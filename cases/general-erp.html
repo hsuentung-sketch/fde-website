@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貿易公司 ERP — 潤樋科技案例</title>
+  <meta name="description" content="報價到出貨從 2 小時縮短為 5 分鐘，14+ 功能模組，LINE Bot 全流程操作，AI 語音下單與名片 OCR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .case-detail { padding: 60px 0; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;color:var(--text-secondary);font-size:.9rem;margin-bottom:32px; }
+    .back-link:hover { color:var(--cta);text-decoration:none; }
+    .case-hero { background:linear-gradient(135deg,var(--navy),#2D1B4E);color:#fff;padding:60px 0 50px;margin-bottom:0; }
+    .case-hero-inner { display:flex;align-items:center;gap:20px;flex-wrap:wrap; }
+    .case-hero h1 { color:#fff;font-size:2rem; }
+    .case-hero .case-badge { font-size:.85rem;padding:4px 16px; }
+    .case-hero .hero-sub { color:rgba(255,255,255,.7);font-size:.95rem;margin-top:6px; }
+
+    /* Detail grid */
+    .detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:48px; }
+    .detail-block h2 { font-size:1.3rem;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--mac-lavender); }
+    .detail-block p, .detail-block li { color:var(--text-secondary);font-size:.95rem;line-height:1.8; }
+    .detail-block ul { list-style:none;padding:0; }
+    .detail-block li { padding:6px 0;display:flex;align-items:flex-start;gap:10px; }
+    .detail-block li::before { content:'';width:6px;height:6px;background:var(--mac-lavender);border-radius:50%;flex-shrink:0;margin-top:10px; }
+
+    /* Section titles */
+    .section-title { font-size:1.4rem;margin-bottom:24px;display:flex;align-items:center;gap:10px; }
+    .section-title svg { flex-shrink:0; }
+
+    /* Module icon */
+    .module-icon {
+      width:40px;height:40px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:12px;flex-shrink:0;
+    }
+    .module-icon svg { width:20px;height:20px;stroke-width:2; }
+
+    /* AI built feature cards */
+    .ai-built-grid {
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;
+    }
+    .ai-built-card {
+      padding:24px;border-radius:var(--radius-sm);
+      border:1px solid var(--border);position:relative;overflow:hidden;
+    }
+    .ai-built-card::before {
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    }
+    .ai-built-card h4 { font-size:.95rem;margin-bottom:8px;display:flex;align-items:center;gap:8px; }
+    .ai-built-card p { font-size:.82rem;color:var(--text-secondary);line-height:1.5; }
+    .ai-built-card .ai-tag {
+      display:inline-block;font-size:.7rem;font-weight:700;padding:2px 8px;
+      border-radius:4px;background:var(--mac-lavender);color:#4338CA;margin-bottom:10px;
+    }
+
+    /* Roadmap timeline */
+    .roadmap-grid {
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:48px;
+    }
+    .roadmap-item {
+      padding:16px;background:var(--surface);border:1px dashed var(--border);
+      border-radius:var(--radius-sm);
+    }
+    .roadmap-item h4 { font-size:.88rem;margin-bottom:4px;color:var(--text-secondary); }
+    .roadmap-item p { font-size:.78rem;color:var(--text-muted); }
+
+    /* LINE flow */
+    .flow-section { margin-bottom:48px; }
+    .flow-steps { display:flex;flex-wrap:wrap;gap:8px;align-items:center; }
+    .flow-step {
+      background:var(--surface);border:2px solid var(--mac-lavender);
+      border-radius:var(--radius-sm);padding:10px 18px;
+      font-size:.85rem;font-weight:600;color:var(--cta);
+    }
+    .flow-arrow { color:var(--text-muted);font-size:1rem; }
+
+    /* Admin preview */
+    .admin-preview {
+      background:var(--navy);border-radius:var(--radius);padding:20px;margin-bottom:48px;
+    }
+    .admin-preview h3 {
+      color:#fff;font-size:1rem;margin-bottom:16px;
+      display:flex;align-items:center;gap:8px;
+    }
+    .admin-tabs { display:flex;gap:8px;flex-wrap:wrap; }
+    .admin-tab {
+      padding:6px 14px;border-radius:6px;font-size:.78rem;
+      color:#94a3b8;background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .admin-tab.active { color:#fff;background:rgba(139,92,246,.25);border-color:#a78bfa; }
+
+    @media(max-width:768px) {
+      .detail-grid { grid-template-columns:1fr; }
+      .ai-built-grid { grid-template-columns:1fr; }
+      .roadmap-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:480px) {
+      .roadmap-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" style="text-decoration:none">
+      <div class="logo-icon">R</div>
+      潤樋科技
+    </a>
+    <nav class="nav">
+      <a href="../index.html#cases">所有案例</a>
+      <a href="../index.html#contact" class="btn-cta" style="padding:8px 18px;font-size:.85rem">與我聯絡</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- ── Hero ─────────────────────────────────────────── -->
+<section class="case-hero">
+  <div class="container">
+    <div class="case-hero-inner">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <div>
+        <h1>貿易公司 ERP</h1>
+        <span class="case-badge badge-live">已上線 Production</span>
+        <p class="hero-sub">v2.16.0 | 14+ 模組 | LINE Bot + LIFF + Admin Panel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Case Detail ──────────────────────────────────── -->
+<section class="case-detail">
+  <div class="container">
+    <a href="../index.html#cases" class="back-link">&#8592; 返回所有案例</a>
+
+    <!-- Metrics -->
+    <div class="metrics-row fade-up">
+      <div class="metric-box">
+        <span class="metric" data-count="5">5</span>
+        <span>分鐘報價到出貨（原 2 小時）</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric" data-count="14">14+</span>
+        <span>功能模組</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric" data-count="70">70%</span>
+        <span>應收催收工作量減少</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric" data-count="0">0</span>
+        <span>額外硬體成本</span>
+      </div>
+    </div>
+
+    <!-- ── Before / After ──────────────────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><path d="M12 2v20M2 12h20"/><path d="M17 7l5 5-5 5M7 7l-5 5 5 5"/></svg>
+      導入前後對比
+    </h2>
+    <div class="ba-grid fade-up">
+      <div class="ba-side ba-before">
+        <div class="ba-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+          導入前
+        </div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon">&#128196;</span>
+            報價單用 Word 手動填寫
+            <span class="ba-metric">30-60 min</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128203;</span>
+            銷貨單紙本作業
+            <span class="ba-metric">2 hrs</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128202;</span>
+            應收帳款 Excel 追蹤
+            <span class="ba-metric">2-4 hrs/wk</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128433;</span>
+            電子發票人工開立
+            <span class="ba-metric">15 min/張</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128197;</span>
+            月結帳單人工彙整
+            <span class="ba-metric">1 天</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9997;</span>
+            客戶資料手動鍵入
+            <span class="ba-metric">10 min</span>
+          </li>
+        </ul>
+      </div>
+      <div class="ba-side ba-after">
+        <div class="ba-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          導入後
+        </div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon">&#128172;</span>
+            LINE 輸入品名數量即出報價
+            <span class="ba-metric">3 min (-90%)</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128241;</span>
+            LINE 全流程 5 分鐘完成
+            <span class="ba-metric">5 min (-96%)</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128276;</span>
+            到期前自動 LINE 提醒
+            <span class="ba-metric">0 min (-100%)</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            系統自動開立 Turnkey XML
+            <span class="ba-metric">30 sec (-97%)</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128230;</span>
+            批次 PDF ZIP 一鍵下載
+            <span class="ba-metric">5 min (-99%)</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128247;</span>
+            名片 OCR 拍照即建檔
+            <span class="ba-metric">30 sec (-95%)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Module Inventory ────────────────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      系統功能模組
+    </h2>
+    <div class="module-grid fade-up">
+      <!-- 1 客戶主檔 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mac-rose)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4>客戶主檔</h4>
+        <p>名片 OCR 自動建立、聯絡人管理、交易歷史、信用額度追蹤</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 2 供應商主檔 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        </div>
+        <h4>供應商主檔</h4>
+        <p>銀行帳戶管理、文件上傳、聯絡窗口、付款條件設定</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 3 產品主檔 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h4>產品主檔</h4>
+        <p>EK 產品規格、14 系列分類、售價/成本管理、圖片上傳</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 4 銷售報價 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>銷售報價</h4>
+        <p>LINE 對話流程 + LIFF 介面、PDF 自動生成、JWT 簽章下載連結</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 5 銷貨單 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+        </div>
+        <h4>銷貨單</h4>
+        <p>LINE 全流程操作、CJK PDF 生成、報價一鍵轉銷貨</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 6 銷售佣金 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>銷售佣金</h4>
+        <p>毛利計算、員工稅率設定、角色可見性控制、即時成本快照</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 7 進貨單 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 3 20 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h4>進貨單</h4>
+        <p>LINE 對話流程建立、PDF 列印、自動產生應付帳款</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 8 應收帳款 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <h4>應收帳款</h4>
+        <p>銷貨自動產生、逾期 Cron 提醒、月結帳單批次 PDF ZIP</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 9 應付帳款 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/><path d="M12 2L2 7l10 5 10-5L12 2z"/></svg>
+        </div>
+        <h4>應付帳款</h4>
+        <p>進貨自動產生、付款狀態追蹤、到期日管理</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 10 電子發票 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        </div>
+        <h4>電子發票</h4>
+        <p>B2B/B2C、Turnkey XML、號碼池管理、載具/捐贈、中文大寫金額</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 11 會計科目 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><path d="M4 7V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/><polyline points="14 2 14 8 20 8"/><line x1="2" y1="15" x2="12" y2="15"/><line x1="7" y1="12" x2="7" y2="18"/></svg>
+        </div>
+        <h4>會計科目 + 分錄</h4>
+        <p>科目表管理、傳票登錄、借貸平衡驗證</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 12 庫存 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h4>庫存管理</h4>
+        <p>事件驅動：銷貨扣庫、進貨入庫、即時庫存查詢</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 13 拜訪紀錄 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        </div>
+        <h4>拜訪紀錄 / CRM</h4>
+        <p>客戶拜訪追蹤、下次行動日期、業務活動歷程</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+      <!-- 14 管理後台 -->
+      <div class="module-card">
+        <div class="module-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h4>管理後台</h4>
+        <p>11+ 視圖、Hash Router SPA、角色權限控制、儀表板總覽</p>
+        <span class="badge badge-live">已上線</span>
+      </div>
+    </div>
+
+    <!-- ── Admin Tabs Mockup ──────────────────────── -->
+    <div class="admin-preview fade-up">
+      <h3>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        管理後台（模擬畫面）
+      </h3>
+      <div class="admin-tabs">
+        <div class="admin-tab active">總覽</div>
+        <div class="admin-tab">客戶</div>
+        <div class="admin-tab">產品</div>
+        <div class="admin-tab">供應商</div>
+        <div class="admin-tab">員工</div>
+        <div class="admin-tab">報價單</div>
+        <div class="admin-tab">銷貨單</div>
+        <div class="admin-tab">進貨單</div>
+        <div class="admin-tab">應收帳款</div>
+        <div class="admin-tab">應付帳款</div>
+        <div class="admin-tab">庫存</div>
+      </div>
+    </div>
+
+    <!-- ── Challenges & Solutions ──────────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      挑戰與解決方案
+    </h2>
+    <div class="detail-grid fade-up">
+      <div class="detail-block">
+        <h2>挑戰</h2>
+        <ul>
+          <li>報價/銷貨靠 Word 和紙本，一張單要花 30 分鐘到 2 小時</li>
+          <li>應收帳款用 Excel 追蹤，每週花 2-4 小時人工比對</li>
+          <li>電子發票人工登入開立，每張 15 分鐘</li>
+          <li>月結帳單要花整天彙整列印寄送</li>
+          <li>新客戶資料手動建檔 10 分鐘，容易打錯</li>
+          <li>業務員不在公司時無法處理報價，錯失商機</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <h2>解決方案</h2>
+        <ul>
+          <li>LINE Bot + LIFF 介面，手機隨時建立報價/銷貨單</li>
+          <li>銷貨成立自動產生應收帳款，Cron 逾期提醒零人工</li>
+          <li>E-Invoice 整合 Turnkey XML，30 秒自動開立</li>
+          <li>月結帳單批次 PDF ZIP 一鍵產出，5 分鐘完成</li>
+          <li>名片 OCR：拍照 30 秒自動擷取姓名/公司/電話/統編</li>
+          <li>語音下單：說「賣 100 個給 X 公司」自動建立銷貨草稿</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── LINE Bot Flow ──────────────────────────── -->
+    <div class="flow-section fade-up">
+      <h2 class="section-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        LINE Bot 操作流程
+      </h2>
+      <div class="flow-steps">
+        <div class="flow-step">&#128241; 開啟 LINE</div>
+        <span class="flow-arrow">&#8594;</span>
+        <div class="flow-step">&#128205; Rich Menu 選功能</div>
+        <span class="flow-arrow">&#8594;</span>
+        <div class="flow-step">&#128269; 搜尋產品</div>
+        <span class="flow-arrow">&#8594;</span>
+        <div class="flow-step">&#128221; 輸入數量/單價</div>
+        <span class="flow-arrow">&#8594;</span>
+        <div class="flow-step">&#128196; PDF 自動生成</div>
+        <span class="flow-arrow">&#8594;</span>
+        <div class="flow-step">&#128279; JWT 連結分享</div>
+      </div>
+    </div>
+
+    <!-- ── AI Features (Built) ─────────────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.56 13.44A6 6 0 0 0 6 18h12a6 6 0 0 0-2.56-4.56"/><circle cx="12" cy="6" r="2"/><path d="M17 2l2 2-2 2"/><path d="M7 2L5 4l2 2"/></svg>
+      AI 功能（已上線）
+    </h2>
+    <div class="ai-built-grid fade-up">
+      <div class="ai-built-card" style="background:var(--bg-lavender);">
+        <span class="ai-tag">OpenAI Whisper + Claude Haiku</span>
+        <h4>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          語音下單
+        </h4>
+        <p>LINE 傳語音訊息「賣 100 個給 X 公司」，Whisper 轉文字後 Claude Haiku 解析品名、數量、客戶，自動建立銷貨草稿。</p>
+      </div>
+      <div class="ai-built-card" style="background:var(--bg-mint);">
+        <span class="ai-tag">Google Vision API</span>
+        <h4>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          名片 OCR
+        </h4>
+        <p>手機拍攝名片，Google Vision 自動辨識姓名、公司、電話、Email、職稱、統一編號，30 秒完成客戶建檔。</p>
+      </div>
+      <div class="ai-built-card" style="background:var(--bg-lemon);">
+        <span class="ai-tag">即時成本快照</span>
+        <h4>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          佣金精準計算
+        </h4>
+        <p>銷貨成立時快照當下成本價，即使後續成本異動也不影響佣金計算。毛利 = 售價 - 快照成本，業務獎金算得準。</p>
+      </div>
+    </div>
+
+    <!-- ── AI Enhancement Suggestions ──────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      AI 擴充方向
+    </h2>
+    <div class="ai-enhance-grid fade-up">
+      <div class="ai-enhance-card">
+        <div class="ai-enhance-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <div>
+          <h4>AI 報表分析</h4>
+          <p>Claude 分析銷售趨勢、客戶購買模式、季節性預測，自動產出管理報表與洞察建議</p>
+        </div>
+      </div>
+      <div class="ai-enhance-card">
+        <div class="ai-enhance-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h4>AI 訂單自動轉換</h4>
+          <p>客戶透過 LINE 或 Email 傳送訂單，AI 自動解析內容並建立銷貨單草稿，人工確認即送出</p>
+        </div>
+      </div>
+      <div class="ai-enhance-card">
+        <div class="ai-enhance-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h4>AI CRM 洞察</h4>
+          <p>分析拜訪紀錄，建議最佳回訪時機與交叉銷售機會，提高客戶經營效率</p>
+        </div>
+      </div>
+      <div class="ai-enhance-card">
+        <div class="ai-enhance-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <div>
+          <h4>AI 應收帳款預測</h4>
+          <p>根據歷史付款行為預測哪些客戶可能逾期，提前預警、主動跟催，降低壞帳風險</p>
+        </div>
+      </div>
+      <div class="ai-enhance-card">
+        <div class="ai-enhance-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h4>AI 智慧定價</h4>
+          <p>基於毛利目標、競品數據、客戶歷史交易，建議最適報價策略，兼顧利潤與成交率</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Planned Roadmap ─────────────────────────── -->
+    <h2 class="section-title fade-up">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      規劃中功能
+    </h2>
+    <div class="roadmap-grid fade-up">
+      <div class="roadmap-item">
+        <h4>自動會計分錄</h4>
+        <p>銷貨/進貨/收付款自動產生對應會計傳票</p>
+      </div>
+      <div class="roadmap-item">
+        <h4>薪資扣繳明細</h4>
+        <p>佣金連動薪資計算與扣繳申報</p>
+      </div>
+      <div class="roadmap-item">
+        <h4>零用金管理</h4>
+        <p>定額備用金制度（Imprest Mode）</p>
+      </div>
+      <div class="roadmap-item">
+        <h4>銀行對帳</h4>
+        <p>匯入銀行明細自動比對帳務</p>
+      </div>
+      <div class="roadmap-item">
+        <h4>現金流量表</h4>
+        <p>自動彙整營運/投資/融資現金流</p>
+      </div>
+    </div>
+
+    <!-- ── Highlight Box ──────────────────────────── -->
+    <div class="highlight-box fade-up">
+      <h3>為什麼這個案例最具說服力？</h3>
+      <p>這是目前唯一<strong>已正式上線、每天被使用</strong>的生產系統（v2.16.0）。報價到出貨從 2 小時壓縮到 5 分鐘，應收帳款催收工作量減少 70%，電子發票從 15 分鐘降到 30 秒。員工每天打開 LINE 就在用，不需要培訓。語音下單、名片 OCR 這些 AI 功能不是 demo，是真正在跑的功能。零硬體成本，全雲端架構，Fly.io 部署。</p>
+    </div>
+
+    <!-- ── CTA ────────────────────────────────────── -->
+    <div style="text-align:center;padding:20px 0">
+      <a href="../index.html#contact" class="btn-cta" style="font-size:1rem;padding:14px 36px;background:#7C3AED;color:#fff">想了解更多？與我聯絡</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">&copy; 2026 潤樋科技. All rights reserved.</div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

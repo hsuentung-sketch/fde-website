@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>潤樋科技 — 不賣軟體，建你的系統</title>
+  <meta name="description" content="依你的行業流程量身打造 ERP — LINE 操作、機台整合、法規合規，4-8 週上線。">
+  <meta property="og:title" content="潤樋科技 — 不賣軟體，建你的系統">
+  <meta property="og:description" content="依你的行業流程量身打造 ERP — LINE 操作、機台整合、法規合規，4-8 週上線。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&subset=chinese-traditional&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-nav">跳到主要內容</a>
+
+<!-- ═══ Header ═══ -->
+<header class="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">R</div>
+      潤樋科技
+    </a>
+    <nav class="nav" role="navigation" aria-label="主選單">
+      <a href="#pain">常見困境</a>
+      <a href="#compare-ba">效益對比</a>
+      <a href="#cases">成功案例</a>
+      <a href="#features">功能亮點</a>
+      <a href="#about">關於我們</a>
+      <a href="#contact" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem">與我聯絡</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══ Hero ═══ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="fade-up">
+          不賣軟體，
+          <span class="gradient-text">建你的系統</span>
+        </h1>
+        <p class="hero-sub fade-up">
+          依你的行業流程量身打造 ERP<br>
+          LINE 操作、機台整合、法規合規，4-8 週上線
+        </p>
+        <div class="hero-ctas fade-up">
+          <a href="#cases" class="btn btn-white">查看案例</a>
+          <a href="#contact" class="btn btn-ghost">與我聯絡</a>
+        </div>
+      </div>
+      <div class="hero-mockup fade-up">
+        <div class="mockup-bar">
+          <span class="mockup-dot" style="background:#ef4444"></span>
+          <span class="mockup-dot" style="background:#f59e0b"></span>
+          <span class="mockup-dot" style="background:#22c55e"></span>
+          <span class="mockup-bar-title">CNC 機台即時看板</span>
+        </div>
+        <div class="machine-grid">
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"setup","label":"架機"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-01 銑床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-02 銑床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"idle","label":"待機"},{"key":"setup","label":"架機"}]'>
+            <div class="machine-name">CNC-03 車床</div>
+            <span class="machine-status status-idle">待機</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"down","label":"異常"}]'>
+            <div class="machine-name">CNC-04 車床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"setup","label":"架機"},{"key":"running","label":"加工中"}]'>
+            <div class="machine-name">CNC-05 銑床</div>
+            <span class="machine-status status-setup">架機</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"down","label":"異常"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-06 磨床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"down","label":"異常"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-07 放電</div>
+            <span class="machine-status status-down">異常</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"setup","label":"架機"}]'>
+            <div class="machine-name">CNC-08 銑床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-09 車床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"idle","label":"待機"},{"key":"running","label":"加工中"}]'>
+            <div class="machine-name">CNC-10 線切割</div>
+            <span class="machine-status status-idle">待機</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"setup","label":"架機"}]'>
+            <div class="machine-name">CNC-11 銑床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+          <div class="machine-card" data-states='[{"key":"running","label":"加工中"},{"key":"idle","label":"待機"}]'>
+            <div class="machine-name">CNC-12 銑床</div>
+            <span class="machine-status status-running">加工中</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Pain Points ═══ -->
+<section class="section-pain" id="pain">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>中小工廠的真實困境</h2>
+      <p>你不是不想數位化，而是現有方案不適合你</p>
+    </div>
+    <div class="pain-grid-8 stagger">
+
+      <div class="pain-card fade-up" data-pain="excel">
+        <div class="pain-icon" style="background:var(--mac-rose)">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="4 2"/></svg>
+        </div>
+        <h4>Excel 管理有資安<br>與備份隱患</h4>
+        <p>檔案存在個人電腦，中毒、硬碟壞掉就全沒了，離職還可能帶走客戶資料</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="order-miss">
+        <div class="pain-icon" style="background:var(--mac-peach)">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h4>客戶訂單靠人處理<br>漏單風險高</h4>
+        <p>LINE 訊息、電話、Email 多管道進單，忙起來忘記回覆，客戶打來才發現漏掉了</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="erp-waste">
+        <div class="pain-icon" style="background:var(--mac-lemon)">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/><circle cx="17" cy="18" r="3"/><path d="M17 16v2h2"/></svg>
+        </div>
+        <h4>買了 ERP<br>卻用不起來</h4>
+        <p>花了幾十萬導入，功能多到用不完，想改一個欄位要等原廠排半年</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="kpi">
+        <div class="pain-icon" style="background:var(--mac-lavender)">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+        </div>
+        <h4>打考績只能<br>憑感覺</h4>
+        <p>老闆想獎勵認真的員工，但沒有數據佐證。錢花了卻不知道帶來多少效益</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="gov">
+        <div class="pain-icon" style="background:var(--mac-blue)">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg>
+        </div>
+        <h4>政府採購網需求<br>靠人工處理</h4>
+        <p>標案出來手動抄寫規格、比對庫存、算報價，一案搞半天還怕算錯</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="knowledge">
+        <div class="pain-icon" style="background:var(--mac-mint)">
+          <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.42A12.08 12.08 0 0121 17.5C17.5 20 12 21 12 21S6.5 20 3 17.5a12.08 12.08 0 012.84-6.92L12 14z"/></svg>
+        </div>
+        <h4>老師傅的經驗<br>沒有留下來</h4>
+        <p>排程靠記憶、報價靠手感，師傅請假整個廠就慌了，人一離職知識就斷了</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="compliance">
+        <div class="pain-icon" style="background:var(--mac-rose)">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6M9 15l3 3 3-3"/></svg>
+        </div>
+        <h4>法規申報<br>靠人工抄填</h4>
+        <p>EPA 廢棄物申報、電子發票對帳，每月底加班填表，一不小心就罰款</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+      <div class="pain-card fade-up" data-pain="data-loss">
+        <div class="pain-icon" style="background:var(--mac-peach)">
+          <svg viewBox="0 0 24 24"><path d="M21 4H3a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1z"/><path d="M16 2v4M8 2v4M2 10h20"/><path d="M9 16l2 2 4-4"/></svg>
+        </div>
+        <h4>資料遺失<br>找不到問題點</h4>
+        <p>客戶說有下單但系統找不到，到底是誰改了什麼？沒有記錄就只能互相猜疑</p>
+        <span class="pain-more">了解 FDE 怎麼解決 &#8594;</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pain Modal -->
+<div class="pain-modal-overlay" id="painModal">
+  <div class="pain-modal">
+    <button class="pain-modal-close" aria-label="關閉">&times;</button>
+    <div class="pain-modal-header">
+      <div class="pain-modal-icon" id="pmIcon"></div>
+      <h3 id="pmTitle"></h3>
+    </div>
+    <div class="pain-modal-body">
+      <div class="pain-modal-section pain-modal-problem">
+        <h4>&#128680; 真實場景</h4>
+        <p id="pmProblem"></p>
+      </div>
+      <div class="pain-modal-section pain-modal-solution">
+        <h4>&#9889; FDE 怎麼解決</h4>
+        <p id="pmSolution"></p>
+      </div>
+      <div class="pain-modal-section pain-modal-result">
+        <h4>&#128200; 實際效益</h4>
+        <p id="pmResult"></p>
+      </div>
+    </div>
+    <a href="mailto:runtong.tw@gmail.com" class="btn btn-primary pain-modal-cta" onclick="document.getElementById('painModal').classList.remove('open');document.body.style.overflow=''">與我聯絡</a>
+  </div>
+</div>
+
+<!-- ═══ Before / After ═══ -->
+<section class="section-compare-ba" id="compare-ba">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>自動化帶來的真實效益</h2>
+      <p>用數據說話 — 人工流程 vs FDE 自動化</p>
+    </div>
+    <div class="ba-grid fade-up">
+      <div class="ba-side ba-before">
+        <div class="ba-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+          人工作業
+        </div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon">&#128196;</span>
+            <span>報價單產生</span>
+            <span class="ba-metric">30-60 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128666;</span>
+            <span>派車排班作業</span>
+            <span class="ba-metric">1 小時</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128200;</span>
+            <span>應收帳款追蹤</span>
+            <span class="ba-metric">每週 2-4 小時</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128221;</span>
+            <span>月結對帳出報表</span>
+            <span class="ba-metric">2 天</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9881;</span>
+            <span>機台狀態確認</span>
+            <span class="ba-metric">巡視 30 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#128203;</span>
+            <span>電子發票開立</span>
+            <span class="ba-metric">15 分鐘/張</span>
+          </li>
+        </ul>
+      </div>
+      <div class="ba-side ba-after">
+        <div class="ba-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          FDE 自動化
+        </div>
+        <ul class="ba-items">
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>LINE 快速報價</span>
+            <span class="ba-metric">3 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>智慧派車系統</span>
+            <span class="ba-metric">10 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>自動到期提醒</span>
+            <span class="ba-metric">0 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>一鍵月結帳單</span>
+            <span class="ba-metric">5 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>FOCAS 即時看板</span>
+            <span class="ba-metric">即時 0 分鐘</span>
+          </li>
+          <li>
+            <span class="ba-icon">&#9889;</span>
+            <span>自動開立發票</span>
+            <span class="ba-metric">30 秒/張</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Stats ═══ -->
+<section class="section-stats">
+  <div class="container">
+    <div class="stats-grid stagger">
+      <div class="stat-card fade-up">
+        <div class="stat-number"><span class="count-up" data-target="90">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">平均作業時間節省</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number"><span class="count-up" data-target="3">0</span><span class="stat-suffix">個</span></div>
+        <div class="stat-label">行業專屬 ERP 已上線</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number"><span class="count-up" data-target="0">0</span><span class="stat-suffix">元</span></div>
+        <div class="stat-label">額外硬體成本</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number"><span class="count-up" data-target="4">0</span><span class="stat-suffix">-8 週</span></div>
+        <div class="stat-label">從流程確認到上線</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Solution Steps ═══ -->
+<section class="section-solution" id="solution">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>我們的做法不一樣</h2>
+      <p>先懂你的流程，再寫你的系統</p>
+    </div>
+    <div class="steps-grid steps-grid-4">
+      <div class="step-card fade-up">
+        <div class="step-num">1</div>
+        <div class="step-icon" style="background:var(--mac-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/><path d="M9 14l2 2 4-4"/></svg>
+        </div>
+        <h3>流程先行</h3>
+        <p>實地訪談、記錄你的作業流程，每一步怎麼做、誰負責、哪裡容易出錯，全部釐清才動手</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-icon" style="background:var(--mac-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2M7 12h4"/></svg>
+        </div>
+        <h3>量身打造</h3>
+        <p>根據你的行業特性建構專屬模組 — 製程管制卡、廢棄物申報、三種報價模板，不是通用模板改改就上</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-icon" style="background:var(--mac-peach)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="1.5"><path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7"/><path d="M16 3H8L6 7h12l-2-4z"/><path d="M12 11v6M9 14h6"/></svg>
+        </div>
+        <h3>系統建置與資料匯入</h3>
+        <p>後端流程設計、資料庫建構、舊有 Excel / ERP 資料清洗匯入，確保歷史資料完整搬遷、無縫銜接</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">4</div>
+        <div class="step-icon" style="background:var(--mac-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9h8M8 13h4"/></svg>
+        </div>
+        <h3>LINE 即上線</h3>
+        <p>員工用 LINE 就能操作，零硬體、零訓練成本。報價、派工、查單全在手機完成</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Case Studies ═══ -->
+<section class="section-cases" id="cases">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>成功案例</h2>
+      <p>每一套系統都是從實際作業流程長出來的</p>
+    </div>
+    <div class="cases-bento stagger">
+
+      <!-- Case 1: Trading -->
+      <div class="case-card case-card--trading fade-up">
+        <div class="case-icon" style="background:var(--mac-peach)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="1.5"><path d="M20 7H4a1 1 0 00-1 1v11a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3>貿易公司 ERP</h3>
+        <span class="badge badge-live">已上線 Production</span>
+        <div class="case-tags">
+          <span class="case-tag">LINE Bot 全流程</span>
+          <span class="case-tag">電子發票</span>
+          <span class="case-tag">語音下單</span>
+          <span class="case-tag">名片 OCR</span>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <strong>5 分鐘</strong>
+            <span>報價到出貨</span>
+          </div>
+          <div class="case-metric">
+            <strong>14+</strong>
+            <span>功能模組</span>
+          </div>
+          <div class="case-metric">
+            <strong>70%</strong>
+            <span>催收工作量減少</span>
+          </div>
+          <div class="case-metric">
+            <strong>0 元</strong>
+            <span>硬體成本</span>
+          </div>
+        </div>
+        <a href="cases/general-erp.html" class="case-link">查看完整案例 &#8594;</a>
+      </div>
+
+      <!-- Case 2: Waste Management -->
+      <div class="case-card case-card--waste fade-up">
+        <div class="case-icon" style="background:var(--mac-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5"><path d="M1 22l2-7 13.4-13.4a1.6 1.6 0 012.4 0l2.6 2.6a1.6 1.6 0 010 2.4L8 20l-7 2z"/><path d="M16 8l-2.5-2.5"/></svg>
+        </div>
+        <h3>環保清運 ERP</h3>
+        <span class="badge badge-live">已上線 Production</span>
+        <div class="case-tags">
+          <span class="case-tag">派車管理</span>
+          <span class="case-tag">油耗分析</span>
+          <span class="case-tag">AI 駕駛報告</span>
+          <span class="case-tag">EPA 合規</span>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <strong>20+</strong>
+            <span>功能模組</span>
+          </div>
+          <div class="case-metric">
+            <strong>AI</strong>
+            <span>月績效報告</span>
+          </div>
+          <div class="case-metric">
+            <strong>3 種</strong>
+            <span>報價模板</span>
+          </div>
+          <div class="case-metric">
+            <strong>$0.005</strong>
+            <span>AI 成本/次</span>
+          </div>
+        </div>
+        <a href="cases/waste-management.html" class="case-link">查看完整案例 &#8594;</a>
+      </div>
+
+      <!-- Case 3: Precision Machining -->
+      <div class="case-card case-card--machining fade-up">
+        <div class="case-icon" style="background:var(--mac-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>精密金屬加工 ERP</h3>
+        <span class="badge badge-building">建置中 Phase 6</span>
+        <div class="case-tags">
+          <span class="case-tag">CNC FOCAS</span>
+          <span class="case-tag">13 階段製程</span>
+          <span class="case-tag">AI 圖面辨識</span>
+          <span class="case-tag">智慧派工</span>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <strong>14 台</strong>
+            <span>CNC 即時監控</span>
+          </div>
+          <div class="case-metric">
+            <strong>13 階段</strong>
+            <span>製程追蹤</span>
+          </div>
+          <div class="case-metric">
+            <strong>5 秒</strong>
+            <span>即時更新</span>
+          </div>
+          <div class="case-metric">
+            <strong>AI</strong>
+            <span>圖面自動建檔</span>
+          </div>
+        </div>
+        <a href="cases/precision-machining.html" class="case-link">查看完整案例 &#8594;</a>
+      </div>
+
+      <!-- Placeholder for future -->
+      <div class="case-card case-card--placeholder fade-up" style="grid-column: 1 / -1; min-height: 120px;">
+        <div>
+          <p style="color:var(--text-muted);font-size:.95rem;margin-bottom:8px">更多行業案例持續加入中</p>
+          <p style="color:var(--text-muted);font-size:.82rem">食品加工 / 紡織 / 物流 / 零售...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Feature Bento ═══ -->
+<section class="section-features" id="features">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>功能亮點</h2>
+      <p>不是套裝軟體的改裝版，是從地基開始蓋的</p>
+    </div>
+    <div class="feature-bento stagger">
+      <div class="feature-card feature-card--wide fade-up">
+        <div class="feature-icon feature-icon--mint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h4>LINE 即介面</h4>
+        <p>員工不用學新系統，用 LINE 就能報價、接單、派工、查庫存。零訓練成本、零硬體投資。管理者用 Admin 後台掌控全局。</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon feature-icon--lavender">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+        </div>
+        <h4>CNC 機台整合</h4>
+        <p>FANUC FOCAS 即時串接，5 秒更新機台狀態，不需另買 MES</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon feature-icon--rose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h4>電子發票</h4>
+        <p>B2B/B2C 全自動開立，Turnkey XML 合規，載具/捐贈/大寫金額全支援</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon feature-icon--lemon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="1.5"><path d="M9 17H7v-7h2m4 7h-2V7h2m4 10h-2v-4h2M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+        </div>
+        <h4>智慧報表</h4>
+        <p>營收分析、應收帳齡、駕駛績效、機台稼動率，一鍵產出 PDF/Excel</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon feature-icon--blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M12 11v6M9 14h6"/></svg>
+        </div>
+        <h4>EPA 法規合規</h4>
+        <p>廢棄物管制編號、處理許可追蹤、申報 API 對接，避免漏報罰款</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon feature-icon--peach">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>多租戶 SaaS 架構</h4>
+        <p>同一套系統服務不同客戶，資料行級隔離、獨立 LINE 頻道、方案與計費管理</p>
+      </div>
+      <div class="feature-card feature-card--wide fade-up">
+        <div class="feature-icon" style="background:var(--mac-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>資訊安全與備援機制</h4>
+        <p>AES-256 加密備份（每日/每週/每月三層保留），JWT 短效 Token 認證（15 分鐘過期 + 30 天 Refresh），全站 HTTPS 強制加密傳輸。稽核日誌記錄每筆操作的人員、時間、修改前後差異，密碼 bcrypt 雜湊儲存，敏感資料自動遮罩。備份自動推送到異地 NAS，每月強制還原測試確保可恢復。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AI Capabilities ═══ -->
+<section class="section-ai" id="ai">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>AI 加持，自動化更完整</h2>
+      <p>不是噱頭，是已經在生產環境跑的 AI 功能</p>
+    </div>
+    <div class="ai-grid stagger">
+      <div class="ai-card fade-up">
+        <div class="ai-icon ai-icon--voice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+        </div>
+        <h4>語音下單</h4>
+        <p>LINE 語音訊息直接轉成銷貨單，Whisper 語音辨識 + Claude 意圖解析</p>
+        <span class="ai-cost">已上線</span>
+      </div>
+      <div class="ai-card fade-up">
+        <div class="ai-icon ai-icon--ocr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <h4>智慧 OCR 辨識</h4>
+        <p>名片拍照自動建檔、工程圖面標題欄擷取、儀表板里程辨識、車牌/輪胎辨識</p>
+        <span class="ai-cost">已上線</span>
+      </div>
+      <div class="ai-card fade-up">
+        <div class="ai-icon ai-icon--report">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5"><path d="M9 17H7v-7h2m4 7h-2V7h2m4 10h-2v-4h2"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        </div>
+        <h4>AI 績效報告</h4>
+        <p>駕駛月報自動生成：油耗、里程、維修、異常次數，AI 撰寫中文評語 + A-D 評分</p>
+        <span class="ai-cost">~$0.005/次</span>
+      </div>
+      <div class="ai-card fade-up">
+        <div class="ai-icon ai-icon--dispatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h4>智慧派工推薦</h4>
+        <p>硬約束篩選 + 軟評分（佇列/狀態/稼動/親和度）+ LLM 自然語言推理，人機協作決策</p>
+        <span class="ai-cost">建置中</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Comparison Table ═══ -->
+<section class="section-table" id="compare">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>跟其他方案有什麼不同？</h2>
+      <p>同樣是 ERP，做法天差地遠</p>
+    </div>
+    <div class="compare-wrap fade-up">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>企業級 ERP</th>
+            <th>台灣通用 ERP</th>
+            <th class="col-fde">潤樋科技</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>導入費用</td><td>$50 - 250 萬</td><td>$20 - 50 萬</td><td class="col-fde">首次建置 $8 - 12 萬<br><small style="font-weight:400;opacity:.7">依功能範圍差異</small></td></tr>
+          <tr><td>客製化程度</td><td>模組配置</td><td>套版微調</td><td class="col-fde">行業專屬程式碼</td></tr>
+          <tr><td>操作介面</td><td>桌面軟體</td><td>網頁後台</td><td class="col-fde">LINE Bot + Web</td></tr>
+          <tr><td>機台整合</td><td>需外掛 MES</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> 內建 FOCAS</td></tr>
+          <tr><td>AI 功能</td><td>另購模組</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> 內建 OCR/語音/報告</td></tr>
+          <tr><td>教育訓練</td><td>數週</td><td>數天</td><td class="col-fde">系統內建流程介紹<br><small style="font-weight:400;opacity:.7">與使用說明</small></td></tr>
+          <tr><td>上線時間</td><td>6 - 12 個月</td><td>2 - 4 個月</td><td class="col-fde">4 - 8 週</td></tr>
+          <tr><td>法規合規</td><td>另購模組</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> EPA / 電子發票</td></tr>
+          <tr><td>資料安全</td><td>依版本</td><td>基本備份</td><td class="col-fde"><span class="check">&#10003;</span> AES-256 加密 + 三層備援</td></tr>
+          <tr><td>月租管理費</td><td>年維護費<br><small style="opacity:.6">約授權金額 15-20%</small></td><td>年維護費<br><small style="opacity:.6">$3-8 萬/年</small></td><td class="col-fde">$6,000 - 12,000/月<br><small style="font-weight:400;opacity:.7">含 8 項管理服務</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Monthly fee breakdown -->
+    <div class="monthly-fee-detail fade-up" style="margin-top:48px">
+      <div style="text-align:center;margin-bottom:32px">
+        <h3 style="font-size:1.3rem;margin-bottom:8px">月租管理費 NT$6,000 - 12,000</h3>
+        <p style="color:var(--text-sec);font-size:.92rem">每月包含以下 8 項專業管理服務，依使用規模與功能範圍定價</p>
+      </div>
+      <div class="fee-grid">
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5" width="20" height="20"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <strong>軟體維護管理</strong>
+            <span>每月 1 次功能微調與需求討論、bug 即時修復、版本更新上線、效能優化</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-rose)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>資安管理</strong>
+            <span>AES-256 加密備份、JWT Token 管理、安全漏洞修補、密碼政策與權限稽核</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <strong>AI 升級管理</strong>
+            <span>AI 模型版本更新、新 AI 功能開發上線、OCR/語音辨識準確度調優、prompt 迭代</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <strong>雲端主機代管</strong>
+            <span>Fly.io 主機費用全包、SSL 憑證自動更新、CDN 加速、流量自動擴展</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-peach)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="1.5" width="20" height="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div>
+            <strong>自動備份與災難復原</strong>
+            <span>每日/每週/每月三層自動備份、異地 NAS 存放、每月還原測試驗證、30 天資料恢復</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-lemon)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="1.5" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <strong>系統監控與異常通報</strong>
+            <span>24/7 uptime 監控、服務異常即時 LINE/Email 通知、效能瓶頸分析與處理</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <strong>法規合規更新</strong>
+            <span>EPA 申報格式變更跟進、電子發票規格更新、稅法/勞基法異動即時調整系統</span>
+          </div>
+        </div>
+        <div class="fee-item">
+          <div class="fee-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" width="20" height="20"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <strong>LINE 頻道維護</strong>
+            <span>LINE Messaging API 版本升級、LIFF 頁面維護、推播額度監控與管理</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ About ═══ -->
+<section class="section-about" id="about">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>關於潤樋科技</h2>
+      <p>我們相信好系統是從作業流程長出來的，不是套裝軟體硬塞的</p>
+    </div>
+    <div class="about-inner">
+      <div class="about-text fade-up">
+        <p>潤樋科技專注於中小企業的流程數位化。我們不賣通用軟體，而是深入每個行業的實際作業流程，量身打造真正能用的系統。</p>
+        <p>我們的「流程先行」方法論：</p>
+        <ul class="method-list">
+          <li><span class="method-num">1</span><span>實地訪談 — 跟著你的員工走一遍真實流程</span></li>
+          <li><span class="method-num">2</span><span>流程文件化 — 畫出每一步的角色、動作、狀態變化</span></li>
+          <li><span class="method-num">3</span><span>確認後才動工 — 不浪費一行程式碼在假需求上</span></li>
+          <li><span class="method-num">4</span><span>迭代上線 — 核心流程先上，邊用邊擴充</span></li>
+        </ul>
+      </div>
+      <div class="about-stats fade-up">
+        <div class="about-stat">
+          <strong>3</strong>
+          <span>行業 ERP 已交付</span>
+        </div>
+        <div class="about-stat">
+          <strong>50+</strong>
+          <span>功能模組</span>
+        </div>
+        <div class="about-stat">
+          <strong>6</strong>
+          <span>AI 功能已上線</span>
+        </div>
+        <div class="about-stat">
+          <strong>24/7</strong>
+          <span>系統穩定運行</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="section-cta" id="contact">
+  <div class="container">
+    <h2 class="fade-up">免費流程診斷</h2>
+    <p class="fade-up">告訴我們你的行業和痛點<br>我們會先幫你做一份流程診斷報告</p>
+    <div class="fade-up" style="margin:32px 0 16px">
+      <a href="mailto:runtong.tw@gmail.com" class="btn btn-white" style="font-size:1.1rem;padding:16px 40px;gap:10px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        runtong.tw@gmail.com
+      </a>
+    </div>
+    <p class="cta-hint fade-up">點擊上方按鈕直接寄信，或複製信箱地址聯繫我們</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    &copy; 2026 潤樋科技. All rights reserved.
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="回到頂部" title="回到頂部">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>

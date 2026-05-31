@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精密金屬加工廠 — 潤樋科技案例</title>
+  <meta name="description" content="14 台 CNC 即時監控、13 階段製程管制卡、AI 圖面辨識、FANUC FOCAS 機台整合">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ── Case Detail Base ── */
+    .case-detail { padding: 60px 0; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;color:var(--text-sec);font-size:.9rem;margin-bottom:32px;text-decoration:none; }
+    .back-link:hover { color:var(--cta);text-decoration:none; }
+    .case-hero { background:linear-gradient(135deg,var(--navy),#1B2D4F);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden; }
+    .case-hero::before { content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(79,70,229,.15) 0%,transparent 70%);pointer-events:none; }
+    .case-hero::after { content:'';position:absolute;bottom:-30%;left:-8%;width:400px;height:400px;background:radial-gradient(circle,rgba(196,222,255,.1) 0%,transparent 70%);pointer-events:none; }
+    .case-hero-inner { display:flex;align-items:center;gap:20px;flex-wrap:wrap;position:relative;z-index:1; }
+    .case-hero h1 { color:#fff;font-size:2.2rem; }
+    .case-hero .case-badge { font-size:.85rem;padding:4px 16px; }
+    .case-hero-sub { color:#94a3b8;font-size:1rem;margin-top:8px;max-width:520px;line-height:1.7; }
+    .detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:48px; }
+    .detail-block h2 { font-size:1.3rem;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--cta); }
+    .detail-block p,.detail-block li { color:var(--text-sec);font-size:.95rem;line-height:1.8; }
+    .detail-block ul { list-style:none;padding:0; }
+    .detail-block li { padding:6px 0;display:flex;align-items:flex-start;gap:10px; }
+    .detail-block li::before { content:'';width:6px;height:6px;background:var(--cta);border-radius:50%;flex-shrink:0;margin-top:10px; }
+    .metrics-row { display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:56px; }
+    .metric-box { text-align:center;padding:28px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:transform .2s,box-shadow .2s; }
+    .metric-box:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
+    .metric-box .metric { display:block;font-family:var(--font-num);font-size:2rem;font-weight:800;margin-bottom:4px; }
+    .metric-box span { color:var(--text-sec);font-size:.82rem; }
+    .metric-box .metric-icon { width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px; }
+    .metric-box .metric-icon svg { width:20px;height:20px;stroke-width:2; }
+
+    /* ── Section Titles ── */
+    .section-title { font-size:1.5rem;margin-bottom:24px;display:flex;align-items:center;gap:12px; }
+    .section-title .st-icon { width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    .section-title .st-icon svg { width:18px;height:18px;stroke-width:2; }
+    .section-tag { font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:12px;margin-bottom:12px;display:inline-block; }
+
+    /* ── Before / After ── */
+    .ba-section { margin-bottom:56px; }
+    .ba-grid { display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg); }
+    .ba-side { padding:36px 32px; }
+    .ba-before { background:linear-gradient(135deg,#FFF1F0,#FFE4E1);border-right:3px solid var(--mac-rose); }
+    .ba-after { background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border-left:3px solid var(--mac-mint); }
+    .ba-label { font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:14px; }
+    .ba-before .ba-label { background:rgba(239,68,68,.1);color:#DC2626; }
+    .ba-after .ba-label { background:rgba(16,185,129,.1);color:#059669; }
+    .ba-items { list-style:none;padding:0;margin:0; }
+    .ba-items li { display:flex;align-items:flex-start;gap:10px;padding:10px 0;font-size:.9rem;color:var(--text);border-bottom:1px solid rgba(0,0,0,.05); }
+    .ba-items li:last-child { border-bottom:none; }
+    .ba-icon { flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;margin-top:1px; }
+    .ba-before .ba-icon { background:rgba(239,68,68,.12);color:#DC2626; }
+    .ba-after .ba-icon { background:rgba(16,185,129,.12);color:#059669; }
+    .ba-metric { font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:8px;margin-left:auto;white-space:nowrap;flex-shrink:0; }
+    .ba-before .ba-metric { background:rgba(239,68,68,.08);color:#DC2626; }
+    .ba-after .ba-metric { background:rgba(16,185,129,.08);color:#059669; }
+
+    /* ── Module Cards ── */
+    .module-section { margin-bottom:56px; }
+    .module-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+    .module-card { padding:24px;border-radius:var(--radius);border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden; }
+    .module-card:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
+    .module-card .mc-icon { width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px; }
+    .module-card .mc-icon svg { width:22px;height:22px;stroke-width:1.8; }
+    .module-card h4 { font-size:.95rem;margin-bottom:6px; }
+    .module-card p { color:var(--text-sec);font-size:.83rem;line-height:1.6; }
+    .module-card .badge { position:absolute;top:14px;right:14px;font-size:.65rem;padding:2px 8px; }
+
+    /* ── Machine Board Mockup ── */
+    .board-mockup { background:var(--navy);border-radius:var(--radius);padding:24px;margin-bottom:56px;position:relative;overflow:hidden; }
+    .board-mockup::before { content:'';position:absolute;top:0;right:0;width:300px;height:300px;background:radial-gradient(circle,rgba(79,70,229,.12),transparent);pointer-events:none; }
+    .board-mockup h3 { color:#fff;font-size:1rem;margin-bottom:20px;display:flex;align-items:center;gap:8px;position:relative;z-index:1; }
+    .board-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative;z-index:1; }
+    .board-card { padding:14px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xs);text-align:center;transition:transform .2s; }
+    .board-card:hover { transform:scale(1.04); }
+    .board-card .bc-name { font-size:.72rem;color:#94a3b8;margin-bottom:8px; }
+    .board-card .bc-type { font-size:.6rem;color:#64748b;margin-bottom:6px; }
+    .board-card .bc-status { font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block; }
+    .bc-running { background:rgba(16,185,129,.2);color:#6EE7B7; }
+    .bc-idle { background:rgba(148,163,184,.15);color:#94a3b8; }
+    .bc-setup { background:rgba(250,204,21,.2);color:#FDE047; }
+    .bc-down { background:rgba(239,68,68,.2);color:#FCA5A5; }
+    .board-legend { display:flex;gap:16px;margin-top:14px;position:relative;z-index:1; }
+    .board-legend span { display:flex;align-items:center;gap:5px;font-size:.7rem;color:#94a3b8; }
+    .legend-dot { width:8px;height:8px;border-radius:50%; }
+
+    /* ── Process Timeline ── */
+    .timeline-section { margin-bottom:56px; }
+    .timeline-track { display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius); }
+    .timeline-node { padding:10px 16px;border-radius:20px;font-size:.78rem;font-weight:600;border:2px solid;white-space:nowrap;transition:transform .15s; }
+    .timeline-node:hover { transform:scale(1.06); }
+    .tn-done { background:#dcfce7;border-color:#22c55e;color:#15803d; }
+    .tn-active { background:#dbeafe;border-color:#3b82f6;color:#1e40af;box-shadow:0 0 0 3px rgba(59,130,246,.15); }
+    .tn-hold { background:#fef3c7;border-color:#f59e0b;color:#92400e; }
+    .tn-future { background:#f1f5f9;border-color:#cbd5e1;color:#64748b; }
+    .timeline-arrow { display:flex;align-items:center;color:var(--text-sec);font-size:.75rem; }
+    .timeline-labels { display:flex;gap:20px;margin-top:14px;flex-wrap:wrap; }
+    .tl-label { display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--text-sec); }
+    .tl-label .tl-dot { width:10px;height:10px;border-radius:50%;border:2px solid; }
+
+    /* ── AI Features ── */
+    .ai-section { margin-bottom:56px; }
+    .ai-card { padding:28px;border-radius:var(--radius);border:1px solid var(--border);position:relative;overflow:hidden; }
+    .ai-card::before { content:'';position:absolute;top:0;left:0;right:0;height:3px; }
+    .ai-card-blue::before { background:linear-gradient(90deg,var(--mac-blue),var(--mac-lavender)); }
+    .ai-card-mint::before { background:linear-gradient(90deg,var(--mac-mint),var(--mac-blue)); }
+    .ai-card .ai-badge { font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:8px;display:inline-block;margin-bottom:12px; }
+    .ai-card h4 { font-size:1.05rem;margin-bottom:8px; }
+    .ai-card p { color:var(--text-sec);font-size:.88rem;line-height:1.7; }
+    .ai-detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px; }
+    .ai-flow { display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding:14px;background:var(--bg);border-radius:var(--radius-sm); }
+    .ai-flow-step { padding:6px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xs);font-size:.78rem;font-weight:600;color:var(--text); }
+    .ai-flow-arrow { color:var(--text-sec);font-size:.8rem; }
+    .ai-score-row { display:flex;gap:8px;flex-wrap:wrap;margin-top:12px; }
+    .ai-score { padding:6px 12px;border-radius:var(--radius-xs);font-size:.75rem;font-weight:600;display:flex;align-items:center;gap:6px; }
+    .ai-score-high { background:#dcfce7;color:#15803d; }
+    .ai-score-mid { background:#fef3c7;color:#92400e; }
+    .ai-score-low { background:#fee2e2;color:#991b1b; }
+
+    /* ── AI Enhancement ── */
+    .ai-enhance-section { margin-bottom:56px; }
+    .ai-enhance-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+    .ai-enhance-card { padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-align:center;transition:transform .2s,box-shadow .2s; }
+    .ai-enhance-card:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
+    .ai-enhance-icon { width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px; }
+    .ai-enhance-icon svg { width:26px;height:26px;stroke-width:1.5; }
+    .ai-enhance-card h4 { font-size:.95rem;margin-bottom:8px; }
+    .ai-enhance-card p { color:var(--text-sec);font-size:.83rem;line-height:1.6; }
+
+    /* ── Progress ── */
+    .progress-section { margin-bottom:56px; }
+    .progress-bar { display:flex;gap:3px;margin-bottom:12px; }
+    .progress-segment { height:10px;border-radius:5px;flex:1;transition:background .3s; }
+    .progress-done { background:var(--cta); }
+    .progress-current { background:var(--amber);animation:pulse-progress 2s infinite; }
+    .progress-todo { background:var(--border); }
+    @keyframes pulse-progress { 0%,100%{opacity:1;}50%{opacity:.6;} }
+    .progress-label { display:flex;justify-content:space-between;font-size:.78rem;color:var(--text-sec); }
+    .progress-phases { display:grid;grid-template-columns:repeat(11,1fr);gap:6px;margin-top:16px; }
+    .phase-chip { text-align:center;padding:8px 4px;border-radius:var(--radius-xs);font-size:.68rem;font-weight:600; }
+    .phase-done { background:#EEF2FF;color:var(--cta); }
+    .phase-current { background:#FEF3C7;color:#92400e;border:1px solid #F59E0B; }
+    .phase-todo { background:#F3F4F6;color:#9CA3AF; }
+
+    /* ── Highlight Box ── */
+    .highlight-box { background:linear-gradient(135deg,#EFF6FF,#F0FDF4);border:1px solid #bfdbfe;border-radius:var(--radius);padding:36px;margin-bottom:56px;position:relative;overflow:hidden; }
+    .highlight-box::before { content:'';position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(79,70,229,.08),transparent);pointer-events:none; }
+    .highlight-box h3 { color:#1e40af;margin-bottom:12px;font-size:1.15rem; }
+    .highlight-box p { color:var(--text-sec);font-size:.95rem;line-height:1.8; }
+
+    /* ── CTA ── */
+    .case-cta { text-align:center;padding:32px 0 8px; }
+    .case-cta .btn { font-size:1rem;padding:16px 40px; }
+
+    /* ── Responsive ── */
+    @media(max-width:1024px) {
+      .module-grid { grid-template-columns:repeat(2,1fr); }
+      .ai-enhance-grid { grid-template-columns:repeat(2,1fr); }
+      .board-grid { grid-template-columns:repeat(4,1fr); }
+      .metrics-row { grid-template-columns:repeat(3,1fr); }
+    }
+    @media(max-width:768px) {
+      .detail-grid,.ba-grid,.ai-detail-grid { grid-template-columns:1fr; }
+      .metrics-row { grid-template-columns:repeat(2,1fr); }
+      .module-grid,.ai-enhance-grid { grid-template-columns:1fr; }
+      .board-grid { grid-template-columns:repeat(3,1fr); }
+      .progress-phases { grid-template-columns:repeat(4,1fr); }
+      .ba-before { border-right:none;border-bottom:3px solid var(--mac-rose); }
+      .ba-after { border-left:none;border-top:3px solid var(--mac-mint); }
+      .case-hero h1 { font-size:1.6rem; }
+    }
+    @media(max-width:480px) {
+      .board-grid { grid-template-columns:repeat(2,1fr); }
+      .metrics-row { grid-template-columns:1fr 1fr; }
+      .progress-phases { grid-template-columns:repeat(3,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ Header ═══ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" style="text-decoration:none">
+      <div class="logo-icon">R</div>
+      潤樋科技
+    </a>
+    <nav class="nav">
+      <a href="../index.html#cases">所有案例</a>
+      <a href="../index.html#contact" class="btn btn-primary" style="padding:8px 18px;font-size:.85rem">與我聯絡</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- ═══ Hero ═══ -->
+<section class="case-hero">
+  <div class="container">
+    <div class="case-hero-inner">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+        <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+      <div>
+        <h1>精密金屬加工廠</h1>
+        <span class="case-badge badge-building">建置中 Phase 6</span>
+        <p class="case-hero-sub">樂奇精密 — 14 台 CNC 即時監控、FANUC FOCAS 整合、AI 圖面辨識，從 Excel 管理到全數位製造執行系統</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Main Content ═══ -->
+<section class="case-detail">
+  <div class="container">
+    <a href="../index.html#cases" class="back-link">&#8592; 返回所有案例</a>
+
+    <!-- ── Metrics Row ── -->
+    <div class="metrics-row fade-up">
+      <div class="metric-box">
+        <div class="metric-icon" style="background:var(--bg-blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="metric" data-count="14">14</span>
+        <span>台 CNC 即時監控</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-icon" style="background:var(--bg-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span class="metric" data-count="13">13</span>
+        <span>階段製程追蹤</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-icon" style="background:var(--bg-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <span class="metric">5 秒</span>
+        <span>機台狀態更新</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <span class="metric">AI</span>
+        <span>圖面自動辨識</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-icon" style="background:var(--bg-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        </div>
+        <span class="metric">4</span>
+        <span>因子 AI 派工評分</span>
+      </div>
+    </div>
+
+    <!-- ── Before / After Comparison ── -->
+    <div class="ba-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-rose)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        導入前後效益對比
+      </h2>
+      <div class="ba-grid">
+        <div class="ba-side ba-before">
+          <span class="ba-label">導入前</span>
+          <ul class="ba-items">
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>工單進度 Excel 追蹤，跨工序容易漏</span>
+              <span class="ba-metric">Excel</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>巡場確認機台狀態，來回走動</span>
+              <span class="ba-metric">30 分鐘</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>派工靠資深師傅經驗判斷</span>
+              <span class="ba-metric">20 分鐘</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>圖面資料人工逐欄填入</span>
+              <span class="ba-metric">20 分鐘/張</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>出貨紀錄靠紙本，無法追溯</span>
+              <span class="ba-metric">紙本</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              <span>排程用白板，衝突靠記憶避免</span>
+              <span class="ba-metric">白板</span>
+            </li>
+          </ul>
+        </div>
+        <div class="ba-side ba-after">
+          <span class="ba-label">導入後</span>
+          <ul class="ba-items">
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>13 階段即時看板，全程可追溯</span>
+              <span class="ba-metric">即時</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>FOCAS 5 秒刷新，即時看板</span>
+              <span class="ba-metric">省 100%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>AI 推薦 + 人工確認，決策留紀錄</span>
+              <span class="ba-metric">省 85%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>AI OCR 辨識 + 人工審核</span>
+              <span class="ba-metric">省 90%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>數位出貨單 + 超交預防</span>
+              <span class="ba-metric">零錯誤</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              <span>甘特時程表 + 衝突偵測</span>
+              <span class="ba-metric">無衝突</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CNC Machine Board Mockup ── -->
+    <div class="board-mockup fade-up">
+      <h3>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        CNC 機台即時看板 -- 5 秒刷新
+        <span style="margin-left:auto;font-size:.7rem;font-weight:400;color:#64748b">每 5 秒輪詢 FOCAS / webhook</span>
+      </h3>
+      <div class="board-grid">
+        <div class="board-card">
+          <div class="bc-name">CNC-01</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-02</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-03</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-idle">待機</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-04</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-05</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-setup">架機</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-06</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-07</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-08</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-09</div>
+          <div class="bc-type">銑床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-10</div>
+          <div class="bc-type">車床</div>
+          <div class="bc-status bc-running">加工中</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-11</div>
+          <div class="bc-type">車床</div>
+          <div class="bc-status bc-idle">待機</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-12</div>
+          <div class="bc-type">磨床</div>
+          <div class="bc-status bc-setup">架機</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-13</div>
+          <div class="bc-type">放電加工</div>
+          <div class="bc-status bc-down">異常</div>
+        </div>
+        <div class="board-card">
+          <div class="bc-name">CNC-14</div>
+          <div class="bc-type">線切割</div>
+          <div class="bc-status bc-idle">待機</div>
+        </div>
+      </div>
+      <div class="board-legend">
+        <span><span class="legend-dot" style="background:#6EE7B7"></span> 加工中</span>
+        <span><span class="legend-dot" style="background:#FDE047"></span> 架機</span>
+        <span><span class="legend-dot" style="background:#94a3b8"></span> 待機</span>
+        <span><span class="legend-dot" style="background:#FCA5A5"></span> 異常</span>
+      </div>
+    </div>
+
+    <!-- ── 13-Stage Process Timeline ── -->
+    <div class="timeline-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-mint)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </span>
+        13 階段製程管制卡
+      </h2>
+      <div class="timeline-track">
+        <div class="timeline-node tn-done">備料中</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-done">材料到貨</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-done">程式編寫</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-done">待排機</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-active">加工中</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">品檢</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">後處理</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">送外包</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">外包回收</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">入庫</div>
+        <div class="timeline-arrow">&#8594;</div>
+        <div class="timeline-node tn-future">已出貨</div>
+        <div class="timeline-arrow" style="color:var(--text-sec)">|</div>
+        <div class="timeline-node tn-hold">暫停</div>
+        <div class="timeline-arrow" style="color:var(--text-sec)">|</div>
+        <div class="timeline-node" style="background:#fee2e2;border-color:#ef4444;color:#991b1b">取消</div>
+      </div>
+      <div class="timeline-labels">
+        <span class="tl-label"><span class="tl-dot" style="background:#dcfce7;border-color:#22c55e"></span> 已完成</span>
+        <span class="tl-label"><span class="tl-dot" style="background:#dbeafe;border-color:#3b82f6"></span> 進行中</span>
+        <span class="tl-label"><span class="tl-dot" style="background:#f1f5f9;border-color:#cbd5e1"></span> 待處理</span>
+        <span class="tl-label"><span class="tl-dot" style="background:#fef3c7;border-color:#f59e0b"></span> 暫停</span>
+        <span class="tl-label"><span class="tl-dot" style="background:#fee2e2;border-color:#ef4444"></span> 取消</span>
+      </div>
+    </div>
+
+    <!-- ── Module Inventory (Visual Cards) ── -->
+    <div class="module-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </span>
+        系統功能模組
+      </h2>
+      <div class="module-grid">
+
+        <!-- Core: Process Tracking Card -->
+        <div class="module-card" style="background:var(--bg-blue);grid-column:span 2;">
+          <span class="badge badge-live" style="position:static;margin-bottom:10px;display:inline-block">核心模組</span>
+          <div class="mc-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>製程管制卡 Process Tracking Card</h4>
+          <p>13 階段生命週期完整追蹤：備料到出貨。Excel-like 表格介面、階段歷史紀錄、與機台看板連動。每張卡對應一張客戶工單，串連圖面、機台、外包、出貨全流程。</p>
+        </div>
+
+        <!-- Machine Board -->
+        <div class="module-card" style="background:var(--bg-mint)">
+          <div class="mc-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h4>機台即時看板</h4>
+          <p>麥當勞式 CSS Grid 看板，5 秒輪詢刷新，色碼狀態一眼掌握全場 14 台機台。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- FOCAS Integration -->
+        <div class="module-card" style="background:var(--bg-lemon)">
+          <div class="mc-icon" style="background:var(--mac-lemon)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4>CNC FOCAS 整合</h4>
+          <p>FANUC FOCAS 協議直連控制器，Python 收集器 5-10 秒推送。顯示模式、運轉狀態、當前程式、加工件數、警報。60 秒過時指示。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Machine Status -->
+        <div class="module-card" style="background:var(--bg-peach)">
+          <div class="mc-icon" style="background:var(--mac-peach)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h4>機台狀態機</h4>
+          <p>完整狀態機搭配管制卡連動：加工中連結卡片、待機推送至品檢。狀態變更間自動計算持續時間。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Dispatch Board -->
+        <div class="module-card" style="background:var(--bg-lavender)">
+          <div class="mc-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h4>派工看板</h4>
+          <p>拖放式介面：未派工 + 各機台泳道。衝突偵測、派工決策日誌 (DispatchDecisionLog) 含必填理由。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Schedule Timeline -->
+        <div class="module-card" style="background:var(--bg-blue)">
+          <div class="mc-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+          <h4>排程時程表</h4>
+          <p>甘特圖式：Y 軸依類別分機台、X 軸可切 7/14/30 天、衝突標記、今日線。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Drawing AI -->
+        <div class="module-card" style="background:var(--bg-rose)">
+          <div class="mc-icon" style="background:var(--mac-rose)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h4>AI 圖面辨識</h4>
+          <p>上傳 PDF/JPG 工程圖面，GCV OCR + Claude Haiku 自動擷取 10 個標題欄位。逐欄信心分數，一鍵建立管制卡。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="module-card" style="background:var(--bg-mint)">
+          <div class="mc-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h4>即時儀表板</h4>
+          <p>三區 KPI：生產進度/逾期/未派工、銷售月報、交期風險 3 日預警。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Customer Master -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-lemon)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>客戶主檔</h4>
+          <p>EPA 欄位、承辦人可見性、LINE 綁定。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Customer Part -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-peach)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h4>客戶料號</h4>
+          <p>ODM 追蹤：客戶料號、圖號、版次、材質、公差、表面處理、多版次圖面管理。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Machine Master -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4"/></svg>
+          </div>
+          <h4>機台主檔</h4>
+          <p>6 分類（銑/車/磨/放電/線切割/其他）、6 種狀態、時薪費率、目前管制卡追蹤。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Routing Template -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          </div>
+          <h4>工序模板</h4>
+          <p>製程步驟範本，用於預估加工時間與排程。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Shipment -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h4>出貨管理</h4>
+          <p>DO-YYMMDD-NN 編號、部分出貨追蹤、多卡合併出貨、超交預防機制。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Quotation -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-rose)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>報價管理</h4>
+          <p>金屬加工專用報價，含工時估算與材料成本。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Sales Order -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-lemon)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h4>銷貨訂單</h4>
+          <p>客戶 PO 編號對應、圖面參照行號。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Purchase Order -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-peach)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h4>採購單</h4>
+          <p>材料採購 + 外包加工，追蹤供應商交期。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Supplier -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h4>供應商管理</h4>
+          <p>含外包分類（如電鍍廠），追蹤外包工序。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+        <!-- Dictionary -->
+        <div class="module-card">
+          <div class="mc-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h4>資料字典</h4>
+          <p>表面處理規格、管理者可擴充的選項清單。</p>
+          <span class="badge badge-live">已上線</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Challenges & Solutions ── -->
+    <div class="detail-grid fade-up">
+      <div class="detail-block">
+        <h2>挑戰</h2>
+        <ul>
+          <li>14 台 CNC 機台狀態靠人工巡場，異常發現平均慢 30 分鐘</li>
+          <li>Excel 追蹤工單進度，跨工序（銑床到車床到外包鍍膜）容易漏</li>
+          <li>派工靠資深師傅記憶和經驗，人一離開就斷層</li>
+          <li>工程圖面標題欄資料人工逐欄輸入，20 分鐘一張且易出錯</li>
+          <li>外包廠交期難追蹤，經常催不到回覆</li>
+          <li>CNC_Viewer（舊版監控軟體）與訂單系統完全分離，數據孤島</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <h2>解決方案</h2>
+        <ul>
+          <li>FANUC FOCAS 協議直連 CNC 控制器，5 秒推送即時狀態到 ERP</li>
+          <li>13 階段製程管制卡，每張工單從備料到出貨全程追蹤，歷史完整可查</li>
+          <li>派工決策紀錄系統，每次派工記錄原因 + AI 評分，知識不隨人走</li>
+          <li>GCV OCR + Claude Haiku 自動擷取 10 個標題欄位，2 分鐘完成</li>
+          <li>外包工序狀態機（送出到回收到入庫），逾期自動提醒</li>
+          <li>機台看板即時連動訂單，麥當勞式 5 秒刷新，一眼掌握全場</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── AI Features (Built) ── -->
+    <div class="ai-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-lavender)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        AI 功能（已建置）
+      </h2>
+      <div class="ai-detail-grid">
+        <!-- Drawing AI -->
+        <div class="ai-card ai-card-blue" style="background:var(--bg-blue)">
+          <span class="ai-badge" style="background:rgba(79,70,229,.1);color:var(--cta)">GCV + Claude Haiku</span>
+          <h4>工程圖面標題欄自動辨識</h4>
+          <p>上傳 PDF 或 JPG 工程圖面，系統自動執行 OCR 並提取 10 個結構化欄位：品名、料號、材質、版次、公差等。每個欄位獨立信心分數 (0-1)，低於 0.5 以紅色標記提醒人工審查。</p>
+          <div class="ai-flow">
+            <span class="ai-flow-step">上傳圖面</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">GCV OCR</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">Claude 欄位擷取</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">信心分數標記</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">人工審查</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">一鍵建卡</span>
+          </div>
+          <div class="ai-score-row">
+            <span class="ai-score ai-score-high">品名 0.95</span>
+            <span class="ai-score ai-score-high">料號 0.92</span>
+            <span class="ai-score ai-score-high">材質 0.88</span>
+            <span class="ai-score ai-score-mid">公差 0.72</span>
+            <span class="ai-score ai-score-low">表處 0.45</span>
+          </div>
+        </div>
+
+        <!-- Auto-Dispatch -->
+        <div class="ai-card ai-card-mint" style="background:var(--bg-mint)">
+          <span class="ai-badge" style="background:rgba(16,185,129,.1);color:#059669">3-Phase Engine</span>
+          <h4>AI 派工推薦引擎</h4>
+          <p>三階段決策：(1) 硬約束過濾機台類別與能力、(2) 軟評分加權 (3) Claude LLM 審查 Top 5 並產出自然語言理由。</p>
+          <div style="margin-top:16px">
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <div style="flex:1;min-width:120px;padding:12px;background:var(--surface);border-radius:var(--radius-xs);text-align:center;border:1px solid var(--border)">
+                <div style="font-size:.7rem;color:var(--text-sec);margin-bottom:4px">排隊量</div>
+                <div style="font-size:1.2rem;font-weight:800;color:var(--text)">0-30</div>
+              </div>
+              <div style="flex:1;min-width:120px;padding:12px;background:var(--surface);border-radius:var(--radius-xs);text-align:center;border:1px solid var(--border)">
+                <div style="font-size:.7rem;color:var(--text-sec);margin-bottom:4px">機台狀態</div>
+                <div style="font-size:1.2rem;font-weight:800;color:var(--text)">0-20</div>
+              </div>
+              <div style="flex:1;min-width:120px;padding:12px;background:var(--surface);border-radius:var(--radius-xs);text-align:center;border:1px solid var(--border)">
+                <div style="font-size:.7rem;color:var(--text-sec);margin-bottom:4px">稼動率</div>
+                <div style="font-size:1.2rem;font-weight:800;color:var(--text)">0-20</div>
+              </div>
+              <div style="flex:1;min-width:120px;padding:12px;background:var(--surface);border-radius:var(--radius-xs);text-align:center;border:1px solid var(--border)">
+                <div style="font-size:.7rem;color:var(--text-sec);margin-bottom:4px">歷史親和度</div>
+                <div style="font-size:1.2rem;font-weight:800;color:var(--text)">0-30</div>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:8px;font-size:.75rem;color:var(--text-sec)">總分 0-100，取 Top 5 送 LLM 審查</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AI Enhancement Suggestions ── -->
+    <div class="ai-enhance-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-lemon)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        AI 強化方向（規劃中）
+      </h2>
+      <div class="ai-enhance-grid">
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--mac-rose)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4>AI 品質預測</h4>
+          <p>根據機台狀況、材質、操作員、加工時段，預測不良品機率，在加工前預警。</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--mac-mint)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>AI 刀具壽命預測</h4>
+          <p>追蹤 FOCAS 刀具磨耗數據，預測最佳更換時機，避免刀具斷裂造成廢品。</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--mac-lavender)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4>AI 交期預估</h4>
+          <p>綜合目前排隊量、機台稼動率、歷史加工時間，自動估算可承諾交期。</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--mac-blue)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h4>AI 自動排程優化</h4>
+          <p>最佳化機台排程，最小化換模時間，最大化產出量，自動考慮機台能力與訂單優先序。</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--mac-peach)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h4>AI 圖面相似度搜尋</h4>
+          <p>上傳新圖面，自動比對歷史相似零件，快速參考過往報價與工序模板。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Build Progress ── -->
+    <div class="progress-section fade-up">
+      <h2 class="section-title">
+        <span class="st-icon" style="background:var(--bg-blue)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--cta)"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        </span>
+        建置進度 Phase 6 / 11
+      </h2>
+      <div class="progress-bar">
+        <div class="progress-segment progress-done"></div>
+        <div class="progress-segment progress-done"></div>
+        <div class="progress-segment progress-done"></div>
+        <div class="progress-segment progress-done"></div>
+        <div class="progress-segment progress-done"></div>
+        <div class="progress-segment progress-current"></div>
+        <div class="progress-segment progress-todo"></div>
+        <div class="progress-segment progress-todo"></div>
+        <div class="progress-segment progress-todo"></div>
+        <div class="progress-segment progress-todo"></div>
+        <div class="progress-segment progress-todo"></div>
+      </div>
+      <div class="progress-label">
+        <span>P1 主檔建立</span>
+        <span>P6 儀表板/排程（進行中）</span>
+        <span>P11 Email 解析</span>
+      </div>
+      <div class="progress-phases">
+        <div class="phase-chip phase-done">P1 主檔</div>
+        <div class="phase-chip phase-done">P2 報價</div>
+        <div class="phase-chip phase-done">P3 管制卡</div>
+        <div class="phase-chip phase-done">P4 機台</div>
+        <div class="phase-chip phase-done">P5 圖面AI</div>
+        <div class="phase-chip phase-current">P6 看板</div>
+        <div class="phase-chip phase-todo">P7 報價模板</div>
+        <div class="phase-chip phase-todo">P8 外包PO</div>
+        <div class="phase-chip phase-todo">P9 庫存</div>
+        <div class="phase-chip phase-todo">P10 AI排程</div>
+        <div class="phase-chip phase-todo">P11 Email</div>
+      </div>
+    </div>
+
+    <!-- ── Highlight Box ── -->
+    <div class="highlight-box fade-up">
+      <h3>技術亮點：從機台感知到 AI 決策的完整鏈路</h3>
+      <p>這不只是一套 ERP。透過 FANUC FOCAS 協議，我們讓 CNC 控制器的即時數據（運轉模式、主軸轉速、加工件數、警報碼）直接流入 ERP。Python 收集器每 5 秒推送，機台看板與訂單進度即時連動。再搭配 AI 圖面辨識省下 90% 建檔時間、AI 派工推薦讓排程決策有數據依據 -- 這是 ERP 內建的製造執行感知能力，不是另一套 MES。</p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="case-cta">
+      <a href="../index.html#contact" class="btn btn-primary">想了解更多？與我聯絡</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <div class="container">&copy; 2026 潤樋科技. All rights reserved.</div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

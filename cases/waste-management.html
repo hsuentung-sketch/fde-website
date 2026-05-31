@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>環保清運公司 — 潤樋科技案例</title>
+  <meta name="description" content="20+ 功能模組已上線、派車排程省 83%、AI 月報每位司機成本 $0.005">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .case-detail { padding: 60px 0; }
+    .back-link { display:inline-flex;align-items:center;gap:6px;color:var(--text-sec);font-size:.9rem;margin-bottom:32px;text-decoration:none; }
+    .back-link:hover { color:var(--green);text-decoration:none; }
+    .case-hero { background:linear-gradient(135deg,#1A2E1A,#0F3D2E);color:#fff;padding:72px 0 56px;margin-bottom:0; }
+    .case-hero-inner { display:flex;align-items:center;gap:20px;flex-wrap:wrap; }
+    .case-hero h1 { color:#fff;font-size:2.2rem; }
+    .case-hero .case-badge { font-size:.85rem;padding:4px 16px; }
+    .case-hero-sub { color:rgba(255,255,255,.7);font-size:1rem;margin-top:8px; }
+
+    /* Accent color for this case = green */
+    .detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:48px; }
+    .detail-block h2 { font-size:1.3rem;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--green); }
+    .detail-block p, .detail-block li { color:var(--text-sec);font-size:.95rem;line-height:1.8; }
+    .detail-block ul { list-style:none;padding:0; }
+    .detail-block li { padding:6px 0;display:flex;align-items:flex-start;gap:10px; }
+    .detail-block li::before { content:'';width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;margin-top:10px; }
+
+    /* Metrics */
+    .metrics-row { display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:56px; }
+    .metric-box { text-align:center;padding:28px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:transform .2s,box-shadow .2s; }
+    .metric-box:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
+    .metric-box .metric { display:block;font-size:2rem;font-weight:800;font-family:var(--font-num);margin-bottom:4px; }
+    .metric-box span { color:var(--text-sec);font-size:.82rem; }
+    .metric-box:nth-child(1) .metric { color:#0F3D2E; }
+    .metric-box:nth-child(2) .metric { color:var(--cta); }
+    .metric-box:nth-child(3) .metric { color:#B45309; }
+    .metric-box:nth-child(4) .metric { color:#0F766E; }
+    .metric-box:nth-child(5) .metric { color:var(--green); }
+
+    /* Before / After grid */
+    .ba-section { margin-bottom:56px; }
+    .ba-section > h2 { margin-bottom:24px; }
+    .ba-grid { display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border); }
+    .ba-side { padding:32px; }
+    .ba-before { background:var(--bg-rose); }
+    .ba-after { background:var(--bg-mint); }
+    .ba-label { font-size:1.05rem;font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:8px; }
+    .ba-before .ba-label { color:#DC2626; }
+    .ba-after .ba-label { color:#15803D; }
+    .ba-items { list-style:none;padding:0; }
+    .ba-items li { padding:10px 0;font-size:.9rem;color:var(--text-sec);display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid rgba(0,0,0,.05); }
+    .ba-items li:last-child { border-bottom:none; }
+    .ba-icon { flex-shrink:0;font-weight:700;font-size:.85rem;width:20px;text-align:center; }
+    .ba-before .ba-icon { color:#EF4444; }
+    .ba-after .ba-icon { color:#22C55E; }
+    .ba-metric { margin-left:auto;flex-shrink:0;font-weight:700;font-size:.78rem;padding:2px 10px;border-radius:12px;white-space:nowrap; }
+    .ba-before .ba-metric { background:#FEE2E2;color:#DC2626; }
+    .ba-after .ba-metric { background:#D1FAE5;color:#065F46; }
+
+    /* Module cards */
+    .module-section { margin-bottom:56px; }
+    .module-section > h2 { margin-bottom:24px; }
+    .module-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:16px; }
+    .module-card { padding:22px 18px;border-radius:var(--radius-sm);border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden; }
+    .module-card:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
+    .module-card .mc-icon { width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px; }
+    .module-card h4 { font-size:.92rem;margin-bottom:6px;color:var(--text); }
+    .module-card p { font-size:.8rem;color:var(--text-sec);line-height:1.5; }
+    .module-card .badge { position:absolute;top:12px;right:12px;font-size:.65rem;padding:2px 8px; }
+
+    /* AI features built */
+    .ai-built-section { margin-bottom:56px;padding:48px 0;background:var(--bg-lavender);border-radius:var(--radius);padding:40px; }
+    .ai-built-section > h2 { margin-bottom:24px; }
+    .ai-built-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+    .ai-built-card { background:var(--surface);border-radius:var(--radius-sm);padding:24px;border:1px solid var(--border);transition:transform .2s; }
+    .ai-built-card:hover { transform:translateY(-2px); }
+    .ai-built-card .ai-icon { width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px; }
+    .ai-built-card h4 { font-size:.95rem;margin-bottom:8px; }
+    .ai-built-card p { font-size:.85rem;color:var(--text-sec);line-height:1.6; }
+    .ai-built-card .ai-cost { display:inline-block;margin-top:10px;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:12px;background:#EDE9FE;color:#6D28D9; }
+
+    /* AI Enhancement suggestions */
+    .ai-enhance-section { margin-bottom:56px; }
+    .ai-enhance-section > h2 { margin-bottom:8px; }
+    .ai-enhance-section > p { color:var(--text-sec);margin-bottom:24px; }
+    .ai-enhance-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:16px; }
+    .ai-enhance-card { background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius-sm);padding:24px 18px;text-align:center;transition:transform .2s,border-color .2s; }
+    .ai-enhance-card:hover { transform:translateY(-3px);border-color:var(--cta); }
+    .ai-enhance-icon { width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px; }
+    .ai-enhance-card h4 { font-size:.88rem;margin-bottom:8px; }
+    .ai-enhance-card p { font-size:.78rem;color:var(--text-sec);line-height:1.5; }
+
+    /* Highlight box */
+    .highlight-box { background:linear-gradient(135deg,#F0FDF4,#EFF6FF);border:1px solid #86EFAC;border-radius:var(--radius);padding:36px;margin-bottom:48px; }
+    .highlight-box h3 { color:#065F46;margin-bottom:12px;font-size:1.2rem; }
+    .highlight-box p { color:var(--text-sec);font-size:.95rem;line-height:1.8; }
+
+    /* Dispatch flow mockup */
+    .dispatch-mockup { background:var(--navy);border-radius:var(--radius);padding:28px;margin-bottom:56px; }
+    .dispatch-mockup h3 { color:#fff;font-size:1rem;margin-bottom:20px;display:flex;align-items:center;gap:8px; }
+    .dispatch-flow { display:flex;align-items:center;gap:6px;flex-wrap:wrap; }
+    .dispatch-node { padding:10px 16px;border-radius:8px;font-size:.78rem;font-weight:700;white-space:nowrap; }
+    .dn-scheduled { background:rgba(96,165,250,.2);border:1px solid #60A5FA;color:#93C5FD; }
+    .dn-dispatched { background:rgba(251,191,36,.2);border:1px solid #FBBF24;color:#FDE68A; }
+    .dn-arrived { background:rgba(52,211,153,.2);border:1px solid #34D399;color:#6EE7B7; }
+    .dn-completed { background:rgba(16,185,129,.2);border:1px solid #10B981;color:#A7F3D0; }
+    .dn-returned { background:rgba(139,92,246,.2);border:1px solid #8B5CF6;color:#C4B5FD; }
+    .dispatch-arrow { color:rgba(255,255,255,.4);font-size:.8rem; }
+    .dispatch-labels { display:flex;gap:16px;flex-wrap:wrap;margin-top:16px; }
+    .dispatch-label { font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px; }
+    .dispatch-label span { display:inline-block;width:8px;height:8px;border-radius:3px; }
+
+    @media(max-width:1024px) {
+      .module-grid { grid-template-columns:repeat(3,1fr); }
+      .ai-enhance-grid { grid-template-columns:repeat(3,1fr); }
+    }
+    @media(max-width:768px) {
+      .detail-grid { grid-template-columns:1fr; }
+      .metrics-row { grid-template-columns:repeat(2,1fr); }
+      .ba-grid { grid-template-columns:1fr; }
+      .module-grid { grid-template-columns:repeat(2,1fr); }
+      .ai-built-grid { grid-template-columns:1fr; }
+      .ai-enhance-grid { grid-template-columns:repeat(2,1fr); }
+      .dispatch-flow { gap:4px; }
+    }
+    @media(max-width:480px) {
+      .metrics-row { grid-template-columns:1fr 1fr; }
+      .module-grid { grid-template-columns:1fr; }
+      .ai-enhance-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo" style="text-decoration:none">
+      <div class="logo-icon">R</div>
+      潤樋科技
+    </a>
+    <nav class="nav">
+      <a href="../index.html#cases">所有案例</a>
+      <a href="../index.html#contact" class="btn btn-primary" style="padding:8px 18px;font-size:.85rem">與我聯絡</a>
+    </nav>
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- ═══ Hero ═══ -->
+<section class="case-hero">
+  <div class="container">
+    <div class="case-hero-inner">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
+      <div>
+        <h1>華品環保 — 環保清運 ERP</h1>
+        <span class="case-badge badge-live">已上線 Production</span>
+        <p class="case-hero-sub">從派車到月結、從油耗到 AI 月報，全流程數位化的廢棄物清運管理系統</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Case Detail ═══ -->
+<section class="case-detail">
+  <div class="container">
+    <a href="../index.html#cases" class="back-link">&#8592; 返回所有案例</a>
+
+    <!-- ── Metrics Row ── -->
+    <div class="metrics-row fade-up">
+      <div class="metric-box">
+        <span class="metric" data-count="20">20+</span>
+        <span>功能模組已上線</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric">83%</span>
+        <span>派車排程時間節省</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric">3</span>
+        <span>報價模板</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric">4</span>
+        <span>AP 自動產生來源</span>
+      </div>
+      <div class="metric-box">
+        <span class="metric">$0.005</span>
+        <span>AI 月報 / 司機 / 月</span>
+      </div>
+    </div>
+
+    <!-- ── Before / After ── -->
+    <div class="ba-section fade-up">
+      <h2>導入前後對比</h2>
+      <div class="ba-grid">
+        <div class="ba-side ba-before">
+          <div class="ba-label">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+            導入前 — 人工作業
+          </div>
+          <ul class="ba-items">
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              派車排程打電話逐一聯繫司機
+              <span class="ba-metric">1 小時</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              月底手動統計油耗、製作分析報表
+              <span class="ba-metric">4 小時</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              壓縮車月結人工計算附加費用
+              <span class="ba-metric">2 天</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              司機績效靠主觀印象評估
+              <span class="ba-metric">半天</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              每日里程手寫行車日誌
+              <span class="ba-metric">手動</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10005;</span>
+              處理廠應付帳款人工算重量 x 費率
+              <span class="ba-metric">手動</span>
+            </li>
+          </ul>
+        </div>
+        <div class="ba-side ba-after">
+          <div class="ba-label">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            導入後 — 系統自動化
+          </div>
+          <ul class="ba-items">
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              系統排程 + LINE 推播通知司機
+              <span class="ba-metric">10 分鐘 / -83%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              AI 即時分析油耗與異常偵測
+              <span class="ba-metric">即時 / -99%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              自動月結含超重/超桶/處理費附加
+              <span class="ba-metric">5 分鐘 / -99%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              AI 月報 A-D 評分 + 中文評語
+              <span class="ba-metric">5 分鐘 / -98%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              儀錶板拍照 OCR 自動記錄里程
+              <span class="ba-metric">拍照即記 / -95%</span>
+            </li>
+            <li>
+              <span class="ba-icon">&#10003;</span>
+              從派車資料自動計算處理廠 AP
+              <span class="ba-metric">全自動 / -100%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Module Inventory ── -->
+    <div class="module-section fade-up">
+      <h2>20+ 功能模組總覽</h2>
+      <div class="module-grid">
+
+        <!-- 1. Customer Master -->
+        <div class="module-card" style="background:var(--bg-mint);">
+          <div class="mc-icon" style="background:#D1FAE5;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>客戶主檔</h4>
+          <p>EPA 欄位、管制編號、廢棄物代碼、清運合約 30 天到期提醒、統編 g0v 查詢</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 2. Supplier -->
+        <div class="module-card" style="background:var(--bg-blue);">
+          <div class="mc-icon" style="background:var(--mac-blue);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h4>處理廠 / 供應商</h4>
+          <p>EPA 許可證追蹤、到期自動停派、依廢棄物代碼計價</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 3. Driver -->
+        <div class="module-card" style="background:var(--bg-lemon);">
+          <div class="mc-icon" style="background:var(--mac-lemon);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>司機管理</h4>
+          <p>多駕照管理、駕照 30 天到期提醒</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 4. Vehicle -->
+        <div class="module-card" style="background:var(--bg-peach);">
+          <div class="mc-icon" style="background:var(--mac-peach);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h4>車隊管理</h4>
+          <p>里程追蹤、車輛主檔與調度</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 5. Tire -->
+        <div class="module-card" style="background:var(--bg-rose);">
+          <div class="mc-icon" style="background:var(--mac-rose);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h4>輪胎庫存</h4>
+          <p>安裝紀錄追蹤、庫存管理</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 6. Product -->
+        <div class="module-card" style="background:var(--bg-lavender);">
+          <div class="mc-icon" style="background:var(--mac-lavender);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h4>產品分類</h4>
+          <p>階層式分類管理</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 7. Quotation -->
+        <div class="module-card" style="background:var(--bg-mint);">
+          <div class="mc-icon" style="background:#D1FAE5;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>報價管理</h4>
+          <p>3 模板：壓縮車/工業廢棄物/營建；壓縮車 3 計價：月包/按桶/按趟</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 8. Sales Order -->
+        <div class="module-card" style="background:var(--bg-blue);">
+          <div class="mc-icon" style="background:var(--mac-blue);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+          </div>
+          <h4>銷貨管理</h4>
+          <p>報價自動轉單、派車整合、司機過磅回寫</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 9. Single Trip Dispatch -->
+        <div class="module-card" style="background:var(--bg-lemon);">
+          <div class="mc-icon" style="background:var(--mac-lemon);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <h4>單趟派車</h4>
+          <p>5 階段生命週期、LINE 推播、LIFF 操作、GPS、車輛衝突偵測</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 10. Compactor Route -->
+        <div class="module-card" style="background:var(--bg-peach);">
+          <div class="mc-icon" style="background:var(--mac-peach);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>壓縮車路線</h4>
+          <p>週模板 7 天、每日秤重/桶數、月結自動銷貨、3 項自動附加費</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 11. Fuel Management -->
+        <div class="module-card" style="background:var(--bg-rose);">
+          <div class="mc-icon" style="background:var(--mac-rose);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M3 22V2h12l4 4v16H3z"/><path d="M14 2v6h5"/><path d="M8 13h8M8 17h5"/></svg>
+          </div>
+          <h4>油料管理</h4>
+          <p>油卡 Excel 匯入（動態表頭）、司機拍照、自動算油耗 km/L、SHA256 去重</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 12. Maintenance -->
+        <div class="module-card" style="background:var(--bg-lavender);">
+          <div class="mc-icon" style="background:var(--mac-lavender);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>維修保養</h4>
+          <p>完整生命週期、LIFF 報修、廠商主檔、工/料/稅明細、90 天成本摘要</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 13. Inventory -->
+        <div class="module-card" style="background:var(--bg-mint);">
+          <div class="mc-icon" style="background:#D1FAE5;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h4>庫存管理</h4>
+          <p>PO 收貨自動入庫、逐品項開關</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 14. AR -->
+        <div class="module-card" style="background:var(--bg-blue);">
+          <div class="mc-icon" style="background:var(--mac-blue);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>應收帳款</h4>
+          <p>SO 自動建立 + 實重回寫、現金/月結 30/60/支票、1:1/1:N/N:1 沖帳、帳齡分析</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 15. AP -->
+        <div class="module-card" style="background:var(--bg-lemon);">
+          <div class="mc-icon" style="background:var(--mac-lemon);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h4>應付帳款</h4>
+          <p>4 來源自動產生：維修/輪胎/PO/處理廠（派車重量 x 費率）</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 16. Payment -->
+        <div class="module-card" style="background:var(--bg-peach);">
+          <div class="mc-icon" style="background:var(--mac-peach);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h4>收付款管理</h4>
+          <p>現金/匯款/支票全生命週期、逾期提醒、月結對帳 PDF</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 17. AI Monthly Report -->
+        <div class="module-card" style="background:var(--bg-lavender);">
+          <div class="mc-icon" style="background:var(--mac-lavender);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l7-7"/></svg>
+          </div>
+          <h4>AI 司機月報</h4>
+          <p>油耗/效率/里程/維修/輪胎/異常，規則計分 A-D，Claude Haiku 中文評語</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 18. AI Fuel Analysis -->
+        <div class="module-card" style="background:var(--bg-rose);">
+          <div class="mc-icon" style="background:var(--mac-rose);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>AI 油耗分析</h4>
+          <p>車隊油耗模式分析 + AI 中文評語</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 19. LINE / LIFF -->
+        <div class="module-card" style="background:var(--bg-mint);">
+          <div class="mc-icon" style="background:#D1FAE5;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>LINE / LIFF</h4>
+          <p>司機端：今日派車/歷史/油料/維修/月報/個人；管理端：名片 OCR 建客戶</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+        <!-- 20. System -->
+        <div class="module-card" style="background:var(--bg-blue);">
+          <div class="mc-icon" style="background:var(--mac-blue);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h4>系統管理</h4>
+          <p>4 角色權限、資料依指派可見、每日備份 30d/12w/24m、稽核日誌</p>
+          <span class="badge badge-live">上線</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Dispatch Flow Mockup ── -->
+    <div class="dispatch-mockup fade-up">
+      <h3>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        單趟派車生命週期（狀態流）
+      </h3>
+      <div class="dispatch-flow">
+        <div class="dispatch-node dn-scheduled">已排程 Scheduled</div>
+        <span class="dispatch-arrow">&#8594;</span>
+        <div class="dispatch-node dn-dispatched">已派車 Dispatched</div>
+        <span class="dispatch-arrow">&#8594;</span>
+        <div class="dispatch-node dn-arrived">已到場 Arrived</div>
+        <span class="dispatch-arrow">&#8594;</span>
+        <div class="dispatch-node dn-completed">已完成 Completed</div>
+        <span class="dispatch-arrow">&#8594;</span>
+        <div class="dispatch-node dn-returned">已回場 Returned</div>
+      </div>
+      <div class="dispatch-labels">
+        <div class="dispatch-label"><span style="background:#60A5FA"></span>LINE 推播通知司機</div>
+        <div class="dispatch-label"><span style="background:#FBBF24"></span>LIFF 操作回報</div>
+        <div class="dispatch-label"><span style="background:#34D399"></span>GPS 定位紀錄</div>
+        <div class="dispatch-label"><span style="background:#8B5CF6"></span>過磅資料自動回寫</div>
+      </div>
+    </div>
+
+    <!-- ── Challenges & Solutions ── -->
+    <div class="detail-grid fade-up">
+      <div class="detail-block">
+        <h2>挑戰</h2>
+        <ul>
+          <li>司機/車輛/油耗/維修/輪胎分散在 20+ 個 Excel，資料無法交叉分析</li>
+          <li>壓縮車/工業/營建三種廢棄物報價邏輯完全不同，每次手動計算</li>
+          <li>壓縮車月結需比對每日秤重、桶數，再人工算超重/超桶附加費</li>
+          <li>派車靠電話逐一通知司機，衝突排程時有所聞</li>
+          <li>處理廠 EPA 許可證到期無人追蹤，風險合規全靠記憶</li>
+          <li>司機績效無客觀量化，考核流於形式</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <h2>解決方案</h2>
+        <ul>
+          <li>20+ 模組統一平台，所有數據即時連動、交叉分析</li>
+          <li>3 種報價模板，壓縮車另含 3 種計價方式（月包/按桶/按趟）</li>
+          <li>壓縮車路線自動月結，3 項附加費自動計算（超重/超桶/處理費）</li>
+          <li>系統排程 + LINE 推播 + 車輛衝突即時偵測</li>
+          <li>處理廠許可證到期自動封鎖派車，清運合約 30 天到期提醒</li>
+          <li>AI 月報依油耗/里程/維修/輪胎計分 A-D 等級，Claude Haiku 生成評語</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── AI Features (Built) ── -->
+    <div class="ai-built-section fade-up">
+      <h2>已上線的 AI 功能</h2>
+      <div class="ai-built-grid">
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-lavender);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l7-7"/></svg>
+          </div>
+          <h4>AI 司機月報</h4>
+          <p>以規則引擎對每位司機的油耗、效率、里程、維修、輪胎、異常等六維度計分 0-100，轉換 A-D 等級。Claude Haiku 為每人生成個人化中文評語與改善建議。</p>
+          <span class="ai-cost">~$0.005 / 司機 / 月</span>
+        </div>
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-rose);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4>AI 油耗分析</h4>
+          <p>自動分析車隊油耗消費模式，比對車輛間差異與歷史趨勢，AI 生成中文洞察報告與異常標記。</p>
+        </div>
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-mint);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <h4>OCR 辨識套件</h4>
+          <p>Google Vision 整合：儀錶板里程拍照自動讀數、名片拍照自動建客戶、車牌辨識、輪胎胎壁辨識。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AI Enhancement Suggestions ── -->
+    <div class="ai-enhance-section fade-up">
+      <h2>AI 進階擴充方向</h2>
+      <p>基於現有數據基礎，未來可進一步導入的智慧功能</p>
+      <div class="ai-enhance-grid">
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--bg-mint);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <h4>AI 路線優化</h4>
+          <p>基於 GPS 歷史、交通模式與客戶位置，自動規劃最佳每日路線</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--bg-lemon);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>AI 預測性維修</h4>
+          <p>從里程/油耗/維修歷史預測車輛保養需求，提前排程避免故障停工</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--bg-lavender);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <h4>AI 廢棄物分類</h4>
+          <p>現場相機辨識廢棄物類別，自動對應計費代碼，精準計價不漏帳</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--bg-blue);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/></svg>
+          </div>
+          <h4>AI 合約續約</h4>
+          <p>根據客戶行為模式預測續約機率與最佳洽談時機，主動提醒業務</p>
+        </div>
+        <div class="ai-enhance-card">
+          <div class="ai-enhance-icon" style="background:var(--bg-rose);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h4>AI 油耗異常偵測</h4>
+          <p>即時比對油耗異常模式（偷油/漏油/低效駕駛），自動通知管理者</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Highlight Box ── -->
+    <div class="highlight-box fade-up">
+      <h3>為什麼這個案例代表我們的技術深度？</h3>
+      <p>環保清運不是標準 ERP 能解決的行業。EPA 法規欄位、廢棄物代碼、處理廠許可證、壓縮車路線月結附加費 — 每一個都是行業特有邏輯。我們沒有用通用模組硬套，而是<strong>從產業流程出發</strong>，逐一拆解 20+ 個模組。更重要的是，AI 不是事後加上去的噱頭：從第一天起就用 Claude Haiku 生成司機月報、用 Google Vision 做 OCR，<strong>每位司機每月 AI 成本不到 $0.005</strong>，證明 AI 可以在中小企業真正落地而非只是概念。</p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div style="text-align:center;padding:20px 0">
+      <a href="../index.html#contact" class="btn btn-primary" style="font-size:1rem;padding:16px 40px;background:var(--green);box-shadow:0 4px 12px rgba(16,185,129,.3)">和我們聊聊你的行業需求</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">&copy; 2026 潤樋科技. All rights reserved.</div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
