@@ -1297,6 +1297,16 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   h2 { font-size: 1.6rem; }
 
   .nav { display: none; }
+
+  /* 開選單時移除 header 的 backdrop-filter，
+     否則 fixed 子元素會相對 header 定位 */
+  body.menu-open { overflow: hidden; }
+  body.menu-open .header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #fff;
+  }
+
   .nav.open {
     display: flex;
     flex-direction: column;

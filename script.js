@@ -47,11 +47,13 @@
   if (hamburger && nav) {
     hamburger.addEventListener('click', () => {
       nav.classList.toggle('open');
+      document.body.classList.toggle('menu-open', nav.classList.contains('open'));
       hamburger.innerHTML = nav.classList.contains('open') ? '&#10005;' : '&#9776;';
     });
     nav.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
         nav.classList.remove('open');
+        document.body.classList.remove('menu-open');
         hamburger.innerHTML = '&#9776;';
       });
     });
