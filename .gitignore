@@ -4,3 +4,5 @@ Thumbs.db
 .env
 SESSION-STATE.md
 DESIGN-LOG.md
+downloads/package-lock.json
+downloads/preview-*.png

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>精密金屬加工廠案例 — 潤樋科技 FDE 自動化流程優化服務</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pdf-styles.css">
+</head>
+<body>
+
+<!-- ═══════════════ P1 封面 ═══════════════ -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="cover-logo">R</div>
+    <div class="cover-brand">潤樋科技 FDE 自動化流程優化服務</div>
+  </div>
+
+  <div class="cover-middle">
+    <div class="cover-tag">CASE STUDY · 2026</div>
+    <h1 class="cover-title">精密金屬加工廠<br>數位轉型案例</h1>
+    <p class="cover-sub">
+      14 台 CNC 即時監控、13 階段製程管制卡、FANUC FOCAS 機台整合、AI 圖面辨識——<br>
+      從 Excel 紙本管理到全數位製造執行系統。
+    </p>
+
+    <div class="cover-metrics">
+      <div class="cover-metric"><div class="cm-num">14</div><div class="cm-label">CNC 機台</div></div>
+      <div class="cover-metric"><div class="cm-num">13</div><div class="cm-label">階段製程卡</div></div>
+      <div class="cover-metric"><div class="cm-num">5<span style="font-size:11pt">秒</span></div><div class="cm-label">看板刷新</div></div>
+      <div class="cover-metric"><div class="cm-num">10</div><div class="cm-label">標題欄抽取</div></div>
+      <div class="cover-metric"><div class="cm-num">100%</div><div class="cm-label">操作追溯</div></div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cb-contact">
+      <strong>潤樋科技</strong>
+      runtong.tw@gmail.com<br>
+      https://hsuentung-sketch.github.io/fde-website/
+    </div>
+    <div>v1.0 · 2026-06-01</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P2 客戶輪廓 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>2 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">客戶輪廓</span>
+    <h2>導入背景：一家中型精密金屬加工廠</h2>
+    <p class="lead">坐落於台灣中部、員工約 40 名、年產值近億的精密金屬加工廠。承接半導體設備、光學模具、航太零組件的客製化精密件加工，客戶要求 ±0.005mm 精度。</p>
+
+    <div class="grid-3" style="margin-top:14pt">
+      <div class="metric"><span class="m-num">14</span><span class="m-label">CNC 加工機台</span></div>
+      <div class="metric"><span class="m-num">40+</span><span class="m-label">第一線員工</span></div>
+      <div class="metric"><span class="m-num">100+</span><span class="m-label">每月活躍訂單</span></div>
+    </div>
+
+    <h3 style="margin-top:18pt">為什麼需要數位化？</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-lemon">
+        <div class="card-icon icon-lemon">📋</div>
+        <h4>派工資訊散落紙本</h4>
+        <p>製程卡用紙本流轉，師傅口頭交接，新人無從學起；卡片潰失就重畫。</p>
+      </div>
+      <div class="card card-rose">
+        <div class="card-icon icon-rose">⏰</div>
+        <h4>機台狀態看現場才知道</h4>
+        <p>14 台機台分散在兩個廠房，廠長要走一圈才知道誰閒置、誰停機；派工常衝突。</p>
+      </div>
+      <div class="card card-peach">
+        <div class="card-icon icon-peach">💼</div>
+        <h4>業務報價靠老師傅經驗</h4>
+        <p>每筆報價要 call out 工程師、查歷史單、看圖面；新人三個月才有 sense。</p>
+      </div>
+      <div class="card card-blue">
+        <div class="card-icon icon-blue">📊</div>
+        <h4>績效獎金憑感覺打</h4>
+        <p>誰加工良率高、誰異常少、誰常拖件，全沒數據；獎金發了沒人服氣。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P3 導入前痛點 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>3 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-rose">BEFORE — 導入前</span>
+    <h2>六個一直無法解決的老問題</h2>
+
+    <div class="ba-grid" style="margin-top:14pt">
+      <div class="ba-side ba-before">
+        <span class="ba-label ba-label-before">手動 / 紙本時代</span>
+        <ul>
+          <li><strong>Excel 報價單存個人桌機</strong>，業務離職就拿走客戶名單</li>
+          <li><strong>製程卡紙本流轉</strong>，卡丟了補不回來，師傅交接靠口頭</li>
+          <li><strong>機台狀態</strong>要走到現場看，廠長一天走 20 次也跟不上</li>
+          <li><strong>派工衝突</strong>，兩個師傅搶同一台機；換刀又要等程式</li>
+          <li><strong>外協送出去就忘了</strong>，等對方打來才知道沒回廠</li>
+          <li><strong>每月對帳</strong>，會計用 Excel 算到天荒地老</li>
+        </ul>
+      </div>
+      <div class="ba-side ba-after">
+        <span class="ba-label ba-label-after">AFTER — 數位化後</span>
+        <ul>
+          <li><strong>所有訂單、報價、圖面</strong>在系統，異動自動稽核</li>
+          <li><strong>13 階段製程管制卡</strong>，每張卡狀態即時可查、可追溯</li>
+          <li><strong>機台看板 5 秒刷新</strong>，FOCAS 整合自動抓加工/閒置/異常</li>
+          <li><strong>派工拖放</strong>，衝突自動偵測、派單原因強制紀錄</li>
+          <li><strong>外協 PO 自動建</strong>，超交預警，收貨自動推卡片進度</li>
+          <li><strong>應收帳款自動結算</strong>，月底結帳 5 分鐘搞定</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:14pt">
+      <h4>🎯 系統的核心價值：把「人腦記」全部變成「系統記」</h4>
+      <p>不是用軟體取代人，而是把容易忘、容易錯、容易跑掉的細節，全部變成系統自動處理。讓師傅專心做加工、業務專心顧客戶、老闆專心看數據。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P4 13 階段製程卡 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>4 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">Phase 1 已上線 — 一般流程</span>
+    <h2>13 階段製程管制卡：每張卡的一生</h2>
+    <p class="lead">客戶下單 → 圖面建卡 → 派工加工 → 入庫出貨。每張卡都有狀態機，前一步沒做完，下一步不能跳。</p>
+
+    <div class="timeline" style="margin-top:18pt">
+      <div class="tl-node"><div class="tl-dot">1</div><div class="tl-label">待備料</div></div>
+      <div class="tl-node"><div class="tl-dot">2</div><div class="tl-label">已到料</div></div>
+      <div class="tl-node"><div class="tl-dot">3</div><div class="tl-label">程式區</div></div>
+      <div class="tl-node"><div class="tl-dot">4</div><div class="tl-label">待上機</div></div>
+      <div class="tl-node"><div class="tl-dot">5</div><div class="tl-label">加工中</div></div>
+      <div class="tl-node"><div class="tl-dot">6</div><div class="tl-label">QC 檢驗</div></div>
+      <div class="tl-node"><div class="tl-dot">7</div><div class="tl-label">後製成</div></div>
+      <div class="tl-node"><div class="tl-dot">8</div><div class="tl-label">送委外</div></div>
+      <div class="tl-node"><div class="tl-dot">9</div><div class="tl-label">委外回</div></div>
+      <div class="tl-node"><div class="tl-dot">10</div><div class="tl-label">入庫</div></div>
+      <div class="tl-node"><div class="tl-dot">11</div><div class="tl-label">出貨</div></div>
+      <div class="tl-node"><div class="tl-dot">12</div><div class="tl-label">暫停</div></div>
+      <div class="tl-node"><div class="tl-dot">13</div><div class="tl-label">取消</div></div>
+    </div>
+
+    <h3 style="margin-top:18pt">設計重點</h3>
+    <div class="grid-3" style="margin-top:8pt">
+      <div class="card">
+        <h4>🔒 狀態機白名單</h4>
+        <p>每個階段只能轉到合法的下一站；不能從「加工中」直接跳「出貨」。資料源頭錯不了。</p>
+      </div>
+      <div class="card">
+        <h4>📸 Snapshot 凍結</h4>
+        <p>建卡時把客戶料號/圖號/版次複製一份在卡上；客戶之後改基本檔，已開卡不受影響。</p>
+      </div>
+      <div class="card">
+        <h4>📜 完整稽核</h4>
+        <p>每次階段轉換、誰操作、時間、備註，全進 Audit Log。爭議「誰改的」一查就有。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P5 Dashboard 截圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>5 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 1/4</span>
+    <h2>Dashboard 經營儀表板</h2>
+    <p class="lead">老闆早上開電腦第一眼看的畫面。三區 KPI：生產進度、出貨/訂單、交期風險 3 日預警。</p>
+
+    <div class="screen">
+      <img src="screenshots/01-dashboard.png" alt="Dashboard 截圖">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card card-blue">
+        <h4>生產概況</h4>
+        <p>進行中製程卡、逾期、未派工，一眼看清。下方階段細分（待上機 8、加工中 6、QC 4...）讓廠長知道瓶頸在哪。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>出貨 / 訂單</h4>
+        <p>本月訂單、本月金額、本月出貨、未完成訂單。業務看 KPI 進度。</p>
+      </div>
+      <div class="card card-rose">
+        <h4>交期風險</h4>
+        <p>已逾期、3 日內到期、7 日內到期。紅色高亮，老闆能立刻指派人員追單。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P6 Machine Board 截圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>6 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 2/4</span>
+    <h2>機台即時看板 — 14 台 CNC 一目了然</h2>
+    <p class="lead">5 秒自動刷新。每張卡顯示機台名稱、品牌、狀態（加工中 / 待機 / 異常 / 架機）、目前加工件、FOCAS 即時數據。</p>
+
+    <div class="screen">
+      <img src="screenshots/02-machine-board.png" alt="Machine Board 截圖">
+    </div>
+
+    <div class="grid-2" style="margin-top:10pt">
+      <div class="card card-mint">
+        <h4>✅ FANUC FOCAS 整合</h4>
+        <p>透過 CNC 機台原廠 FOCAS protocol 即時抓加工狀態、主軸轉速、進給速度。不需另外裝感測器。</p>
+      </div>
+      <div class="card card-lemon">
+        <h4>⚡ 5 秒 polling 刷新</h4>
+        <p>瀏覽器自動 polling 後端 API，狀態變化即時呈現。廠長坐在辦公室就能掌握全廠 14 台機台動向。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P7 Production Tracker 截圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>7 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 3/4</span>
+    <h2>製程卡列表 — 全廠訂單一表掌握</h2>
+    <p class="lead">Excel 式表格。卡號、下單日、交期、發圖日、客戶圖號、規格、數量、表處、委外廠、階段、預計完成日全在一頁。可搜尋、可篩選、雙擊看詳細。</p>
+
+    <div class="screen">
+      <img src="screenshots/03-production-tracker.png" alt="Production Tracker 截圖">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card">
+        <h4>🔍 多欄位篩選</h4>
+        <p>依階段、客戶、交期區間篩選；含已取消可勾選。生管最常用的入口頁。</p>
+      </div>
+      <div class="card">
+        <h4>📊 階段徽章顏色</h4>
+        <p>已出貨綠、送委外橘、後製成藍、QC 灰、委外回紅。一眼看出每張卡卡在哪。</p>
+      </div>
+      <div class="card">
+        <h4>✏️ 雙擊編輯</h4>
+        <p>進詳細 modal 可改 PO 號、追加註記、看歷史變更紀錄、列印 QR 標籤。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P8 Dispatch 截圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>8 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 4/4</span>
+    <h2>派工看板 — 拖放分配機台</h2>
+    <p class="lead">左欄「待派工」清單，右側依機台分類（銑床/車床/磨床/放電）。拖卡片到目標機台 → 衝突自動偵測 → 派單原因強制填寫。</p>
+
+    <div class="screen">
+      <img src="screenshots/04-dispatch.png" alt="Dispatch 截圖">
+    </div>
+
+    <div class="grid-2" style="margin-top:10pt">
+      <div class="card card-rose">
+        <h4>⚠️ 衝突軟警告</h4>
+        <p>機台已有排程？系統警告但不阻擋——廠長知道情境，可以強制覆蓋（會記理由）。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📝 派工原因紀錄</h4>
+        <p>每次派工都要寫「為什麼選這台」（如：師傅熟、夾治具現成、其他在跑長件）。<br><strong>這些紀錄將來訓練 AI 自動派工。</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P9 LIFF 員工介面 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>9 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">員工端 — LIFF</span>
+    <h2>師傅用 LINE 就能操作，零學習成本</h2>
+    <p class="lead">員工掃 QR Code 進 LIFF，看自己今天要做的卡片。5 大按鈕：架機、上機、換料、異常、完工。手指點下去就更新狀態，不用敲鍵盤。</p>
+
+    <div class="grid-2" style="margin-top:14pt; gap:14pt">
+      <div>
+        <div class="screen" style="max-width:80%; margin:0 auto">
+          <img src="screenshots/05-liff-operator.png" alt="LIFF 操作員首頁">
+        </div>
+        <p class="screen-caption">我的卡片清單（手機 LINE 介面）</p>
+      </div>
+      <div>
+        <div class="card card-mint">
+          <h4>✅ 零硬體投入</h4>
+          <p>不用平板、不用工業電腦。員工手機 + LINE 就能用。</p>
+        </div>
+        <div class="card card-lemon" style="margin-top:8pt">
+          <h4>✅ 零訓練成本</h4>
+          <p>大字按鈕、單一動作、立即回饋。新人到職當天就能上工。</p>
+        </div>
+        <div class="card card-lavender" style="margin-top:8pt">
+          <h4>✅ 自動稽核</h4>
+          <p>誰按完工、什麼時間、卡的位置全自動記錄，獎金績效有數據。</p>
+        </div>
+        <div class="card card-blue" style="margin-top:8pt">
+          <h4>✅ 異常即時通知</h4>
+          <p>師傅按異常 → LINE 推播給廠長 → 5 秒內知道；不用走過去找人。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P10 模組總覽 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>10 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">系統總覽</span>
+    <h2>16 個功能模組（紫色 = AI 加值）</h2>
+
+    <div class="modules" style="margin-top:14pt">
+      <div class="module"><div class="m-icon">📊</div><h5>Dashboard</h5><div class="m-desc">經營儀表板</div></div>
+      <div class="module"><div class="m-icon">📁</div><h5>主檔管理</h5><div class="m-desc">客戶/供應商/產品/機台</div></div>
+      <div class="module"><div class="m-icon">💰</div><h5>報價</h5><div class="m-desc">金屬加工專屬模板</div></div>
+      <div class="module"><div class="m-icon">📋</div><h5>銷貨單</h5><div class="m-desc">線上編輯</div></div>
+      <div class="module"><div class="m-icon">🗂️</div><h5>製程卡列表</h5><div class="m-desc">13 階段追蹤</div></div>
+      <div class="module"><div class="m-icon">🔧</div><h5>派工看板</h5><div class="m-desc">拖放派機台</div></div>
+      <div class="module"><div class="m-icon">📺</div><h5>機台看板</h5><div class="m-desc">FOCAS 即時整合</div></div>
+      <div class="module"><div class="m-icon">📅</div><h5>排程時間軸</h5><div class="m-desc">甘特圖式排程</div></div>
+      <div class="module is-ai"><div class="m-icon">🤖</div><h5>圖面擷取</h5><div class="m-desc">OCR + AI 抽欄位</div><span class="ai-mini">AI</span></div>
+      <div class="module"><div class="m-icon">🏭</div><h5>委外追蹤</h5><div class="m-desc">電鍍廠 PO 管理</div></div>
+      <div class="module"><div class="m-icon">🛒</div><h5>採購</h5><div class="m-desc">採購單 / 收貨</div></div>
+      <div class="module"><div class="m-icon">🚚</div><h5>出貨</h5><div class="m-desc">DO 編號 / 部分出貨</div></div>
+      <div class="module"><div class="m-icon">💵</div><h5>應收應付</h5><div class="m-desc">帳齡 / 期末結帳</div></div>
+      <div class="module"><div class="m-icon">📦</div><h5>庫存</h5><div class="m-desc">投料入庫對齊製程</div></div>
+      <div class="module"><div class="m-icon">📈</div><h5>報表</h5><div class="m-desc">機台稼動 / 成本歸集</div></div>
+      <div class="module"><div class="m-icon">🔐</div><h5>稽核日誌</h5><div class="m-desc">全系統操作追溯</div></div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:14pt">
+      <h4>💡 模組是可選的</h4>
+      <p>每個模組都可開可關。中小廠導入時可從「主檔+製程卡+機台看板」三個核心開始，後續再加報價、外協、AI 圖面等模組。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P11 進階流程總覽 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>11 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">Phase 2 規劃中 — 進階流程</span>
+    <h2>未來願景：從 Email 進來，到請款結束，全自動</h2>
+    <p class="lead">客戶把訂單與圖面 Email 過來 → 系統自動抽資料、建製程卡、AI 派工 → 完成後自動產 PO 委外、收貨、出貨、請款。整個流程業主只需要在關鍵節點確認。</p>
+
+    <div class="flow-diagram" style="margin-top:18pt">
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-blue)">📧</div>
+        <h5>1. Email 接單</h5>
+        <div class="fs-desc">監控信箱、抽 PO 與圖面</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-lavender)">📐</div>
+        <h5>2. 圖面辨識</h5>
+        <div class="fs-desc">OCR + AI 抽 10 欄位</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-mint)">🔀</div>
+        <h5>3. 自動派工</h5>
+        <div class="fs-desc">三層機制推薦機台</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-lemon)">📑</div>
+        <h5>4. 自動 PO</h5>
+        <div class="fs-desc">外協委單 / 收貨</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-peach)">💸</div>
+        <h5>5. 自動請款</h5>
+        <div class="fs-desc">出貨 → 請款 → 對帳</div>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:16pt">
+      <h4>🎯 業主在哪些節點需要確認？</h4>
+      <p style="font-size:9.5pt; line-height:1.8">
+        <strong>① Email 進來</strong> → 系統建草稿卡，業主審核後正式建卡<br>
+        <strong>② 圖面 AI 抽欄位</strong> → 業主確認規格無誤<br>
+        <strong>③ AI 派工推薦</strong> → 廠長確認機台選擇（可改）<br>
+        <strong>④ 出貨前</strong> → QC 確認規格、業主放行出貨<br>
+        <strong>⑤ 請款前</strong> → 會計確認金額、業主用印
+      </p>
+    </div>
+
+    <div class="muted" style="margin-top:10pt; text-align:center">
+      ※ Phase 2 為規劃中功能，依各客戶需求獨立評估開發
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P12 AI Email 接單 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>12 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階功能 1/5</span>
+    <h2>Email 自動接單</h2>
+    <p class="lead">業務不用再從信箱複製貼上。客戶 Email 一進來，系統自動讀取主旨、附件、PO 內容，建好草稿卡等業主確認。</p>
+
+    <h3 style="margin-top:16pt">流程</h3>
+    <div class="flow-diagram" style="margin-top:8pt">
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-blue)">📥</div>
+        <h5>監聽信箱</h5>
+        <div class="fs-desc">Gmail / IMAP polling</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-lavender)">🔍</div>
+        <h5>抽取 PO 欄位</h5>
+        <div class="fs-desc">Claude Haiku + 字典</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-mint)">📎</div>
+        <h5>處理圖面附件</h5>
+        <div class="fs-desc">GCV OCR + 抽標題</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-peach)">📝</div>
+        <h5>建草稿卡</h5>
+        <div class="fs-desc">業務 review 後上線</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-lemon)">✅</div>
+        <h5>正式建卡</h5>
+        <div class="fs-desc">業務一鍵確認</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:16pt">技術細節</h3>
+    <div class="grid-3" style="margin-top:8pt">
+      <div class="card card-lavender">
+        <h4>📬 信箱整合</h4>
+        <p>Gmail API 或 IMAP polling。每 60 秒掃一次新信，符合白名單寄件人才處理。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>🧠 Claude Haiku + 字典</h4>
+        <p>業主常用客戶清單、料號慣例、規格用語做 Few-shot prompt，AI 抽取準確率 90%+。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>👤 業主把關</h4>
+        <p>AI 抽出的草稿一律進「待審核」清單；業務 5 秒看完點確認，不對的可改再送。</p>
+      </div>
+    </div>
+
+    <div class="card card-lemon" style="margin-top:14pt">
+      <h4>💰 預估成本</h4>
+      <p>每封信平均成本 NT$ 0.05（Claude Haiku token 費）。每月 500 封信約 NT$ 25。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P13 AI 圖面辨識 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>13 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階功能 2/5</span>
+    <h2>AI 圖面辨識：從 PDF / JPG 抽 10 個關鍵欄位</h2>
+    <p class="lead">客戶傳來機械工程圖（PDF 或 JPG），系統用 Google Cloud Vision OCR + Claude AI 自動抽取標題欄位：圖號、料號、版次、材質、表面處理、尺寸、數量、交期...等。</p>
+
+    <div class="screen">
+      <img src="screenshots/07-drawing-ingest.png" alt="Drawing Ingest 截圖">
+    </div>
+
+    <h3 style="margin-top:14pt">抽取的 10 個欄位</h3>
+    <div class="grid-5" style="margin-top:8pt">
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">圖號</span><span class="m-label">Drawing No.</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">料號</span><span class="m-label">Part No.</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">版次</span><span class="m-label">Revision</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">材質</span><span class="m-label">Material</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">表處</span><span class="m-label">Surface</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">尺寸</span><span class="m-label">Dimension</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">數量</span><span class="m-label">Qty</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">交期</span><span class="m-label">Due Date</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">公差</span><span class="m-label">Tolerance</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">客戶</span><span class="m-label">Customer</span></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:14pt">
+      <div class="card card-mint">
+        <h4>✅ 信心度標示</h4>
+        <p>每個欄位附 confidence 分數（0-1）。低於 0.7 自動標紅，提醒業務人工檢查。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📚 記憶該客戶慣例</h4>
+        <p>同一客戶的圖面格式通常一致。系統會學該客戶的標題位置慣例，越用越準。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P14 AI 自動派工 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>14 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階功能 3/5</span>
+    <h2>AI 自動派工：硬約束 → 軟排序 → LLM 複審</h2>
+    <p class="lead">廠長派工的經驗值，AI 學起來。三層機制確保推薦既符合工藝硬規則，又考慮歷史成功率，最後由 Claude 給出推薦+替代方案+原因。</p>
+
+    <div class="stage-list" style="margin-top:14pt">
+      <div class="stage-row">
+        <div class="stage-num">1</div>
+        <div class="stage-body">
+          <h4>第一層：硬約束過濾</h4>
+          <div class="stage-meta">確定性規則 / 無 AI</div>
+          <p>機台類別匹配（銑床↔銑床）+ 尺寸能力檢查（工件不能大於機台行程）。過不了直接刷掉。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">2</div>
+        <div class="stage-body">
+          <h4>第二層：軟排序計分（0-100）</h4>
+          <div class="stage-meta">機器學習 / 多因子加權</div>
+          <p>佇列長度（30%）+ 機台當前狀態（20%）+ 機台稼動率（20%）+ 歷史成功率（30%）。分數越高越優。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">3</div>
+        <div class="stage-body">
+          <h4>第三層：Claude LLM 複審</h4>
+          <div class="stage-meta">大語言模型 / 給出推薦理由</div>
+          <p>把前 5 名候選+分數+類似案例的派工歷史送給 Claude，回傳：「推薦 MILL-03，替代方案 MILL-05，理由：MILL-03 上週剛做過同尺寸 SUS304，刀具設定可重用，預估省 2 小時換刀。」</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-mint" style="margin-top:14pt">
+      <h4>👨‍🏭 廠長保有最終決定權</h4>
+      <p>AI 推薦只是建議，廠長一定要按確認才會派出去。如果改別台，理由會被自動記下來，下次 AI 學會。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P15 自動 PO + 委外 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>15 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階功能 4/5</span>
+    <h2>自動 PO 與外協委外流程</h2>
+    <p class="lead">製程卡進入「送委外」階段 → 系統自動建草稿 PO，預設帶入該料件慣用的電鍍/熱處理廠商。業主確認後寄出，收貨時系統自動把卡片推進「委外回」。</p>
+
+    <div class="screen">
+      <img src="screenshots/08-outsource.png" alt="Outsource 截圖">
+    </div>
+
+    <div class="grid-2" style="margin-top:12pt">
+      <div class="card card-blue">
+        <h4>📋 PO 自動建立</h4>
+        <p>卡片進 sent_outsource → 系統自動建 draft PO（委外廠預設、單價依歷史單）→ 業務一鍵發送。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>🔄 收貨自動推進度</h4>
+        <p>外協廠交回 → 倉管掃 QR 收貨 → 系統自動把該卡推到「委外回」階段 + 時戳。不用人手動改。</p>
+      </div>
+    </div>
+
+    <div class="card card-rose" style="margin-top:10pt">
+      <h4>⚠️ 超交預警</h4>
+      <p>外協 PO 預計交期前 3 天未收到 → 自動 LINE 通知採購；交期當日未收到 → 上紅色警示。不會再「送出去就忘了」。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P16 自動請款 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>16 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階功能 5/5</span>
+    <h2>自動請款流程</h2>
+    <p class="lead">製程卡完成出貨 → 系統依客戶月結條件自動產生請款單草稿 → 業務確認 → 發送請款單 PDF + 自動對帳。</p>
+
+    <div class="screen">
+      <img src="screenshots/09-shipment.png" alt="Shipment 截圖">
+    </div>
+
+    <div class="grid-4" style="margin-top:12pt">
+      <div class="card card-lemon">
+        <h4>📦 出貨</h4>
+        <p>DO-YYMMDD-NN 編號、部分出貨、多卡合併。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📄 請款單</h4>
+        <p>依月結條件自動產生，PDF 樣板可客製。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>💵 對帳</h4>
+        <p>銀行入帳匯入比對；款項到位自動沖帳。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📊 帳齡分析</h4>
+        <p>30/60/90 天逾期客戶清單，業務追款有依據。</p>
+      </div>
+    </div>
+
+    <div class="card card-mint" style="margin-top:12pt">
+      <h4>📈 業務效益</h4>
+      <p>月底結帳從 2 天（會計手動 Excel 對帳）縮到 5 分鐘（系統自動產報表）。應收帳款收回速度提升 30%。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P17 資安機制 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>17 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-rose">資料安全</span>
+    <h2>企業級資安標準，不是「家用級」軟體</h2>
+    <p class="lead">客戶的圖面、報價、機台稼動數據都是商業機密。FDE 採用銀行業同等級的安全規範。</p>
+
+    <div class="feature-block" style="margin-top:14pt">
+      <h4>🔒 密碼安全 <span class="fb-spec">bcrypt cost=10</span></h4>
+      <p>所有使用者密碼經 bcrypt 雜湊（單向加密）後儲存。即使 DB 被偷，駭客也無法還原原始密碼。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🎫 短期 Token <span class="fb-spec">JWT access 15min · refresh 7d</span></h4>
+      <p>登入後拿 access token（15 分鐘有效）+ refresh token（7 天可換新）。Token 偷走也只能用 15 分鐘。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🛡️ HTTP 安全頭 <span class="fb-spec">Helmet CSP + XSS</span></h4>
+      <p>Content Security Policy 防止 XSS 注入、防止點擊劫持、強制 HTTPS。Web 弱點掃描 OWASP Top 10 全過。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🏢 多租戶隔離 <span class="fb-spec">tenant row-level isolation</span></h4>
+      <p>每個客戶的資料完全隔離（DB row-level）。Prisma extension 在所有 query 自動注入 tenant_id 過濾，工程師不可能寫出「跨租戶看到別人資料」的 bug。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📋 完整稽核日誌 <span class="fb-spec">audit log 90d</span></h4>
+      <p>每一個 API 呼叫都記錄：誰、何時、做什麼、改了哪些欄位、IP 來源。爭議「資料是誰改的」一秒查清。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P18 備援機制 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>18 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">備援機制</span>
+    <h2>備份策略：硬碟壞、勒索病毒都救得回</h2>
+    <p class="lead">資料每日加密備份到企業 NAS。30 天日備 / 12 週週備 / 24 個月月備。即使整台 server 燒掉，最多丟 24 小時資料。</p>
+
+    <div class="screen">
+      <img src="screenshots/10-log-viewer.png" alt="稽核日誌截圖">
+    </div>
+
+    <div class="feature-block" style="margin-top:12pt">
+      <h4>💾 每日完整備份 <span class="fb-spec">pg_dump + gzip</span></h4>
+      <p>每晚凌晨 3 點，PostgreSQL 完整 dump 後壓縮。一次備份約 5-50MB（依資料量）。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🔐 AES-256 加密 <span class="fb-spec">GPG symmetric</span></h4>
+      <p>備份檔用 GPG AES-256 對稱加密。即使檔案外洩，沒有密鑰打不開。密鑰另存安全位置。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📤 NAS 自動推送 <span class="fb-spec">rclone copy</span></h4>
+      <p>加密後的備份檔自動推到企業 NAS（QNAP / Synology 皆可）。客戶實體環境內，不靠雲端。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📅 30/12/24 保留週期 <span class="fb-spec">30d / 12w / 24m</span></h4>
+      <p>近 30 天每天一份、近 12 週每週一份、近 24 個月每月一份。要救哪一天的資料都救得回。</p>
+    </div>
+
+    <div class="card card-mint" style="margin-top:10pt">
+      <h4>✅ 每月驗證 restore</h4>
+      <p>每月自動從備份檔還原到測試環境驗證可用。不會發生「備份了 3 年才發現都還原不了」的悲劇。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P19 三階段總覽 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>19 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lemon">建置時程</span>
+    <h2>三階段建置：從核心到智能，循序漸進</h2>
+    <p class="lead">不是一次上線全部功能。先做核心、看效果、再加進階。每階段獨立可運作，業主驗收滿意才進下一階段。</p>
+
+    <div class="stage-list" style="margin-top:14pt">
+      <div class="stage-row">
+        <div class="stage-num">1</div>
+        <div class="stage-body">
+          <h4>階段一：基礎 MVP — 核心製程追蹤</h4>
+          <div class="stage-meta">📅 規劃中 · 可依需求定制 · 建議 4-6 週</div>
+          <p>主檔管理（客戶 / 供應商 / 產品 / 機台）+ 13 階段製程管制卡。<strong>能用 Excel 取代品。</strong></p>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-num">2</div>
+        <div class="stage-body">
+          <h4>階段二：生管實時監控 — 圖面到派工全流程</h4>
+          <div class="stage-meta">📅 規劃中 · 可依需求定制 · 建議 6-8 週</div>
+          <p>圖面上傳建卡 + 機台看板（FOCAS 整合）+ LIFF 員工介面 + 派工拖放。<strong>廠長可以坐辦公室管全廠。</strong></p>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-num">3</div>
+        <div class="stage-body">
+          <h4>階段三：進階智能化 — AI 加值與全自動化</h4>
+          <div class="stage-meta">📅 規劃中 · 依模組獨立評估</div>
+          <p>報價模板 + 外協 PO 自動化 + AI 自動派工 + Email 接單 + 圖面 AI 抽取。<strong>業主只需要在關鍵節點確認。</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:14pt">
+      <h4>💡 為什麼分三階段？</h4>
+      <p>業界 70% ERP 導入失敗的原因是「一次上線太多功能 → 員工抗拒 → 改回 Excel」。FDE 一次只上一階段，員工慢慢適應，第二階段就會主動要求新功能。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P20 階段一細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>20 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">建置時程 — 階段一</span>
+    <h2>階段一：基礎 MVP（建議 4-6 週）</h2>
+    <p class="lead">目標：取代 Excel + 紙本製程卡，讓基本資料數位化。</p>
+
+    <h3 style="margin-top:14pt">交付項目</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-mint">
+        <h4>📁 主檔管理</h4>
+        <p>客戶 / 供應商 / 產品 / 機台 / 客戶料件 / 路由模板 完整 CRUD。可從 Excel 匯入歷史資料。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>🗂️ 13 階段製程管制卡</h4>
+        <p>建卡 → 派工 → 加工 → QC → 入庫 → 出貨。狀態機白名單、snapshot 凍結、稽核日誌。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>🛒 報價 / 銷貨單</h4>
+        <p>基本報價與銷貨單管理。可列印 / 匯出 PDF。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📊 Dashboard KPI</h4>
+        <p>進行中製程卡、逾期、未派工、本月訂單金額。老闆首頁。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">時程細節（建議）</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt">
+      <strong>第 1 週</strong> — Kick-off + 現況訪談 + 流程確認（workflow-before-code）<br>
+      <strong>第 2 週</strong> — 主檔 schema 設計 + UI 雛型<br>
+      <strong>第 3 週</strong> — 主檔 CRUD 開發 + 客戶 Excel 匯入<br>
+      <strong>第 4 週</strong> — 製程卡核心開發<br>
+      <strong>第 5 週</strong> — 業主測試 + 修正<br>
+      <strong>第 6 週</strong> — 教育訓練 + 正式上線
+    </div>
+
+    <div class="card card-lemon" style="margin-top:10pt">
+      <h4>✅ 驗收標準</h4>
+      <p>連續一週內所有客戶報價、製程卡都進系統處理（不再用 Excel）。實際員工 5 人以上能獨立操作。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P21 階段二細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>21 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">建置時程 — 階段二</span>
+    <h2>階段二：生管實時監控（建議 6-8 週）</h2>
+    <p class="lead">目標：廠長坐在辦公室就能管全廠 14 台機台 + 40 名員工。</p>
+
+    <h3 style="margin-top:14pt">交付項目</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-blue">
+        <h4>📐 圖面擷取（人工版）</h4>
+        <p>上傳 PDF / JPG → 業務手動填欄位建卡（AI 抽取為階段三）。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📺 機台即時看板</h4>
+        <p>14 台 CNC 5 秒刷新、FOCAS 整合、加工/待機/異常/架機四種狀態。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📱 LIFF 員工介面</h4>
+        <p>員工掃 QR → 看自己的卡 → 點 5 大按鈕（架機/上機/換料/異常/完工）。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>🔧 派工看板</h4>
+        <p>拖放派機台、衝突偵測、派單原因強制紀錄（為階段三 AI 學習鋪路）。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">時程細節（建議）</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt">
+      <strong>第 1-2 週</strong> — 圖面上傳模組 + 製程卡草稿流程<br>
+      <strong>第 3-4 週</strong> — FOCAS 機台整合（需配合機台 IP / OPC UA 開通）<br>
+      <strong>第 5 週</strong> — Machine Board 看板 + 5 秒 polling<br>
+      <strong>第 6 週</strong> — LIFF 設定（需 LINE Official Account + LIFF App）<br>
+      <strong>第 7 週</strong> — 派工看板 + 衝突偵測<br>
+      <strong>第 8 週</strong> — 員工教育訓練 + 正式上線
+    </div>
+
+    <div class="card card-rose" style="margin-top:10pt">
+      <h4>⚠️ 階段二前置條件</h4>
+      <p>(1) CNC 機台需支援 FANUC FOCAS（或 OPC UA），廠內網路與機台連通。<br>(2) 業主需註冊 LINE Official Account 並開通 LIFF（潤樋協助設定）。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P22 階段三細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>22 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">建置時程 — 階段三</span>
+    <h2>階段三：進階智能化（依模組獨立評估）</h2>
+    <p class="lead">目標：把業主時間從「處理瑣事」釋放出來。AI 處理瑣碎判斷，業主只看關鍵節點。</p>
+
+    <h3 style="margin-top:14pt">五個獨立模組（可逐個評估開發）</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-lavender">
+        <h4>💰 報價模板 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">2-3 週</span></h4>
+        <p>金屬加工專用報價模板（材料 + 加工工時 + 表處 + 委外）。整合客戶料件主檔。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📑 外協 PO 自動化 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">3-4 週</span></h4>
+        <p>製程卡進送委外 → 自動建 draft PO；收貨自動推卡片進度。超交預警。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>🤖 AI 自動派工 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">4-6 週</span></h4>
+        <p>三層機制：硬約束 + 軟排序 + Claude LLM 複審。需階段二派工歷史資料訓練。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📧 Email 接單 + AI 圖面抽取 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">4-6 週</span></h4>
+        <p>Gmail polling + Claude Haiku + GCV OCR 自動抽取 10 個標題欄位建草稿卡。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">階段三定價方式</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt; line-height:1.8">
+      <strong>基礎建置費：</strong>依選擇的模組數計，每個模組 NT$ 2-6 萬<br>
+      <strong>月租費追加：</strong>每月加 NT$ 2,000-4,000（含 AI 用量 + 維運）<br>
+      <strong>客製化開發：</strong>依需求另計，可分階段付款
+    </div>
+
+    <div class="card card-lavender" style="margin-top:10pt">
+      <h4>💡 建議優先順序</h4>
+      <p>① 報價模板（業務最有感）→ ② 外協 PO 自動化（採購最有感）→ ③ Email 接單 + AI 圖面抽取（業務 + 業主都有感）→ ④ AI 自動派工（廠長最有感，需累積派工歷史 3-6 個月後再開發）</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P23 與其他方案差異 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>23 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">市場比較</span>
+    <h2>跟其他方案有什麼不同？</h2>
+
+    <table class="compare-table" style="margin-top:14pt">
+      <thead>
+        <tr>
+          <th style="width:18%">維度</th>
+          <th style="width:20%">企業 ERP<br>(鼎新/SAP)</th>
+          <th style="width:20%">通用 ERP<br>(華翰/Winton)</th>
+          <th style="width:20%">RPA 整合商</th>
+          <th class="col-fde" style="width:22%">潤樋 FDE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>導入費用</strong></td>
+          <td>NT$ 50-250 萬</td>
+          <td>NT$ 20-50 萬</td>
+          <td>專案制 30 萬起</td>
+          <td class="col-fde">首次 8-12 萬<br>+ 月租 6-12 千</td>
+        </tr>
+        <tr>
+          <td><strong>客製化</strong></td>
+          <td>模組配置</td>
+          <td>套版調整</td>
+          <td>表面流程串接</td>
+          <td class="col-fde">行業專屬程式碼</td>
+        </tr>
+        <tr>
+          <td><strong>操作介面</strong></td>
+          <td>桌面軟體</td>
+          <td>網頁</td>
+          <td>各家原系統</td>
+          <td class="col-fde">LINE Bot + Web</td>
+        </tr>
+        <tr>
+          <td><strong>機台整合</strong></td>
+          <td>MES 外掛</td>
+          <td>無</td>
+          <td>無</td>
+          <td class="col-fde">內建 FOCAS</td>
+        </tr>
+        <tr>
+          <td><strong>AI 加值</strong></td>
+          <td>需另購 AI 模組</td>
+          <td>無</td>
+          <td>無</td>
+          <td class="col-fde">Claude / GCV 內建</td>
+        </tr>
+        <tr>
+          <td><strong>教育訓練</strong></td>
+          <td>數週</td>
+          <td>數天</td>
+          <td>不需要（不換系統）</td>
+          <td class="col-fde">系統內建說明</td>
+        </tr>
+        <tr>
+          <td><strong>上線時間</strong></td>
+          <td>6-12 個月</td>
+          <td>2-4 個月</td>
+          <td>1-3 個月</td>
+          <td class="col-fde">4-8 週 / 階段</td>
+        </tr>
+        <tr>
+          <td><strong>資料安全</strong></td>
+          <td>企業級</td>
+          <td>標準</td>
+          <td>看原系統</td>
+          <td class="col-fde">企業級<br>(bcrypt/JWT/AES-256)</td>
+        </tr>
+        <tr>
+          <td><strong>月租管理費</strong></td>
+          <td>另計維護費</td>
+          <td>另計維護費</td>
+          <td>每流程獨立計費</td>
+          <td class="col-fde">NT$ 6-12 千/月<br>(含 8 項服務)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card card-lavender" style="margin-top:10pt">
+      <h4>🎯 中小工廠最適合的選擇</h4>
+      <p>不是「省錢的 SAP」，而是「為你量身打造的核心系統」。月租制讓你不用一次砸大錢，依需求逐步擴充。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P24 關於潤樋 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>24 / 25</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">關於我們</span>
+    <h2>潤樋科技：不賣軟體，建你的系統</h2>
+    <p class="lead">我們不做套裝軟體。每一個系統都是從業主的實際作業流程長出來的——你的客戶、你的產品、你的派工邏輯、你的報價方式。</p>
+
+    <h3 style="margin-top:16pt">5 個方法論差異</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-mint">
+        <h4>1. 流程先行（Workflow-Before-Code）</h4>
+        <p>不先寫程式。先記錄你的實際作業流程，畫出 BPMN，業主簽字確認後才開發。避免「做了用不到」。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>2. 行業專屬模組</h4>
+        <p>不是通用模組拼裝。13 階段製程卡是為精密加工設計的，環保業有 EPA 申報，貿易業有 LINE Bot 接單。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>3. LINE 即介面</h4>
+        <p>員工不用學新系統。第一線操作用 LINE / LIFF，零硬體、零訓練成本。</p>
+      </div>
+      <div class="card card-lemon">
+        <h4>4. AI 加值不收貴</h4>
+        <p>Claude / Google Cloud Vision 內建。每月 AI 用量成本不會超過 NT$ 500。</p>
+      </div>
+      <div class="card card-peach" style="grid-column: span 2">
+        <h4>5. 中小企業負擔得起</h4>
+        <p>月費 SaaS 模式，不是百萬導入費。NT$ 6-12 千/月含完整維運、資安管理、AI 升級。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:16pt">已上線案例</h3>
+    <div class="grid-3" style="margin-top:8pt">
+      <div class="card">
+        <h4>🚛 環保清運</h4>
+        <p>20+ 車輛派車管理、EPA 合規申報、三種報價模板、AI 月度司機報告。</p>
+      </div>
+      <div class="card">
+        <h4>📦 貿易公司</h4>
+        <p>報價到出貨從 2 小時縮到 5 分鐘、LINE Bot 全流程、PDF 自動生成。</p>
+      </div>
+      <div class="card">
+        <h4>🔩 精密金屬加工</h4>
+        <p>本案例。14 台 CNC 整合、13 階段製程、AI 圖面辨識、LIFF 員工操作。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P25 CTA ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>精密金屬加工廠案例</div>
+    <div>25 / 25</div>
+  </div>
+
+  <div style="margin-top:50mm">
+    <div class="cta-card">
+      <h2>免費流程診斷</h2>
+      <p>第一次接觸，我們先免費花 1-2 小時了解你的作業流程，<br>給你一份書面建議（不用付任何費用、沒有業務電話）。</p>
+
+      <a class="cta-email">📧 runtong.tw@gmail.com</a>
+
+      <div style="margin-top:8pt">
+        <div class="cta-link">https://hsuentung-sketch.github.io/fde-website/</div>
+      </div>
+    </div>
+
+    <div style="margin-top:30pt; text-align:center">
+      <h3 style="color:var(--text-sec); font-size:11pt; font-weight:500">三個案例都在我們網站上，歡迎瀏覽</h3>
+      <div style="margin-top:8pt; font-size:9pt; color:var(--text-mut)">
+        ▸ 精密金屬加工廠 — 本案例完整版<br>
+        ▸ 環保清運公司 — 20+ 車隊管理 + EPA 申報<br>
+        ▸ 貿易公司 ERP — LINE Bot 全流程
+      </div>
+    </div>
+
+    <div style="margin-top:40pt; text-align:center; font-size:8pt; color:var(--text-mut)">
+      本文件為 demo 案例分享，所有客戶資訊已匿名化處理。<br>
+      © 2026 潤樋科技 RunTong Tech. All rights reserved.
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

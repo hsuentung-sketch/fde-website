@@ -1,0 +1,13 @@
+{
+  "name": "fde-pdf-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shots": "node capture-screenshots.mjs",
+    "pdf": "node generate-pdf.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
