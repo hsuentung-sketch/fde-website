@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "shots": "node capture-screenshots.mjs",
-    "pdf": "node generate-pdf.mjs"
+    "pdf": "node generate-pdf.mjs",
+    "pptx": "node generate-pptx.mjs"
   },
   "dependencies": {
+    "pptxgenjs": "^3.12.0",
     "puppeteer": "^23.0.0"
   }
 }
