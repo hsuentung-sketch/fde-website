@@ -9,6 +9,7 @@
     "pptx": "node generate-pptx.mjs"
   },
   "dependencies": {
+    "pg": "^8.21.0",
     "pptxgenjs": "^3.12.0",
     "puppeteer": "^23.0.0"
   }
