@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>一般貿易公司案例 — 潤樋科技 FDE 自動化流程優化服務</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pdf-styles.css">
+</head>
+<body>
+
+<!-- ═══════════════ P1 封面 ═══════════════ -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="cover-logo">R</div>
+    <div class="cover-brand">潤樋科技 FDE 自動化流程優化服務</div>
+  </div>
+
+  <div class="cover-middle">
+    <div class="cover-tag">CASE STUDY · 2026 · v2.16 PRODUCTION</div>
+    <h1 class="cover-title">一般貿易公司<br>數位轉型案例</h1>
+    <p class="cover-sub">
+      多版本迭代的穩定 SaaS ERP — LIFF 報價表單、電子發票 B2C 已上線、<br>
+      完整會計模組（科目/傳票/試算/損益/資產負債）、Claude 語音指令、名片 OCR。
+    </p>
+
+    <div class="cover-metrics">
+      <div class="cover-metric"><div class="cm-num">v2.16</div><div class="cm-label">穩定版本</div></div>
+      <div class="cover-metric"><div class="cm-num">23</div><div class="cm-label">後台模組</div></div>
+      <div class="cover-metric"><div class="cm-num">完整</div><div class="cm-label">會計模組</div></div>
+      <div class="cover-metric"><div class="cm-num">B2C</div><div class="cm-label">電子發票</div></div>
+      <div class="cover-metric"><div class="cm-num">AI</div><div class="cm-label">名片 + 語音</div></div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cb-contact">
+      <strong>潤樋科技</strong>
+      runtong.tw@gmail.com<br>
+      https://hsuentung-sketch.github.io/fde-website/
+    </div>
+    <div>v1.0 · 2026-06-02</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P2 客戶輪廓 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>2 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">客戶輪廓</span>
+    <h2>導入背景：中型一般零售/貿易公司</h2>
+    <p class="lead">員工 20 名、客戶 50+、產品 SKU 數百項、年營業額破千萬。從接單到收款全流程，靠 LINE + 紙本 + Excel 維持運作，但每月對帳、發票、報表都靠人腦記。</p>
+
+    <div class="grid-3" style="margin-top:14pt">
+      <div class="metric"><span class="m-num">20+</span><span class="m-label">員工數</span></div>
+      <div class="metric"><span class="m-num">50+</span><span class="m-label">客戶數</span></div>
+      <div class="metric"><span class="m-num">100+</span><span class="m-label">產品 SKU</span></div>
+    </div>
+
+    <h3 style="margin-top:18pt">為什麼選擇 LIFF + ERP？</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-mint">
+        <div class="card-icon icon-mint">📞</div>
+        <h4>業務在外接單沒系統</h4>
+        <p>客戶 LINE 來訊問報價、業務查產品價、開報價單，全在外面用手機處理；回辦公室才能 key 進 Excel。</p>
+      </div>
+      <div class="card card-rose">
+        <div class="card-icon icon-rose">📑</div>
+        <h4>發票月底開到天荒地老</h4>
+        <p>B2C 客戶要載具/捐贈、B2B 客戶要正式發票、折讓單散落各處。會計每月底加班 3 天。</p>
+      </div>
+      <div class="card card-peach">
+        <div class="card-icon icon-peach">📊</div>
+        <h4>會計帳要分兩套系統</h4>
+        <p>銷貨進貨在 ERP、會計傳票要重 key 到記帳軟體。年底結帳 + 試算表對不上是常事。</p>
+      </div>
+      <div class="card card-blue">
+        <div class="card-icon icon-blue">📦</div>
+        <h4>庫存只能憑感覺進貨</h4>
+        <p>哪個產品快缺貨？哪個賣不動？沒有系統提醒，業務經驗是唯一指標，常常缺貨被客訴。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P3 8 痛點 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>3 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-rose">BEFORE — 導入前</span>
+    <h2>八個一直無法解決的營運痛點</h2>
+
+    <div class="ba-grid" style="margin-top:14pt">
+      <div class="ba-side ba-before">
+        <span class="ba-label ba-label-before">紙本 + Excel 時代</span>
+        <ul>
+          <li><strong>業務在外接單</strong>，回辦公室才 key Excel，常常忘了報哪個客戶</li>
+          <li><strong>新客戶名片</strong>手動 key 統編、電話、地址，10 張花 1 小時</li>
+          <li><strong>產品價格表</strong>各業務手上版本不同，報錯價自己吸收</li>
+          <li><strong>電子發票</strong>外包記帳事務所開立，每筆都要傳檔案來回</li>
+          <li><strong>會計傳票</strong>銷貨/進貨單會計重新 key 一次到記帳軟體</li>
+          <li><strong>應收應付月結</strong>會計手動算到天昏地暗，常算錯</li>
+          <li><strong>庫存盤點</strong>每季手動清點，紙本 vs 系統永遠對不起來</li>
+          <li><strong>業績獎金</strong>毛利每月手算（毛利-營業稅-員工稅率），3 天才結算完</li>
+        </ul>
+      </div>
+      <div class="ba-side ba-after">
+        <span class="ba-label ba-label-after">AFTER — 數位化後</span>
+        <ul>
+          <li><strong>LIFF 報價單</strong>業務在外手機開單，客戶/產品 autocomplete</li>
+          <li><strong>名片 OCR</strong>拍照 → Google Vision 自動抽公司/聯絡人/電話/統編/Email</li>
+          <li><strong>產品主檔統一</strong>，所有業務看同一版價格，改一次全公司同步</li>
+          <li><strong>電子發票自開</strong>，Turnkey API 整合，B2C 載具/捐贈/B2B 統編全自動</li>
+          <li><strong>自動傳票 hooks</strong>銷貨/進貨自動產生分錄（Dr/Cr 自動帶入）</li>
+          <li><strong>應收應付自動結算</strong>，到期前 15 天提醒，月結 PDF 一鍵下載</li>
+          <li><strong>庫存進銷存連動</strong>，銷貨自動扣庫存、進貨自動補</li>
+          <li><strong>業績獎金自動計算</strong>每月 1 號自動結算（毛利-稅-員工稅率）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:12pt">
+      <h4>🎯 系統的核心價值：把人腦記變成系統記</h4>
+      <p>不是新增工具，是把分散的 Excel、紙本、人腦記憶整合到一個系統。業務在外用 LINE 就能下單，會計不用重複 key 帳，老闆隨時看儀表板就知道公司狀況。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P4 業務全貌一頁圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>4 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">階段一已上線 — 一般流程</span>
+    <h2>從接單到收款，全流程線上跑</h2>
+    <p class="lead">業務 LINE 接單 → LIFF 開報價單 → 客戶確認轉銷貨單 → 自動扣庫存 → 自動產應收 → 開電子發票 → 自動產傳票 → 月結對帳 → 收款。</p>
+
+    <div class="flow-diagram" style="margin-top:18pt">
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-blue)">💬</div>
+        <h5>1. LINE 接單</h5>
+        <div class="fs-desc">業務在外 LIFF 開單</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-mint)">📋</div>
+        <h5>2. 銷貨單</h5>
+        <div class="fs-desc">自動扣庫存 + 產 AR</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-lavender)">📑</div>
+        <h5>3. 電子發票</h5>
+        <div class="fs-desc">Turnkey 自動開立</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-lemon)">📊</div>
+        <h5>4. 自動傳票</h5>
+        <div class="fs-desc">Dr/Cr 自動分錄</div>
+      </div>
+      <div class="flow-step">
+        <div class="fs-icon" style="background:var(--mac-peach)">💵</div>
+        <h5>5. 月結對帳</h5>
+        <div class="fs-desc">PDF + ZIP 批次</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:18pt">關鍵設計</h3>
+    <div class="grid-3" style="margin-top:8pt">
+      <div class="card card-mint">
+        <h4>📱 業務手機優先</h4>
+        <p>LIFF 表單 + LINE chat。業務在客戶現場就能開單，不用回辦公室。客戶 / 產品 autocomplete。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>🔄 跨模組自動串接</h4>
+        <p>銷貨 → 庫存扣 + AR 產 + 自動分錄 + 電子發票。一張單子觸發四個模組同步更新。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📜 全程稽核</h4>
+        <p>每筆操作（誰、何時、改了什麼）都進 AuditLog。爭議追到具體操作者，責任歸屬清楚。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P5 截圖 Dashboard ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>5 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 1/8</span>
+    <h2>Dashboard + 11 個側欄分組</h2>
+    <p class="lead">左側側欄分組：總覽 / 管理 / 報價單 / 銷貨單 / 業務功能 / 進貨單 / 帳款 / 發票 / 會計 / 庫存 / 公司資料 / 紀錄。模組獨立可開可關。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/01-dashboard.png" alt="Dashboard 總覽">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card card-blue">
+        <h4>📊 4 張 KPI 卡片</h4>
+        <p>客戶數 / 產品數 / 供應商數 / 逾期應收。最重要的數字一眼可見。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>🎛️ 角色權限</h4>
+        <p>ADMIN / SALES / PURCHASING / ACCOUNTING 四種角色。看到的選單與功能依角色動態調整。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>🔧 版本管理</h4>
+        <p>左下顯示版本 + 部署日期。客戶端固定主版本（如 v2.16），保留 minor 升級彈性。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P6 截圖 客戶管理 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>6 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 2/8</span>
+    <h2>主檔管理 — 客戶 / 產品 / 供應商 / 員工</h2>
+    <p class="lead">4 個 Tab 切換。客戶頁面：公司名、聯絡人、職稱、電話、Email、統編、付款天數、等級（A/B/C），右上有「名片辨識上傳」按鈕（Google Vision OCR）。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/02-customers.png" alt="客戶管理">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card card-lavender">
+        <h4>📇 名片 OCR ✅ AI</h4>
+        <p>拍名片 → Google Vision 自動抽公司/聯絡人/電話/統編/Email。10 張新客戶 5 分鐘建檔完。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>🏆 客戶分級</h4>
+        <p>A/B/C 三級。報價/銷貨可依等級套用不同折扣率與付款條件。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📅 月結天數</h4>
+        <p>每客戶設定付款天數（30/45/60/90）。應收帳款自動算到期日，到期前 15 天 LINE 提醒。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P7 截圖 報價單 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>7 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 3/8</span>
+    <h2>報價單 — LIFF 手機表單 + 自動 PDF</h2>
+    <p class="lead">後台唯讀檢視，建單走業務手機 LIFF 表單（autocomplete 客戶 + 產品）。確認後自動產 PDF，JWT 簽名公開連結傳客戶 LINE 直接點開。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/03-quotations.png" alt="報價單列表">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card card-mint">
+        <h4>📱 LIFF 開單</h4>
+        <p>業務在客戶現場用手機開單。客戶/產品 autocomplete 搜尋，價格自動帶入（依客戶等級）。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>🔗 PDF 公開連結</h4>
+        <p>確認後系統產 PDF + JWT 7 天簽名連結，業務傳 LINE 給客戶。客戶不用登入直接看。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>🔄 一鍵轉銷貨單</h4>
+        <p>客戶確認後，後台點「轉銷貨」自動建銷貨單，品項/價格/數量全部帶過去。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P8 截圖 銷貨單 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>8 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 4/8</span>
+    <h2>銷貨單 — 一張單觸發四模組</h2>
+    <p class="lead">建銷貨單同時觸發：① 自動扣庫存（InventoryTransaction）② 自動產應收（Receivable）③ 自動產傳票（JournalEntry）④ 通知會計開電子發票。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/04-sales-orders.png" alt="銷貨單列表">
+    </div>
+
+    <div class="grid-2" style="margin-top:10pt">
+      <div class="card card-mint">
+        <h4>📦 自動扣庫存</h4>
+        <p>銷貨確認 → 逐品項扣減（SALES_OUT 事件）→ InventoryTransaction 記錄。庫存低於安全點自動標紅。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📊 自動產傳票</h4>
+        <p>Dr 應收帳款 / Cr 銷貨收入 + 銷項稅。傳票進 Pending 狀態，會計審核後過帳。</p>
+      </div>
+    </div>
+
+    <div class="card card-blue" style="margin-top:10pt">
+      <h4>💼 LINE chat 也能開單</h4>
+      <p>業務開 LINE 給公司帳號 → 文字「開單 客戶名 產品 數量」→ Bot 走 Flex Carousel 確認 → 一條訊息就建好銷貨單。連 LIFF 都不用開。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P9 截圖 應收應付 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>9 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 5/8</span>
+    <h2>應收應付 — 自動結算 + 月結 PDF</h2>
+    <p class="lead">應收應付不用人手 key。銷貨單 → 自動進 AR、進貨單 → 自動進 AP。到期日依客戶/供應商月結天數計算，到期前 15 天 LINE 提醒。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/06-receivables.png" alt="應收帳款">
+    </div>
+
+    <div class="grid-3" style="margin-top:10pt">
+      <div class="card card-mint">
+        <h4>📅 自動到期日</h4>
+        <p>依客戶設定的月結天數算（30/45/60/90）。到期前 15 天 LINE 推播提醒業務追款。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📄 月結對帳單</h4>
+        <p>每月底自動產出每客戶的 PDF 對帳單，可一鍵 ZIP 批次下載寄客戶。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>💵 業績獎金</h4>
+        <p>每月 1 號自動結算業務獎金（毛利 - 營業稅 - 員工稅率）。3 天作業變 0 秒。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P10 截圖 會計傳票 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>10 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 6/8</span>
+    <h2>完整會計模組 — 不用另買記帳軟體</h2>
+    <p class="lead">會計子模組 7 個：總覽、科目表 (CoA)、會計期間、傳票 (Journal)、試算表、損益表、資產負債表、庫存表。<strong>不用另買 4 萬塊的記帳軟體</strong>，年底結帳 ERP 內就完成。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/08-journal.png" alt="會計傳票">
+    </div>
+
+    <div class="grid-4" style="margin-top:10pt">
+      <div class="card card-mint">
+        <h4>📒 科目表</h4>
+        <p>資產/負債/收入/費用四大類，可自訂明細科目。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📝 傳票</h4>
+        <p>銷貨/進貨自動產分錄，會計只需審核 Pending 單。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>⚖️ 試算表</h4>
+        <p>科目餘額借貸平衡驗證，異常自動標示。</p>
+      </div>
+      <div class="card card-lemon">
+        <h4>📈 三大報表</h4>
+        <p>損益表 / 資產負債表 / 庫存表，期末一鍵產出。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P11 庫存管理（補充完整）═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>11 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">後台實際畫面 7/8 · 完整補充</span>
+    <h2>庫存管理 — 進銷存全自動連動</h2>
+    <p class="lead">庫存不用手動更新。銷貨自動扣、進貨自動補、低於安全庫存自動提醒。每筆異動記錄操作員與原因（InventoryTransaction）。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/09-inventory.png" alt="庫存管理">
+    </div>
+
+    <h3 style="margin-top:14pt">7 大庫存功能</h3>
+    <div class="grid-4" style="margin-top:8pt">
+      <div class="card card-mint">
+        <div class="card-icon icon-mint">📥</div>
+        <h4>入庫</h4>
+        <p>進貨單確認 → 自動 PURCHASE_IN 事件 → 庫存加。</p>
+      </div>
+      <div class="card card-rose">
+        <div class="card-icon icon-rose">📤</div>
+        <h4>出庫</h4>
+        <p>銷貨單確認 → 自動 SALES_OUT 事件 → 庫存扣。</p>
+      </div>
+      <div class="card card-blue">
+        <div class="card-icon icon-blue">⚠️</div>
+        <h4>安全庫存</h4>
+        <p>每產品設 reorderPoint，低於警戒自動標紅。</p>
+      </div>
+      <div class="card card-lemon">
+        <div class="card-icon icon-lemon">📊</div>
+        <h4>異動紀錄</h4>
+        <p>InventoryTransaction：誰、何時、+/- 多少、原因。</p>
+      </div>
+      <div class="card card-lavender">
+        <div class="card-icon icon-lavender">🏷️</div>
+        <h4>批號 / 效期</h4>
+        <p>食品/藥品/化妝品適用（規劃中）。</p>
+      </div>
+      <div class="card card-peach">
+        <div class="card-icon icon-peach">🏬</div>
+        <h4>多倉</h4>
+        <p>branchId 欄位預留，可擴充多分店分倉（規劃中）。</p>
+      </div>
+      <div class="card card-mint">
+        <div class="card-icon icon-mint">📋</div>
+        <h4>盤點</h4>
+        <p>盤差調整單（規劃中），盤點完一鍵調整。</p>
+      </div>
+      <div class="card card-blue">
+        <div class="card-icon icon-blue">🔍</div>
+        <h4>條碼掃描</h4>
+        <p>手機掃 Barcode/QR 直接查庫存（規劃中）。</p>
+      </div>
+    </div>
+
+    <div class="card card-lemon" style="margin-top:10pt">
+      <h4>💡 庫存資料是 AI 進銷存預測的基礎</h4>
+      <p>每筆 InventoryTransaction 累積進歷史，未來 AI 模型可用此資料訓練「進銷存預測」「推薦補貨量」「季節性需求」等智能化功能。詳見後續 AI 應用章節。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P12 LIFF + 名片 OCR ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>12 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">員工端 — LIFF + LINE Bot</span>
+    <h2>業務手機 = 行動辦公室</h2>
+    <p class="lead">業務不用回辦公室。LIFF 開報價單、LINE chat 開銷貨單、名片 OCR 建客戶、LINE 查應收應付、傳票輸入。一支手機跑全流程。</p>
+
+    <div class="grid-2" style="margin-top:14pt; gap:14pt">
+      <div>
+        <div class="card card-mint">
+          <h4>📄 LIFF 報價單</h4>
+          <p>客戶/產品 autocomplete，金額自動算稅。確認 → 自動產 PDF 公開連結 → 傳 LINE 給客戶。</p>
+        </div>
+        <div class="card card-lemon" style="margin-top:8pt">
+          <h4>💬 LINE chat 開單</h4>
+          <p>業務直接打字「銷貨 客戶 產品 數量」→ Bot 走 Flex 確認流程 → 自動建單。</p>
+        </div>
+        <div class="card card-lavender" style="margin-top:8pt">
+          <h4>📇 名片 OCR ✅ AI</h4>
+          <p>拍名片 → Google Vision 抽公司/姓名/電話/統編/Email → 自動建客戶資料。</p>
+        </div>
+        <div class="card card-blue" style="margin-top:8pt">
+          <h4>🎤 語音指令解析 ⏳ AI</h4>
+          <p>OpenAI Whisper + Claude Haiku：語音 → 結構化 ERP 指令（規劃中）。</p>
+        </div>
+      </div>
+      <div class="card card-peach" style="display:flex; flex-direction:column; justify-content:center; align-items:center; padding:24pt">
+        <div style="font-size:48pt; margin-bottom:8pt">📱</div>
+        <h4 style="text-align:center">Rich Menu 6 格</h4>
+        <p style="text-align:center; font-size:9pt">報價 / 銷貨 / 進貨 / 帳務 / 查詢 / 報價追蹤<br><br>業務按一鍵就到對應功能</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P13 23 模組總覽 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>13 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">系統總覽</span>
+    <h2>23 個後台模組（紫色 = AI 加值）</h2>
+
+    <div class="modules" style="margin-top:14pt">
+      <div class="module"><div class="m-icon">📊</div><h5>Dashboard</h5><div class="m-desc">總覽 KPI</div></div>
+      <div class="module is-ai"><div class="m-icon">📇</div><h5>客戶</h5><div class="m-desc">名片 OCR + 分級</div><span class="ai-mini">AI</span></div>
+      <div class="module"><div class="m-icon">📦</div><h5>產品</h5><div class="m-desc">SKU + 售/進價</div></div>
+      <div class="module"><div class="m-icon">🏭</div><h5>供應商</h5><div class="m-desc">+ 銀行資訊</div></div>
+      <div class="module"><div class="m-icon">👥</div><h5>員工</h5><div class="m-desc">LINE 綁定 + 部門</div></div>
+      <div class="module"><div class="m-icon">📝</div><h5>報價單</h5><div class="m-desc">LIFF 手機開單</div></div>
+      <div class="module"><div class="m-icon">📋</div><h5>銷貨單</h5><div class="m-desc">自動觸發 4 模組</div></div>
+      <div class="module"><div class="m-icon">📅</div><h5>工作日誌</h5><div class="m-desc">VisitLog 拜訪紀錄</div></div>
+      <div class="module"><div class="m-icon">💰</div><h5>業績獎金</h5><div class="m-desc">毛利-稅自動算</div></div>
+      <div class="module"><div class="m-icon">🛒</div><h5>進貨單</h5><div class="m-desc">自動產 AP</div></div>
+      <div class="module"><div class="m-icon">💵</div><h5>應收</h5><div class="m-desc">月結 + 提醒</div></div>
+      <div class="module"><div class="m-icon">💳</div><h5>應付</h5><div class="m-desc">到期管理</div></div>
+      <div class="module"><div class="m-icon">📑</div><h5>電子發票</h5><div class="m-desc">B2C ✅ B2B 待補</div></div>
+      <div class="module"><div class="m-icon">🔢</div><h5>發票配號</h5><div class="m-desc">ADMIN 號碼池</div></div>
+      <div class="module"><div class="m-icon">📒</div><h5>會計總覽</h5><div class="m-desc">期間統計</div></div>
+      <div class="module"><div class="m-icon">📚</div><h5>科目表</h5><div class="m-desc">CoA 分類</div></div>
+      <div class="module"><div class="m-icon">📆</div><h5>會計期間</h5><div class="m-desc">期初期末</div></div>
+      <div class="module"><div class="m-icon">✍️</div><h5>傳票</h5><div class="m-desc">Dr/Cr 分錄</div></div>
+      <div class="module"><div class="m-icon">⚖️</div><h5>試算表</h5><div class="m-desc">借貸平衡</div></div>
+      <div class="module"><div class="m-icon">📈</div><h5>損益表</h5><div class="m-desc">本期淨利</div></div>
+      <div class="module"><div class="m-icon">⚖️</div><h5>資產負債</h5><div class="m-desc">三大科目</div></div>
+      <div class="module"><div class="m-icon">📦</div><h5>庫存</h5><div class="m-desc">進銷存連動</div></div>
+      <div class="module"><div class="m-icon">🔐</div><h5>稽核日誌</h5><div class="m-desc">全系統追溯</div></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P14 電子發票特別加註 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>14 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">特別加註功能</span>
+    <h2>電子發票完整功能 — B2C 已上線</h2>
+    <p class="lead">整合 Turnkey API + S3 backend（v2.11.0+）。客戶要載具？捐贈碼？正式 B2B 發票？折讓單？全在系統內一鍵搞定，不用再外包記帳事務所。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/07-einvoices.png" alt="電子發票">
+    </div>
+
+    <h3 style="margin-top:14pt">支援 4 種發票型態</h3>
+    <div class="grid-4" style="margin-top:8pt">
+      <div class="card card-mint">
+        <div class="card-icon icon-mint">🛒</div>
+        <h4>B2C ✅</h4>
+        <p>手機條碼 / 自然人憑證 / 捐贈碼三擇一。已上線生產。</p>
+      </div>
+      <div class="card card-blue">
+        <div class="card-icon icon-blue">🏢</div>
+        <h4>B2B ⏳</h4>
+        <p>統編必填，正式發票。Service 完成，UI 規劃中。</p>
+      </div>
+      <div class="card card-rose">
+        <div class="card-icon icon-rose">↩️</div>
+        <h4>折讓 D0401</h4>
+        <p>退貨折讓單，自動沖回 AR。Service 完成。</p>
+      </div>
+      <div class="card card-lavender">
+        <div class="card-icon icon-lavender">📋</div>
+        <h4>作廢</h4>
+        <p>同月份作廢、轉開正確金額。Audit log 全紀錄。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">技術架構</h3>
+    <div class="card card-lemon" style="margin-top:8pt">
+      <p style="font-size:9.5pt; line-height:1.8">
+        <strong>① Fly 容器</strong>產 XML → <strong>② S3 bucket</strong>（R2 / Tigris / AWS）→ <strong>③ Turnkey 服務</strong>讀 inbound → <strong>④ 回執寫 outbound</strong> → <strong>⑤ Fly 容器</strong>讀確認。<br><br>
+        <strong>多租戶隔離：</strong>每個租戶 per-tenant prefix 子目錄，發票號碼池獨立配號。<br>
+        <strong>自動分錄：</strong>發票開立 → 自動產 Dr 應收 / Cr 銷貨收入 + 銷項稅。
+      </p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P15 進階流程藍圖 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>15 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">階段二 + 階段三 — 進階流程</span>
+    <h2>進階流程：LINE 群組 AI 客服 + AI 業務分析</h2>
+    <p class="lead">基礎已上線。下一步把 AI 用更深：LINE 群組客戶服務自動回答、AI 分析業務績效、AI 進銷存預測 + 推薦補貨。</p>
+
+    <div class="flow-diagram" style="margin-top:18pt">
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-blue)">💬</div>
+        <h5>1. LINE 群組客服</h5>
+        <div class="fs-desc">客戶問題自動回</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-mint)">👨‍💼</div>
+        <h5>2. AI 業務績效</h5>
+        <div class="fs-desc">月度評分 + 評語</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-lavender)">📈</div>
+        <h5>3. AI 進銷存預測</h5>
+        <div class="fs-desc">歷史 + 季節 + 趨勢</div>
+      </div>
+      <div class="flow-step has-ai">
+        <div class="ai-tag">AI</div>
+        <div class="fs-icon" style="background:var(--mac-lemon)">📦</div>
+        <h5>4. AI 推薦補貨</h5>
+        <div class="fs-desc">智能採購建議</div>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:16pt">
+      <h4>🎯 為什麼這四個方向？</h4>
+      <p style="font-size:9.5pt; line-height:1.8">
+        <strong>① LINE 群組客服</strong>：客戶來訊 80% 是查訂單/查報價/查發票，AI 處理重複問題。<br>
+        <strong>② 業務績效</strong>：用客觀數據評估業務，公平打獎金 + 留住好業務。<br>
+        <strong>③ AI 進銷存預測</strong>：根據歷史銷售 + 季節性 + 趨勢，預測下個月需求量。<br>
+        <strong>④ AI 推薦補貨</strong>：低於安全庫存自動推薦採購數量、最佳供應商、議價空間。
+      </p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P16 LINE 群組 AI 客服 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>16 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階流程 1/4 · 規劃中</span>
+    <h2>LINE 群組客戶服務 + AI 自動回覆</h2>
+    <p class="lead">公司每個重要客戶開一個 LINE 群組，AI 助理 24 小時聽訊息。常見問題 AI 直接回（查報價、查進度、查發票、何時付款）；複雜問題標記給業務追蹤。</p>
+
+    <h3 style="margin-top:14pt">8 種常見客戶問題自動處理</h3>
+    <div class="grid-4" style="margin-top:8pt">
+      <div class="card card-blue">
+        <h4>📋 查報價</h4>
+        <p>「上次報多少」→ AI 查最新 quotation 回 PDF 連結。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📦 查進度</h4>
+        <p>「我訂的什麼時候到」→ 查 sales-order 狀態。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📄 查發票</h4>
+        <p>「上個月發票呢」→ 撈電子發票 PDF + 載具明細。</p>
+      </div>
+      <div class="card card-lemon">
+        <h4>💵 查欠款</h4>
+        <p>「我們還欠多少」→ 查 receivables 餘額 + 到期日。</p>
+      </div>
+      <div class="card card-peach">
+        <h4>🆕 新詢價</h4>
+        <p>「這個產品有貨嗎」→ 查產品 + 庫存 + 通知業務。</p>
+      </div>
+      <div class="card card-rose">
+        <h4>↩️ 退貨折讓</h4>
+        <p>「要退這批」→ 引導開折讓單給業務確認。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>🚚 出貨通知</h4>
+        <p>銷貨單出貨 → 主動推播「貨已寄出 + 物流單號」。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📅 提醒付款</h4>
+        <p>到期前 15 天 → 主動推「應付帳款 X 元，到期日 Y」。</p>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:14pt">
+      <h4>🎯 AI 不是取代業務，是放大業務</h4>
+      <p>業務時間花在「拜訪新客戶 + 處理複雜案件」，不是「重複回答查詢問題」。AI 處理 80% 重複問題後，業務人均產出可提升 2-3 倍。複雜或不確定的問題 AI 一律標記人工跟進，不會擅自決策。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P17 AI 業務績效分析 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>17 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">進階流程 2/4 · 規劃中</span>
+    <h2>AI 業務績效分析 — 從感覺打獎金到數據打獎金</h2>
+    <p class="lead">每月 1 號自動跑：抓上月每位業務的 KPI → 計算評分 → Claude 撰寫個人化評語 → 推播給該業務 + 主管。從此「年度業績評估」不是大事，每月就有客觀數據。</p>
+
+    <h3 style="margin-top:14pt">6 項 KPI 自動計算</h3>
+    <div class="grid-3" style="margin-top:8pt">
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">營業額</span><span class="m-label">本月銷貨總金額</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">毛利率</span><span class="m-label">(售價 - 進價) ÷ 售價</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">新客戶</span><span class="m-label">本月新建客戶數</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">客戶活躍</span><span class="m-label">老客戶回購率</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">收款週期</span><span class="m-label">平均回款天數</span></div>
+      <div class="metric card-lavender"><span class="m-num" style="font-size:11pt">拜訪頻率</span><span class="m-label">VisitLog 紀錄</span></div>
+    </div>
+
+    <h3 style="margin-top:14pt">AI 評語樣例</h3>
+    <div class="card card-mint" style="margin-top:8pt">
+      <h4>🅰️ A 業務 — 評分 A</h4>
+      <p style="font-style:italic; color:var(--text)">「A 業務本月營業額 220 萬，毛利率 28% 高於團隊均值 22%。新增 3 個 B 級客戶，老客戶回購率 75%。收款週期 32 天表現優異。建議續發績效獎金 + 安排帶新人。」</p>
+    </div>
+    <div class="card card-peach" style="margin-top:8pt">
+      <h4>🅲 C 業務 — 評分 C</h4>
+      <p style="font-style:italic; color:var(--text)">「C 業務本月營業額 80 萬，達成度 60%。毛利率僅 18% 低於均值，建議檢視是否折扣給太多。VisitLog 顯示拜訪 5 次屬低頻率，建議主管面談規劃明月拜訪計畫。」</p>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:10pt">
+      <h4>💡 公平 + 透明 = 留住好業務</h4>
+      <p>每月 KPI 公開，業務知道自己排名與改善方向。獎金發得有依據，好業務不會被「不會表現的同事」搶資源。Claude Haiku 每位業務評語成本 NT$ 0.005，20 個業務每月 NT$ 0.1。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P18 AI 應用範例 ① 進銷存預測 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>18 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">AI 應用範例 1/2 · 規劃中</span>
+    <h2>AI 進銷存預測 — 預測下個月需求量</h2>
+    <p class="lead">傳統靠老業務的經驗。AI 用歷史銷售 + 季節性 + 趨勢分析，告訴你「下個月每個產品大概會賣多少」。準確度提升 30%，缺貨率降 50%。</p>
+
+    <h3 style="margin-top:14pt">三個資料源綜合分析</h3>
+    <div class="stage-list" style="margin-top:8pt">
+      <div class="stage-row">
+        <div class="stage-num" style="background:var(--mac-rose); color:var(--text)">A</div>
+        <div class="stage-body">
+          <h4>① 歷史銷售曲線</h4>
+          <div class="stage-meta">資料源：SalesOrder + InventoryTransaction</div>
+          <p>過去 12 個月每產品的銷售量、客戶分布、淡旺季。識別出規律性需求。</p>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-num" style="background:var(--mac-mint); color:var(--text)">B</div>
+        <div class="stage-body">
+          <h4>② 季節性因子</h4>
+          <div class="stage-meta">資料源：日期 + 節慶 + 天氣（外部 API）</div>
+          <p>春節、中秋、年中慶等高峰；夏季冷飲、冬季火鍋等季節性產品。AI 自動識別週期。</p>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-num" style="background:var(--mac-lavender); color:var(--text)">C</div>
+        <div class="stage-body">
+          <h4>③ 趨勢分析</h4>
+          <div class="stage-meta">資料源：最近 3 個月銷售增減 + 客戶流失/增加</div>
+          <p>產品成長還是衰退？某客戶停止下單會少多少？AI 自動算邊際影響。</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">AI 預測輸出範例</h3>
+    <div class="card card-lavender" style="margin-top:8pt">
+      <h4>📦 SKU-A0001 預測（下個月）</h4>
+      <p style="font-style:italic; color:var(--text); line-height:1.7">
+        <strong>預測量：</strong>320 ± 40 個（85% 信心區間）<br>
+        <strong>對比：</strong>上月 290 個 / 同期 305 個（+5%）<br>
+        <strong>判斷：</strong>季節性高峰開始，X 客戶往年此時下大單機率 70%。<br>
+        <strong>建議：</strong>備貨至少 360 個（含 10% buffer）。
+      </p>
+    </div>
+
+    <div class="card card-lemon" style="margin-top:10pt">
+      <h4>💰 效益</h4>
+      <p>缺貨率：從 15% 降到 5% / 庫存週轉天數：從 60 天降到 35 天 / 過期報廢：減少 70%（食品/化妝品適用）。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P19 AI 應用範例 ② 推薦補貨 ═══════════════ -->
+<section class="page">
+  <div class="ai-badge">🤖 AI 加值功能</div>
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>19 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">AI 應用範例 2/2 · 規劃中</span>
+    <h2>AI 推薦補貨 — 智能採購建議</h2>
+    <p class="lead">基於 P18 的預測，AI 自動產出「該補誰的貨、補多少、什麼時候下單最划算」的建議清單。採購人員只需審核確認，不用每天看庫存表手算。</p>
+
+    <h3 style="margin-top:14pt">AI 補貨建議邏輯（4 層分析）</h3>
+    <div class="stage-list" style="margin-top:8pt">
+      <div class="stage-row">
+        <div class="stage-num">1</div>
+        <div class="stage-body">
+          <h4>第一層：低於安全庫存的產品篩選</h4>
+          <p>每天自動掃 reorderPoint，產生「需要補貨」候選清單。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">2</div>
+        <div class="stage-body">
+          <h4>第二層：AI 計算補貨數量</h4>
+          <p>用 P18 預測結果 + 供應商交期 + 季節 buffer 計算最適採購量。不過量、不缺貨。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">3</div>
+        <div class="stage-body">
+          <h4>第三層：AI 推薦最佳供應商</h4>
+          <p>比對該產品的歷史 PurchaseOrder：誰價格最好？誰交期最準？誰品質最穩？AI 給推薦 + 替代方案。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">4</div>
+        <div class="stage-body">
+          <h4>第四層：AI 建議下單時機與議價空間</h4>
+          <p>分析「該供應商月底/季底常有折扣」「某產品下個月漲價」等情境，建議最佳下單時機 + 預估議價空間。</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">AI 建議範例</h3>
+    <div class="card card-lavender" style="margin-top:8pt">
+      <h4>📦 補貨清單 — 2026/07/01 生成</h4>
+      <p style="font-size:9.5pt; line-height:1.8">
+        <strong>① SKU-A0001</strong>（現庫 50，安全 100）→ 建議採購 <strong>360 個</strong>，向「供應商 X」（最近 3 次最低價、平均交期 5 天）。<br>
+        <strong>② SKU-B0023</strong>（現庫 8，安全 30）→ 建議採購 <strong>120 個</strong>，向「供應商 Y」（議價空間 5-8%，月底常打折）。<br>
+        <strong>③ SKU-C0015</strong>（現庫 0，安全 20）→ <span style="color:#B91C1C; font-weight:700">緊急採購 80 個</span>，向「供應商 Z」（最快 2 天到貨）。
+      </p>
+    </div>
+
+    <div class="card card-lemon" style="margin-top:10pt">
+      <h4>💰 效益</h4>
+      <p>採購人員時間：每天 2 小時 → 15 分鐘 / 採購成本：降低 5-10%（找到更佳供應商）/ 缺貨損失：減少 80%。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P20 資安機制 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>20 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-rose">資料安全</span>
+    <h2>多租戶 SaaS 級資安標準</h2>
+    <p class="lead">客戶資料、產品價格、客戶名單都是商業機密。FDE 採用銀行業同等級的安全規範，多租戶 SaaS 確保不同公司資料完全隔離。</p>
+
+    <div class="feature-block" style="margin-top:14pt">
+      <h4>🔒 密碼安全 <span class="fb-spec">bcryptjs cost=10</span></h4>
+      <p>所有員工密碼經 bcrypt 雜湊（單向加密）後儲存。即使 DB 被偷，駭客也無法還原原始密碼。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🎫 雙重認證 <span class="fb-spec">JWT Bearer + HTTP-only Cookie</span></h4>
+      <p>LIFF 用 JWT Bearer（id-token 驗證），Web 後台用 HTTP-only cookie（12 小時 TTL）。XSS 攻擊偷不到 token。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🛡️ HTTP 安全頭 <span class="fb-spec">Helmet + CSP</span></h4>
+      <p>Content Security Policy 防止 XSS 注入、防止點擊劫持、強制 HTTPS。OWASP Top 10 全過。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🏢 多租戶完全隔離 <span class="fb-spec">tenantId + assertTenantIsolation</span></h4>
+      <p>每個業務表都有 tenantId 欄位。Service 層 query 強制注入 tenantId 過濾；fetch 後二次驗證 row 屬於正確 tenant，防範跨租戶資料洩漏 bug。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📋 完整稽核日誌 <span class="fb-spec">AuditLog 表</span></h4>
+      <p>每一個 API 呼叫都記錄：誰、何時、做什麼、改了哪些欄位、IP 來源、UserAgent。後台「操作紀錄」頁可查詢任何爭議。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📑 電子發票安全 <span class="fb-spec">S3 per-tenant prefix</span></h4>
+      <p>電子發票 XML 儲存在 S3 bucket 的 per-tenant prefix 子目錄。Turnkey 服務只能讀指定 prefix，不會跨租戶取錯發票。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P21 備援機制 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>21 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">備援機制</span>
+    <h2>每日加密備份 + Email 通知</h2>
+    <p class="lead">資料每日凌晨 02:00（Asia/Taipei）自動備份。pg_dump SQL 或 Prisma JSON 雙模式，加密後自動 Email 給管理員。即使整台 server 燒掉，最多丟 24 小時資料。</p>
+
+    <div class="screen">
+      <img src="screenshots-runtong/10-audit-logs.png" alt="稽核日誌">
+    </div>
+
+    <div class="feature-block" style="margin-top:12pt">
+      <h4>💾 每日完整備份 <span class="fb-spec">pg_dump + gzip / Prisma JSON</span></h4>
+      <p>每晚 02:00 自動跑。生產用 pg_dump（SQL），備援可選 Prisma JSON（可跨版本 restore）。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>🔐 AES-256 加密 <span class="fb-spec">GPG symmetric</span></h4>
+      <p>備份檔用 GPG AES-256 對稱加密。即使檔案外洩，沒有密鑰打不開。密鑰另存安全位置。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📧 Email 通知 <span class="fb-spec">nodemailer SMTP</span></h4>
+      <p>備份成功/失敗都會 Email 給管理員，含檔案大小 + 表筆數摘要。一週沒收到通知就要查。</p>
+    </div>
+
+    <div class="feature-block">
+      <h4>📤 NAS 自動推送（可選） <span class="fb-spec">rclone copy</span></h4>
+      <p>進階備份策略可加 rclone 推到企業 NAS（QNAP / Synology）。客戶實體環境內，不靠雲端。</p>
+    </div>
+
+    <div class="card card-mint" style="margin-top:10pt">
+      <h4>✅ 還原驗證 + Fly Volume Snapshot</h4>
+      <p>每月自動從備份檔還原到測試環境驗證可用。Fly Volume 另有 daily snapshot（5 天保留）。即使主備份壞掉還有第二道保險。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P22 三階段總覽 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>22 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lemon">建置時程</span>
+    <h2>三階段建置：v2.x 已上線 + Phase B + 規劃中</h2>
+    <p class="lead">不是一次上線全部功能。先做核心、跑順、再加進階。本案例已於 v2.x 穩定運行，正進行 Phase B 擴充，階段三規劃中。</p>
+
+    <div class="stage-list" style="margin-top:14pt">
+      <div class="stage-row" style="background:var(--bg-mint); border-color:var(--mac-mint)">
+        <div class="stage-num" style="background:#10B981">✓</div>
+        <div class="stage-body">
+          <h4>階段一：基礎上線（已完成 v2.x）</h4>
+          <div class="stage-meta">✅ 多版本迭代穩定運行 · v2.16 production</div>
+          <p>報價 LIFF + 銷貨/進貨 LINE chat + 名片 OCR + Rich Menu + 電子發票 B2C + PDF 公開連結 + 員工 LINE 綁定 + 應收應付月結 + 業績獎金 + 基礎會計（科目/期間/傳票）。<strong>已實際處理生產作業多月。</strong></p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-blue); border-color:var(--mac-blue)">
+        <div class="stage-num" style="background:var(--cta)">🔄</div>
+        <div class="stage-body">
+          <h4>階段二：實時管理（進行中 Phase B）</h4>
+          <div class="stage-meta">🚧 進行中 · 完整會計擴充 + B2B 電子發票 + 庫存進銷存連動</div>
+          <p>自動分錄 hooks（銷貨/進貨自動產傳票）+ B2B 電子發票 UI + 折讓單 admin 介面 + 庫存進銷存連動 + 月結對帳 PDF 全自動。</p>
+        </div>
+      </div>
+      <div class="stage-row" style="background:var(--bg-lavender); border-color:var(--mac-lavender)">
+        <div class="stage-num" style="background:var(--cta)">⏳</div>
+        <div class="stage-body">
+          <h4>階段三：進階智能（規劃中）</h4>
+          <div class="stage-meta">📅 規劃中 · 依需求獨立評估</div>
+          <p>LINE 群組 AI 客服 + AI 業務績效分析 + AI 進銷存預測 + AI 推薦補貨 + 語音開單（Whisper + Claude）+ 薪資代扣明細 + 401 兩月一期稅單自動產生 + 銀行對帳自動化。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-lavender" style="margin-top:14pt">
+      <h4>💡 為什麼是三階段？</h4>
+      <p>業界 70% ERP 導入失敗的原因是「一次上線太多功能 → 員工抗拒 → 改回 Excel」。FDE 一次只上一階段，員工慢慢適應，第二階段就會主動要求新功能。</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P23 階段一細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>23 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-mint">建置時程 — 階段一</span>
+    <h2>階段一：基礎上線（已完成 ✅）</h2>
+    <p class="lead">目標：取代 Excel + 紙本，讓基本作業數位化。已實際運行多月，員工已習慣新流程。</p>
+
+    <h3 style="margin-top:14pt">已交付清單</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-mint">
+        <h4>📝 報價單 LIFF</h4>
+        <p>業務手機開單，客戶/產品 autocomplete，自動產 PDF + JWT 公開連結。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📋 銷貨/進貨 LINE chat</h4>
+        <p>LINE 直接打字開單，Flex Carousel 確認流程。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📇 名片 OCR</h4>
+        <p>Google Vision 自動抽客戶資料，10 張新客戶 5 分鐘建檔。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>📑 電子發票 B2C</h4>
+        <p>Turnkey API 整合，手機條碼/自然人/捐贈三種載具支援。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>💵 應收應付月結</h4>
+        <p>自動算到期日 + 15 天 LINE 提醒 + ZIP 批次月結對帳單。</p>
+      </div>
+      <div class="card card-mint">
+        <h4>💰 業績獎金自動算</h4>
+        <p>每月 1 號自動結算（毛利 - 營業稅 - 員工稅率）。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">客戶建議導入時程（4-8 週）</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt; line-height:1.8">
+      <strong>第 1 週</strong> — Kick-off + 現況訪談 + 流程確認（workflow-before-code）<br>
+      <strong>第 2 週</strong> — 主檔匯入（Excel → 系統）+ 員工 LINE 綁定<br>
+      <strong>第 3-4 週</strong> — 報價 LIFF + 銷貨單 + 名片 OCR 上線<br>
+      <strong>第 5-6 週</strong> — 電子發票 B2C + 應收應付 + 月結 PDF<br>
+      <strong>第 7 週</strong> — 教育訓練 + 試運行<br>
+      <strong>第 8 週</strong> — 正式上線
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P24 階段二細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>24 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-blue">建置時程 — 階段二</span>
+    <h2>階段二：實時管理（Phase B 進行中 🚧）</h2>
+    <p class="lead">目標：完整會計擴充 + B2B 電子發票 + 庫存進銷存連動。基於業主反饋持續迭代。</p>
+
+    <h3 style="margin-top:14pt">Phase B 模組進度</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-blue">
+        <h4>📊 自動分錄 hooks <span style="font-size:7pt; background:var(--cta); color:#fff; padding:2pt 6pt; border-radius:4pt; margin-left:4pt">進行中</span></h4>
+        <p>銷貨 → Dr 應收 / Cr 銷貨收入 + 銷項稅；進貨 → Dr 存貨 + 進項稅 / Cr 應付。收付款、折讓單待實作。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📑 B2B 電子發票 <span style="font-size:7pt; background:var(--cta); color:#fff; padding:2pt 6pt; border-radius:4pt; margin-left:4pt">設計完</span></h4>
+        <p>Service 層完成（B2B 流程邏輯 + 統編驗證），缺 admin 建單 UI。預計 2-3 週可上線。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>📦 庫存進銷存連動 <span style="font-size:7pt; background:var(--cta); color:#fff; padding:2pt 6pt; border-radius:4pt; margin-left:4pt">框架完成</span></h4>
+        <p>銷貨/進貨事件已掛 hooks，需擴充：批號管理、效期追蹤、安全庫存推薦、盤點機制。</p>
+      </div>
+      <div class="card card-blue">
+        <h4>↩️ 折讓單開立 <span style="font-size:7pt; background:var(--cta); color:#fff; padding:2pt 6pt; border-radius:4pt; margin-left:4pt">Service 完</span></h4>
+        <p>D0401 / D0501 builder 完成，缺 admin UI + 自動分錄 hook。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">階段二時程估算</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt; line-height:1.8">
+      <strong>B2B 電子發票 UI：</strong>2-3 週（含統編驗證 + 載具明細管理）<br>
+      <strong>自動分錄 hooks：</strong>3-4 週（收付款、折讓、零用金）<br>
+      <strong>庫存進銷存擴充：</strong>4-6 週（批號 + 效期 + 盤點 UI）<br>
+      <strong>合計：</strong>預計 2-3 個月內完成
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P25 階段三細節 ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>25 / 26</div>
+  </div>
+
+  <div style="margin-top:18mm">
+    <span class="section-tag tag-lav">建置時程 — 階段三</span>
+    <h2>階段三：進階智能（規劃中 ⏳）</h2>
+    <p class="lead">目標：把日常瑣事交給 AI。業主時間用在策略決策，不用處理重複客服與庫存判斷。</p>
+
+    <h3 style="margin-top:14pt">六個獨立模組（可逐個評估開發）</h3>
+    <div class="grid-2" style="margin-top:8pt">
+      <div class="card card-lavender">
+        <h4>💬 LINE 群組 AI 客服 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">4-6 週</span></h4>
+        <p>客戶 LINE 群組 + AI 自然語言問答 + 複雜問題標記給業務。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>👨‍💼 AI 業務績效分析 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">3-4 週</span></h4>
+        <p>6 KPI + Claude 評語月度自動報告。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📈 AI 進銷存預測 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">4-6 週</span></h4>
+        <p>歷史 + 季節 + 趨勢三因子分析。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>📦 AI 推薦補貨 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">3-4 週</span></h4>
+        <p>需先完成 P18 預測後可延伸。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>🎤 語音開單 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">2-3 週</span></h4>
+        <p>Whisper + Claude Haiku，技術已驗證。</p>
+      </div>
+      <div class="card card-lavender">
+        <h4>💼 401 稅單 + 銀行對帳 <span style="font-size:7pt; background:#fff; padding:1pt 5pt; border-radius:4pt">4-6 週</span></h4>
+        <p>兩月一期申報書、銀行對帳自動化。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:14pt">階段三定價方式</h3>
+    <div style="background:var(--bg); border-radius:6pt; padding:10pt; margin-top:8pt; font-size:9pt; line-height:1.8">
+      <strong>基礎建置費：</strong>依選擇的模組數計，每個模組 NT$ 3-6 萬<br>
+      <strong>月租費追加：</strong>每月加 NT$ 2,000-5,000（含 AI 用量 + 維運）<br>
+      <strong>稅務報表整合：</strong>依當地法規版本另計
+    </div>
+
+    <div class="card card-lavender" style="margin-top:10pt">
+      <h4>💡 建議優先順序</h4>
+      <p>① AI 業務績效分析（業主最有感）→ ② LINE 群組 AI 客服（業務最有感）→ ③ AI 進銷存預測 + 推薦補貨（採購最有感）→ ④ 語音開單 + 稅單對帳（會計 + 業務都有感）</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>runtong.tw@gmail.com</div>
+    <div>https://hsuentung-sketch.github.io/fde-website/</div>
+  </div>
+</section>
+
+<!-- ═══════════════ P26 CTA ═══════════════ -->
+<section class="page">
+  <div class="page-header">
+    <div class="ph-brand"><span class="ph-logo">R</span>一般貿易公司案例</div>
+    <div>26 / 26</div>
+  </div>
+
+  <div style="margin-top:50mm">
+    <div class="cta-card">
+      <h2>免費流程診斷</h2>
+      <p>第一次接觸，我們先免費花 1-2 小時了解你的作業流程，<br>給你一份書面建議（不用付任何費用、沒有業務電話）。</p>
+
+      <a class="cta-email">📧 runtong.tw@gmail.com</a>
+
+      <div style="margin-top:8pt">
+        <div class="cta-link">https://hsuentung-sketch.github.io/fde-website/</div>
+      </div>
+    </div>
+
+    <div style="margin-top:30pt; text-align:center">
+      <h3 style="color:var(--text-sec); font-size:11pt; font-weight:500">三個案例都在我們網站上，歡迎瀏覽</h3>
+      <div style="margin-top:8pt; font-size:9pt; color:var(--text-mut)">
+        ▸ 一般貿易公司 — 本案例完整版（v2.16 production）<br>
+        ▸ 環保清運公司 — 派車 + AI 月報 + 三油商兼容（已上線）<br>
+        ▸ 精密金屬加工廠 — 14 台 CNC + AI 圖面辨識
+      </div>
+    </div>
+
+    <div style="margin-top:40pt; text-align:center; font-size:8pt; color:var(--text-mut)">
+      本文件為案例分享，所有客戶資訊已匿名化處理。<br>
+      © 2026 潤樋科技 RunTong Tech. All rights reserved.
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
