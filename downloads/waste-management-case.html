@@ -20,7 +20,10 @@
     <h1 class="cover-title">環保清運公司<br>數位轉型案例</h1>
     <p class="cover-sub">
       已上線多月的真實 SaaS 案例 — 派車管理、三種報價模板、加油費三油商匯入、<br>
-      AI 司機月報、LINE 群組客服、EPA 廢棄物代碼……從紙本派車到全流程自動化。
+      AI 司機月報、LINE 群組客服、EPA 廢棄物代碼……從紙本派車到全流程自動化。<br>
+      <span style="display:inline-block;margin-top:8pt;padding:6pt 10pt;background:rgba(255,255,255,.08);border-left:3pt solid var(--mac-rose);border-radius:0 4pt 4pt 0;font-size:10.5pt;color:var(--mac-rose)">
+        ⚠ 新增痛點：年度合約修改困難、合約重新製作得加班處理 → 系統內合約管理自動提醒。
+      </span>
     </p>
 
     <div class="cover-metrics">
@@ -114,6 +117,7 @@
           <li><strong>司機績效</strong>看油耗只能憑感覺打獎金</li>
           <li><strong>應收帳款</strong>客戶月結拖款，業務不知道該追誰</li>
           <li><strong>異常派車</strong>同司機兩天內派車超過 2 次也沒人發現</li>
+          <li><strong>年度合約修改</strong>找不到原檔、版次混亂、合約重新製作得加班處理</li>
         </ul>
       </div>
       <div class="ba-side ba-after">
@@ -127,6 +131,7 @@
           <li><strong>AI 月度司機報告</strong>，Claude 給每個司機 A-D 評分 + 中文評語</li>
           <li><strong>應收帳齡分析</strong>，30/60/90 天逾期客戶清單，業務追款有依據</li>
           <li><strong>異常派車自動偵測</strong>，主管 LINE 即時收到通知</li>
+          <li><strong>合約管理</strong>到期前 45 日 LINE 提醒、自動產新合約、版次完整保留</li>
         </ul>
       </div>
     </div>
@@ -538,10 +543,29 @@
           <p>明日派車、月報出爐、異常派車警示，主動 LINE 訊息推送。</p>
         </div>
       </div>
-      <div class="card card-peach" style="display:flex; flex-direction:column; justify-content:center; align-items:center; padding:24pt">
-        <div style="font-size:48pt; margin-bottom:8pt">📱</div>
-        <h4 style="text-align:center">員工只需學會 LINE</h4>
-        <p style="text-align:center; font-size:9pt">零硬體投入。手機就是工業電腦。<br>新司機到職當天上線，沒有教育訓練成本。</p>
+      <div style="display:flex; flex-direction:column; gap:8pt">
+        <div class="card card-peach" style="padding:14pt">
+          <div style="display:flex; align-items:center; gap:8pt; margin-bottom:6pt">
+            <div style="font-size:24pt">📱</div>
+            <h4 style="margin:0">員工只需學會 LINE</h4>
+          </div>
+          <p style="font-size:8.5pt; margin:0; color:var(--text-sec)">零硬體投入。手機就是工業電腦。新司機到職當天上線。</p>
+        </div>
+
+        <div class="card card-blue" style="padding:14pt; border-left:3pt solid var(--cta)">
+          <div style="display:flex; align-items:center; gap:8pt; margin-bottom:6pt">
+            <div style="font-size:24pt">📋</div>
+            <h4 style="margin:0">年度合約自動管理</h4>
+          </div>
+          <p style="font-size:8.5pt; margin:0 0 6pt; color:var(--text-sec)">合約截止日期到期 → 系統自動新增下年度合約草稿 →
+            <strong style="color:var(--cta)">45 日前 LINE 提醒</strong>業主下載新合約 → 送客戶用印 → 回傳上傳系統。</p>
+          <ul style="margin:0; padding-left:14pt; font-size:8pt; color:var(--text-sec); line-height:1.5">
+            <li><strong>版次完整保留</strong>：每年合約都獨立版本，前後對照一目了然</li>
+            <li><strong>用印追蹤</strong>：草稿 → 已寄送 → 已用印 → 已歸檔，每步驟可查</li>
+            <li><strong>價格延續</strong>：自動帶上年度價格條款，業務可調整再送</li>
+            <li><strong>客戶端 LIFF</strong>：客戶用 LINE 看舊合約 + 簽收新合約</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
