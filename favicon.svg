@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#2563eb"/>
-  <text x="16" y="23" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="20">R</text>
+  <!-- 流管節點：象徵「潤」(流) + 「樋」(管道) -->
+  <rect width="32" height="32" rx="8" fill="#4F46E5"/>
+  <!-- 左側輸入管 -->
+  <path d="M5 8 L5 14 Q5 18 9 18" stroke="rgba(255,255,255,0.5)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- 中心節點（流程匯聚點） -->
+  <circle cx="16" cy="18" r="4" fill="white"/>
+  <circle cx="16" cy="18" r="1.8" fill="#4F46E5"/>
+  <!-- 右側輸出管 -->
+  <path d="M20 18 L26 18 L26 25" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- 右上輸入管 -->
+  <path d="M25 8 L25 13 Q25 18 20 18" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
 </svg>

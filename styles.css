@@ -40,6 +40,11 @@
   --cta:       #4F46E5;
   --cta-hover: #4338CA;
   --cta-light: #EEF2FF;
+
+  /* === 製造業 accent（copper/琥珀金） === */
+  --accent-copper:        #B45309;
+  --accent-copper-light:  #FEF3C7;
+  --accent-copper-mid:    #D97706;
   --cta-glow:  rgba(79,70,229,.25);
 
   /* Accent */

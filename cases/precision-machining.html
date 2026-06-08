@@ -187,7 +187,14 @@
 <header class="header">
   <div class="header-inner">
     <a href="../index.html" class="logo" style="text-decoration:none">
-      <div class="logo-icon">R</div>
+      <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <rect width="32" height="32" rx="8" fill="#4F46E5"/>
+        <path d="M5 8 L5 14 Q5 18 9 18" stroke="rgba(255,255,255,0.5)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <circle cx="16" cy="18" r="4" fill="white"/>
+        <circle cx="16" cy="18" r="1.8" fill="#4F46E5"/>
+        <path d="M20 18 L26 18 L26 25" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <path d="M25 8 L25 13 Q25 18 20 18" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      </svg>
       潤樋科技
     </a>
     <nav class="nav">
@@ -278,6 +285,16 @@
       </div>
     </div>
 
+      <!-- 客戶聲音 -->
+      <div class="fade-up" style="background:var(--bg-lavender,#F0F0FF);border-left:4px solid var(--cta);border-radius:10px;padding:28px 32px;margin:48px 0;position:relative;overflow:hidden">
+        <svg style="position:absolute;top:12px;right:16px;opacity:.1" width="56" height="56" viewBox="0 0 24 24" fill="#4F46E5" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
+          <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+        </svg>
+        <p style="font-size:1.05rem;line-height:1.9;color:#1E1E2E;margin-bottom:14px;font-style:italic">「以前廠裡 14 台機台在哪、忙什麼，要走過去看才知道。現在手機一開，哪台在跑、哪台停機，直接就看到了。師傅不用一直被叫去問，廠長出差也能掌握狀況。」</p>
+        <div style="font-size:.85rem;color:#6B7280;font-weight:600">-- 精密金屬加工廠　製造部主管</div>
+      </div>
+
     <!-- ── Before / After Comparison ── -->
     <div class="ba-section fade-up">
       <h2 class="section-title">
@@ -359,6 +376,51 @@
         </div>
       </div>
     </div>
+
+      <!-- 效益量化圖 -->
+      <div class="fade-up" style="margin:48px 0">
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:24px;color:#1E1E2E">作業時間對比（分鐘/件）</h3>
+        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;font-family:'Noto Sans TC',sans-serif">
+          <!-- 背景格線 -->
+          <line x1="140" y1="10" x2="140" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="240" y1="10" x2="240" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="340" y1="10" x2="340" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="440" y1="10" x2="440" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <line x1="540" y1="10" x2="540" y2="170" stroke="#E5E7EB" stroke-width="1"/>
+          <!-- 刻度標籤 -->
+          <text x="140" y="185" text-anchor="middle" font-size="11" fill="#9CA3AF">10</text>
+          <text x="240" y="185" text-anchor="middle" font-size="11" fill="#9CA3AF">20</text>
+          <text x="340" y="185" text-anchor="middle" font-size="11" fill="#9CA3AF">30</text>
+          <text x="440" y="185" text-anchor="middle" font-size="11" fill="#9CA3AF">40</text>
+          <text x="540" y="185" text-anchor="middle" font-size="11" fill="#9CA3AF">50 分鐘</text>
+          <!-- 行 1：派工安排 -->
+          <text x="130" y="35" text-anchor="end" font-size="12" fill="#374151">派工安排</text>
+          <rect x="140" y="18" width="420" height="20" rx="4" fill="#FEE2E2" opacity=".5"/>
+          <rect x="140" y="18" width="420" height="20" rx="4" fill="#EF4444" opacity=".25"/>
+          <rect x="140" y="18" width="84" height="20" rx="4" fill="#4F46E5"/>
+          <text x="232" y="33" font-size="11" fill="#EF4444" font-weight="600">前：50 分</text>
+          <text x="144" y="33" font-size="11" fill="white" font-weight="700">6 分</text>
+          <!-- 行 2：機台狀態確認 -->
+          <text x="130" y="80" text-anchor="end" font-size="12" fill="#374151">機台狀態確認</text>
+          <rect x="140" y="63" width="300" height="20" rx="4" fill="#FEE2E2" opacity=".5"/>
+          <rect x="140" y="63" width="300" height="20" rx="4" fill="#EF4444" opacity=".25"/>
+          <rect x="140" y="63" width="40" height="20" rx="4" fill="#4F46E5"/>
+          <text x="448" y="78" font-size="11" fill="#EF4444" font-weight="600">前：30 分</text>
+          <text x="144" y="78" font-size="11" fill="white" font-weight="700">即時</text>
+          <!-- 行 3：製程卡追溯 -->
+          <text x="130" y="125" text-anchor="end" font-size="12" fill="#374151">製程卡追溯</text>
+          <rect x="140" y="108" width="360" height="20" rx="4" fill="#FEE2E2" opacity=".5"/>
+          <rect x="140" y="108" width="360" height="20" rx="4" fill="#EF4444" opacity=".25"/>
+          <rect x="140" y="108" width="28" height="20" rx="4" fill="#4F46E5"/>
+          <text x="508" y="123" font-size="11" fill="#EF4444" font-weight="600">前：36 分</text>
+          <text x="144" y="123" font-size="11" fill="white" font-weight="600">3</text>
+          <!-- 圖例 -->
+          <rect x="140" y="150" width="12" height="12" rx="2" fill="#4F46E5"/>
+          <text x="156" y="161" font-size="11" fill="#374151">導入後</text>
+          <rect x="220" y="150" width="12" height="12" rx="2" fill="#EF4444" opacity=".5"/>
+          <text x="236" y="161" font-size="11" fill="#374151">導入前</text>
+        </svg>
+      </div>
 
     <!-- ── CNC Machine Board Mockup ── -->
     <div class="board-mockup fade-up">
