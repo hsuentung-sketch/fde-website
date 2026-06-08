@@ -561,31 +561,59 @@
       </div>
     </div>
 
-    <!-- ── Planned Roadmap ─────────────────────────── -->
+    <!-- ── Phase B Accounting Roadmap ─────────────── -->
     <h2 class="section-title fade-up">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      規劃中功能
+      Phase B 會計擴充路線圖
     </h2>
+    <p class="fade-up" style="color:var(--text-secondary);font-size:.9rem;margin-bottom:24px">目前科目表 + 手動傳票已上線。以下為接續的自動化會計功能，依模組獨立啟用：</p>
     <div class="roadmap-grid fade-up">
-      <div class="roadmap-item">
-        <h4>自動會計分錄</h4>
-        <p>銷貨/進貨/收付款自動產生對應會計傳票</p>
+      <div class="roadmap-item" style="border-color:var(--mac-lavender)">
+        <h4>自動分錄 Hooks（6 種）</h4>
+        <p>銷貨過帳 Dr 應收/Cr 銷貨收入、進貨過帳 Dr 存貨/Cr 應付、收付款沖帳、折讓單反轉、電子發票連動 — 交易發生即自動產生傳票，零人工</p>
       </div>
-      <div class="roadmap-item">
-        <h4>薪資扣繳明細</h4>
-        <p>佣金連動薪資計算與扣繳申報</p>
+      <div class="roadmap-item" style="border-color:var(--mac-rose)">
+        <h4>薪資代扣明細</h4>
+        <p>發薪自動拆帳：Dr 薪資費用 / Cr 銀行 + 代扣健保/勞保/所得稅，佣金連動薪資計算</p>
       </div>
-      <div class="roadmap-item">
-        <h4>零用金管理</h4>
-        <p>定額備用金制度（Imprest Mode）</p>
+      <div class="roadmap-item" style="border-color:var(--mac-mint)">
+        <h4>零用金 Imprest</h4>
+        <p>定額備用金制度，支出記帳後自動算補差額，請款審核流程</p>
       </div>
-      <div class="roadmap-item">
+      <div class="roadmap-item" style="border-color:var(--mac-blue)">
+        <h4>員工借支</h4>
+        <p>應收員工借支 1141 科目管理，扣薪自動沖銷</p>
+      </div>
+      <div class="roadmap-item" style="border-color:var(--mac-lemon)">
+        <h4>JE 模板系統</h4>
+        <p>管理員維護常用借貸對照模板，取代程式內建的關鍵字對照表，彈性更大</p>
+      </div>
+      <div class="roadmap-item" style="border-color:var(--mac-peach)">
+        <h4>折讓單前端 UI</h4>
+        <p>D0401/D0501 builder 已就緒，補前端介面即可操作折讓開立與作廢</p>
+      </div>
+    </div>
+    <h3 class="fade-up" style="font-size:1.1rem;margin:32px 0 16px;color:var(--text)">報表 / 申報</h3>
+    <div class="roadmap-grid fade-up">
+      <div class="roadmap-item" style="border-color:var(--mac-lavender)">
+        <h4>401 營業稅申報</h4>
+        <p>兩月一期，銷項/進項稅額自動彙總產出申報資料</p>
+      </div>
+      <div class="roadmap-item" style="border-color:var(--mac-blue)">
         <h4>銀行對帳</h4>
-        <p>匯入銀行明細自動比對帳務</p>
+        <p>匯入銀行對帳單，自動比對 DB 交易紀錄，標記差異</p>
       </div>
-      <div class="roadmap-item">
+      <div class="roadmap-item" style="border-color:var(--mac-mint)">
         <h4>現金流量表</h4>
-        <p>自動彙整營運/投資/融資現金流</p>
+        <p>間接法自動彙整營運/投資/融資三大區塊現金流</p>
+      </div>
+      <div class="roadmap-item" style="border-color:var(--mac-lemon)">
+        <h4>月結對帳單 PDF</h4>
+        <p>客戶/供應商維度，批次產出帶明細的對帳單 PDF</p>
+      </div>
+      <div class="roadmap-item" style="border-color:var(--mac-rose)">
+        <h4>銷售報表</h4>
+        <p>毛利分析、月度趨勢、科目明細帳/總分類帳檢視</p>
       </div>
     </div>
 

@@ -787,17 +787,19 @@
         <div class="ai-card ai-card-blue" style="background:var(--bg-blue)">
           <span class="ai-badge" style="background:rgba(79,70,229,.1);color:var(--cta)">GCV + Claude Haiku</span>
           <h4>工程圖面標題欄自動辨識</h4>
-          <p>上傳 PDF 或 JPG 工程圖面，系統自動執行 OCR 並提取 10 個結構化欄位：品名、料號、材質、版次、公差等。每個欄位獨立信心分數 (0-1)，低於 0.5 以紅色標記提醒人工審查。</p>
+          <p>完整的圖面生命週期管理：上傳時建立 DrawingIngestJob（owner 指定制），人工確認後觸發 AI 抽取 10 個結構化欄位（品名、料號、材質、版次、公差等）。每個欄位獨立信心分數 (0-1)，低於 0.5 紅色標記提醒審查。Orchestration 層與 AI 抽取層分離，未來可換 model 不改業務流。</p>
           <div class="ai-flow">
             <span class="ai-flow-step">上傳圖面</span>
             <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">建立 Job</span>
+            <span class="ai-flow-arrow">&#8594;</span>
+            <span class="ai-flow-step">人工確認</span>
+            <span class="ai-flow-arrow">&#8594;</span>
             <span class="ai-flow-step">GCV OCR</span>
             <span class="ai-flow-arrow">&#8594;</span>
-            <span class="ai-flow-step">Claude 欄位擷取</span>
+            <span class="ai-flow-step">Claude 擷取</span>
             <span class="ai-flow-arrow">&#8594;</span>
-            <span class="ai-flow-step">信心分數標記</span>
-            <span class="ai-flow-arrow">&#8594;</span>
-            <span class="ai-flow-step">人工審查</span>
+            <span class="ai-flow-step">信心標記</span>
             <span class="ai-flow-arrow">&#8594;</span>
             <span class="ai-flow-step">一鍵建卡</span>
           </div>

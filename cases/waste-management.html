@@ -315,7 +315,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h4>客戶主檔</h4>
-          <p>EPA 欄位、管制編號、廢棄物代碼、清運合約 30 天到期提醒、統編 g0v 查詢</p>
+          <p>EPA 欄位、管制編號、廢棄物代碼表整合（環保署代碼對照）、清運合約 30 天到期提醒、統編 g0v 查詢</p>
           <span class="badge badge-live">上線</span>
         </div>
 
@@ -345,7 +345,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
           <h4>車隊管理</h4>
-          <p>里程追蹤、車輛主檔與調度</p>
+          <p>車輛主檔、里程追蹤、KPI 儀表板（維修費/油耗/輪胎成本 CSS 條狀圖）、車種篩選</p>
           <span class="badge badge-live">上線</span>
         </div>
 
@@ -355,7 +355,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h4>輪胎庫存</h4>
-          <p>安裝紀錄追蹤、庫存管理</p>
+          <p>寄庫管理、安裝/拆卸紀錄追蹤、前後輪位置追蹤、庫存即時查詢</p>
           <span class="badge badge-live">上線</span>
         </div>
 
@@ -415,7 +415,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M3 22V2h12l4 4v16H3z"/><path d="M14 2v6h5"/><path d="M8 13h8M8 17h5"/></svg>
           </div>
           <h4>油料管理</h4>
-          <p>油卡 Excel 匯入（動態表頭）、司機拍照、自動算油耗 km/L、SHA256 去重</p>
+          <p>台糖/山隆/統一三大油商 Excel 自動偵測匯入、動態表頭比對、彙總列過濾、HTML table 解析、司機拍照、油耗 km/L 自動計算、SHA256 去重防重複</p>
           <span class="badge badge-live">上線</span>
         </div>
 
@@ -495,7 +495,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <h4>LINE / LIFF</h4>
-          <p>司機端：今日派車/歷史/油料/維修/月報/個人；管理端：名片 OCR 建客戶</p>
+          <p>3 套 Rich Menu（司機/管理/客戶）自動切換、司機端：今日派車/歷史/油料/維修/月報/個人、管理端：名片 OCR 建客戶、客戶 LINE 綁定 QR</p>
           <span class="badge badge-live">上線</span>
         </div>
 
@@ -588,6 +588,34 @@
           </div>
           <h4>OCR 辨識套件</h4>
           <p>Google Vision 整合：儀錶板里程拍照自動讀數、名片拍照自動建客戶、車牌辨識、輪胎胎壁辨識。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Data Analytics Highlights ── -->
+    <div class="ai-built-section fade-up" style="background:var(--bg-lemon);">
+      <h2>數據分析亮點</h2>
+      <div class="ai-built-grid">
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-lemon);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h4>車輛 KPI 儀表板</h4>
+          <p>每台車的維修費、油耗、輪胎成本一目了然。CSS 條狀圖視覺化呈現，支援車種篩選與 KPI 切換，不依賴外部圖表庫，輕量快速。</p>
+        </div>
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-mint);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4>季報 / 年報自動彙整</h4>
+          <p>月報產出後，系統自動聚合為季報與年報，無需重新計算。管理者一鍵切換月/季/年維度，快速掌握長期趨勢。</p>
+        </div>
+        <div class="ai-built-card">
+          <div class="ai-icon" style="background:var(--mac-blue);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/></svg>
+          </div>
+          <h4>多油商 Excel 智慧匯入</h4>
+          <p>台糖（HTML table）、山隆（多公司合併）、統一（標準 XLSX）三種格式自動偵測。表頭別名動態比對、彙總列自動過濾、非本租戶車牌歸入「未匹配」區，零人工介入。</p>
         </div>
       </div>
     </div>
