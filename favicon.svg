@@ -1,13 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- 流管節點：象徵「潤」(流) + 「樋」(管道) -->
-  <rect width="32" height="32" rx="8" fill="#4F46E5"/>
-  <!-- 左側輸入管 -->
-  <path d="M5 8 L5 14 Q5 18 9 18" stroke="rgba(255,255,255,0.5)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-  <!-- 中心節點（流程匯聚點） -->
-  <circle cx="16" cy="18" r="4" fill="white"/>
-  <circle cx="16" cy="18" r="1.8" fill="#4F46E5"/>
-  <!-- 右側輸出管 -->
-  <path d="M20 18 L26 18 L26 25" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-  <!-- 右上輸入管 -->
-  <path d="M25 8 L25 13 Q25 18 20 18" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <rect width="32" height="32" rx="7" fill="#1B5E7B"/>
+  <path d="M18 6 A10 10 0 0 1 25 19" stroke="rgba(255,255,255,.55)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <polygon points="26,20 23,17 24.5,21.5" fill="rgba(255,255,255,.55)"/>
+  <path d="M24 21 A10 10 0 0 1 8 21" stroke="rgba(255,255,255,.75)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <polygon points="7,20 9,24 6,23" fill="rgba(255,255,255,.75)"/>
+  <path d="M8 19 A10 10 0 0 1 16 6" stroke="rgba(255,255,255,.55)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <polygon points="17,5 14,3 14.5,8" fill="rgba(255,255,255,.55)"/>
+  <text x="16" y="17.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="7.5" fill="white">AI</text>
 </svg>
