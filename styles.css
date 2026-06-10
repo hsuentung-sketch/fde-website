@@ -234,8 +234,8 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   transition: color .15s;
 }
 .nav a:hover { color: var(--text); text-decoration: none; }
-.nav a.btn-primary { color: #fff; }
-.nav a.btn-primary:hover { color: #fff; }
+.nav a.btn-primary { color: #fff !important; }
+.nav a.btn-primary:hover { color: #fff !important; }
 
 .hamburger {
   display: none;
