@@ -291,6 +291,11 @@
             名片 OCR 拍照即建檔
             <span class="ba-metric">30 sec (-95%)</span>
           </li>
+          <li>
+            <span class="ba-icon">&#128200;</span>
+            LINE 查庫存/業績獎金即時回覆
+            <span class="ba-metric">3 sec (-99%)</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -334,7 +339,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
         <h4>銷售報價</h4>
-        <p>LINE 對話流程 + LIFF 介面、PDF 自動生成、JWT 簽章下載連結</p>
+        <p>LINE + LIFF + 後台三通道建立、一鍵轉銷貨、PDF 自動生成、LINE 取消/編輯</p>
         <span class="badge badge-live">已上線</span>
       </div>
       <!-- 5 銷貨單 -->
@@ -424,7 +429,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
         <h4>管理後台</h4>
-        <p>11+ 視圖、Hash Router SPA、角色權限控制、儀表板總覽</p>
+        <p>14 視圖、可直接建立報價/銷貨/進貨單、角色權限控制、儀表板總覽</p>
         <span class="badge badge-live">已上線</span>
       </div>
     </div>
@@ -447,6 +452,7 @@
         <div class="admin-tab">應收帳款</div>
         <div class="admin-tab">應付帳款</div>
         <div class="admin-tab">庫存</div>
+        <div class="admin-tab">業績獎金</div>
       </div>
     </div>
 
@@ -465,6 +471,7 @@
           <li>月結帳單要花整天彙整列印寄送</li>
           <li>新客戶資料手動建檔 10 分鐘，容易打錯</li>
           <li>業務員不在公司時無法處理報價，錯失商機</li>
+          <li>業績獎金手動核算毛利，庫存只能回公司查，決策缺乏即時數據</li>
         </ul>
       </div>
       <div class="detail-block">
@@ -476,6 +483,7 @@
           <li>月結帳單批次 PDF ZIP 一鍵產出，5 分鐘完成</li>
           <li>名片 OCR：拍照 30 秒自動擷取姓名/公司/電話/統編</li>
           <li>語音下單：說「賣 100 個給 X 公司」自動建立銷貨草稿</li>
+          <li>LINE 輸入「庫存」「業績」即查，業績獎金自動算毛利扣稅</li>
         </ul>
       </div>
     </div>
@@ -645,9 +653,9 @@
     <!-- ── ERP Enhancement Roadmap ──────────────── -->
     <h3 class="fade-up" style="font-size:1.1rem;margin:32px 0 16px;color:var(--text)">後台 / LINE / 庫存擴充</h3>
     <div class="roadmap-grid fade-up">
-      <div class="roadmap-item" style="border-color:var(--mac-lavender)">
-        <h4>後台建單 UI</h4>
-        <p>報價/銷貨/進貨目前只能查，補上後台直接建單介面（不經 LINE）</p>
+      <div class="roadmap-item" style="border-color:var(--mac-lavender);border-style:solid;background:var(--bg-mint)">
+        <h4>後台建單 UI <span style="font-size:.7rem;color:#059669;font-weight:700">&#10003; 已上線</span></h4>
+        <p>報價/銷貨/進貨可在後台直接建單、編輯、報價一鍵轉銷貨</p>
       </div>
       <div class="roadmap-item" style="border-color:var(--mac-blue)">
         <h4>庫存進銷存連動</h4>
@@ -732,7 +740,7 @@
     <!-- ── Highlight Box ──────────────────────────── -->
     <div class="highlight-box fade-up">
       <h3>為什麼這個案例最具說服力？</h3>
-      <p>這是目前唯一<strong>已正式上線、每天被使用</strong>的生產系統（v2.16.0）。報價到出貨從 2 小時壓縮到 5 分鐘，應收帳款催收工作量減少 70%，電子發票從 15 分鐘降到 30 秒。員工每天打開 LINE 就在用，不需要培訓。語音下單、名片 OCR 這些 AI 功能不是 demo，是真正在跑的功能。零硬體成本，全雲端架構，Fly.io 部署。</p>
+      <p>這是目前唯一<strong>已正式上線、每天被使用</strong>的生產系統（v2.16.3）。報價到出貨從 2 小時壓縮到 5 分鐘，應收帳款催收工作量減少 70%，電子發票從 15 分鐘降到 30 秒。員工每天打開 LINE 就在用，不需要培訓。語音下單、名片 OCR 這些 AI 功能不是 demo，是真正在跑的功能。零硬體成本，全雲端架構，Fly.io 部署。</p>
     </div>
 
     <!-- ── CTA ────────────────────────────────────── -->
