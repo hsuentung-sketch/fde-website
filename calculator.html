@@ -185,20 +185,39 @@
 
       <!-- 左：輸入 -->
       <div class="calc-form">
-        <h3>你的公司規模</h3>
+        <h3>你的公司規模（顯示用）</h3>
 
         <div class="input-group">
-          <label>員工數 — <span class="val" id="empVal">50</span> 人</label>
-          <input type="range" id="emp" min="20" max="500" step="10" value="50">
+          <label>員工人數 — <span class="val" id="empVal">10 人以下</span></label>
+          <input type="range" id="emp" min="10" max="100" step="10" value="10">
+          <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-muted);margin-top:4px">
+            <span>10 人以下</span><span>100 人以上</span>
+          </div>
         </div>
 
         <div class="input-group">
-          <label>月訂單量 — <span class="val" id="ordVal">100</span> 張</label>
-          <input type="range" id="ord" min="10" max="1000" step="10" value="100">
+          <label>月訂單量 — <span class="val" id="ordVal">100 張以下</span></label>
+          <input type="range" id="ord" min="100" max="1000" step="100" value="100">
+          <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-muted);margin-top:4px">
+            <span>100 張以下</span><span>1000 張以上</span>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px dashed var(--border);margin:24px 0">
+        <h3>影響費用的選項</h3>
+
+        <div class="input-group">
+          <label>模組規模（決定建置費）</label>
+          <div class="radio-group">
+            <label><input type="radio" name="scale" value="basic" checked><span>基礎包</span></label>
+            <label><input type="radio" name="scale" value="standard"><span>標準包</span></label>
+            <label><input type="radio" name="scale" value="full"><span>全套</span></label>
+          </div>
+          <p style="font-size:.75rem;color:var(--text-muted);margin-top:6px;line-height:1.6">基礎：主檔+進銷存｜標準：+ 會計/應收應付｜全套：+ 行業專屬模組</p>
         </div>
 
         <div class="input-group">
-          <label>部署模式</label>
+          <label>部署模式（決定月租）</label>
           <div class="radio-group">
             <label><input type="radio" name="mode" value="managed" checked><span>代管</span></label>
             <label><input type="radio" name="mode" value="byoc"><span>BYOC</span></label>
@@ -206,7 +225,7 @@
         </div>
 
         <div class="input-group">
-          <label>AI 功能使用量</label>
+          <label>AI 功能使用量（決定月租分檔）</label>
           <div class="radio-group">
             <label><input type="radio" name="ai" value="low" checked><span>低</span></label>
             <label><input type="radio" name="ai" value="mid"><span>中</span></label>
@@ -223,11 +242,11 @@
             <span>潤樋科技 — <span id="modeLabel">代管模式</span></span>
             <span class="badge" id="modeBadge">推薦</span>
           </h3>
-          <div class="cost-line"><span>月租 × 12</span><span class="num" id="rtRent">NT$180K</span></div>
-          <div class="cost-line"><span>首次建置（一次性）</span><span class="num" id="rtSetup">NT$150K</span></div>
+          <div class="cost-line"><span>月租 × 12</span><span class="num" id="rtRent">NT$120K</span></div>
+          <div class="cost-line"><span>首次建置（一次性）</span><span class="num" id="rtSetup">NT$100K</span></div>
           <div class="cost-line"><span>AI 用量（年）</span><span class="num" id="rtAi">NT$5K</span></div>
-          <div class="cost-line total"><span>第一年總成本</span><span class="num" id="rtTotal">NT$335K</span></div>
-          <div class="cost-line"><span style="color:var(--text-muted);font-size:.82rem">第二年起（無建置費）</span><span class="num" id="rtYear2" style="color:var(--text-muted);font-size:.85rem">NT$185K</span></div>
+          <div class="cost-line total"><span>第一年總成本</span><span class="num" id="rtTotal">NT$225K</span></div>
+          <div class="cost-line"><span style="color:var(--text-muted);font-size:.82rem">第二年起（無建置費）</span><span class="num" id="rtYear2" style="color:var(--text-muted);font-size:.85rem">NT$125K</span></div>
         </div>
 
         <div class="cost-card cost-card--generic">
@@ -254,9 +273,12 @@
 
     <div class="calc-disclaimer">
       <strong>計算說明：</strong>
-      代管月租依員工規模分檔（≤100 人 NT$15K，101-200 人 NT$20K，&gt;200 人 NT$20K）。BYOC = 代管 × 40%（虛擬主機 / 線上資料庫帳單由你直接支付，未計入；BYOC 不含電子發票服務）。
-      AI 用量：低 NT$5K/年、中 NT$20K/年、高 NT$60K/年。
-      通用 ERP 數字為市場常見區間估算（年維護 NT$3-8 萬/月、整合 NT$50 萬、客製 NT$20 萬），實際依供應商與規模差異。
+      員工人數與月訂單量為顯示用，不影響費用（潤樋採固定月租 + 模組制，與規模無關）。
+      <strong>建置費</strong>依模組規模：基礎包 10 萬／標準包 20 萬／全套 30 萬。
+      <strong>代管月租</strong>依 AI 使用量分檔：低 NT$10K／中 NT$15K／高 NT$20K（已含基本 AI 用量）。
+      <strong>BYOC 月租</strong> = 代管 × 40%（虛擬主機 / 線上資料庫帳單由你直接支付，未計入；BYOC 不含電子發票服務）。
+      <strong>AI 超額費用</strong>：低 NT$5K/年、中 NT$20K/年、高 NT$60K/年（超出月租基本量再計）。
+      <strong>通用 ERP</strong>數字為市場常見區間估算（年維護 NT$50-100 萬、整合 NT$50 萬、客製 NT$20 萬），實際依供應商差異。
       此試算僅供參考，正式報價以合約為準。
     </div>
 
@@ -283,30 +305,34 @@
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => 'NT$' + Math.round(n / 1000).toLocaleString('en-US') + 'K';
 
-  function getMode() {
-    return document.querySelector('input[name="mode"]:checked').value;
-  }
-  function getAi() {
-    return document.querySelector('input[name="ai"]:checked').value;
+  function pick(name) {
+    return document.querySelector('input[name="' + name + '"]:checked').value;
   }
 
   function calc() {
     const emp = parseInt($('emp').value);
     const ord = parseInt($('ord').value);
-    const mode = getMode();
-    const ai = getAi();
+    const mode = pick('mode');
+    const ai = pick('ai');
+    const scale = pick('scale');
 
-    $('empVal').textContent = emp;
-    $('ordVal').textContent = ord;
+    // 員工人數顯示：邊界值顯示「X 以下/以上」
+    $('empVal').textContent = emp <= 10 ? '10 人以下' : (emp >= 100 ? '100 人以上' : emp + ' 人');
+    // 月訂單量顯示
+    $('ordVal').textContent = ord <= 100 ? '100 張以下' : (ord >= 1000 ? '1000 張以上' : ord + ' 張');
 
-    // 代管月租分檔
-    let managedMonthly = 15000;
-    if (emp > 100) managedMonthly = 20000;
-    if (emp > 200) managedMonthly = 20000;
+    // 建置費 — 依模組規模（不受員工/訂單影響）
+    const setupByScale = { basic: 100000, standard: 200000, full: 300000 };
+    const setup = setupByScale[scale];
 
-    // BYOC = 40%
+    // 代管月租 — 依 AI 使用量分檔（不受員工/訂單影響）
+    const managedMonthlyByAi = { low: 10000, mid: 15000, high: 20000 };
+    const managedMonthly = managedMonthlyByAi[ai];
+
+    // BYOC = 代管 × 40%
     const monthly = mode === 'byoc' ? Math.round(managedMonthly * 0.4) : managedMonthly;
-    const setup = mode === 'byoc' ? 150000 : 200000; // 依模組規模（10-30 萬區間取中位）
+
+    // AI 超額（基本量已含於月租）
     const aiYearly = { low: 5000, mid: 20000, high: 60000 }[ai];
 
     const rtRent = monthly * 12;
@@ -321,11 +347,12 @@
     $('rtTotal').textContent = fmt(rtTotal);
     $('rtYear2').textContent = fmt(rtYear2);
 
-    // 通用 ERP 估算（隨員工規模略增）
-    const gnMonthly = emp > 200 ? 80000 : (emp > 100 ? 50000 : 40000);
+    // 通用 ERP 估算 — 依模組規模（小:5/中:7/大:10 萬月維護）
+    const gnMonthlyByScale = { basic: 50000, standard: 70000, full: 100000 };
+    const gnMonthly = gnMonthlyByScale[scale];
     const gnRent = gnMonthly * 12;
     const gnIntegration = 500000;
-    const gnModules = 200000;
+    const gnModules = scale === 'full' ? 300000 : (scale === 'standard' ? 200000 : 100000);
     const gnTotal = gnRent + gnIntegration + gnModules;
     const gnYear2 = gnRent;
 
@@ -349,6 +376,7 @@
   $('ord').addEventListener('input', calc);
   document.querySelectorAll('input[name="mode"]').forEach(el => el.addEventListener('change', calc));
   document.querySelectorAll('input[name="ai"]').forEach(el => el.addEventListener('change', calc));
+  document.querySelectorAll('input[name="scale"]').forEach(el => el.addEventListener('change', calc));
 
   calc();
 })();
