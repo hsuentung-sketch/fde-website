@@ -306,7 +306,7 @@
 
     // BYOC = 40%
     const monthly = mode === 'byoc' ? Math.round(managedMonthly * 0.4) : managedMonthly;
-    const setup = mode === 'byoc' ? 100000 : 150000; // BYOC 略低，因主機設定由客戶端
+    const setup = mode === 'byoc' ? 150000 : 200000; // 依模組規模（10-30 萬區間取中位）
     const aiYearly = { low: 5000, mid: 20000, high: 60000 }[ai];
 
     const rtRent = monthly * 12;
