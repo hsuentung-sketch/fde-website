@@ -579,6 +579,52 @@
   </div>
 </section>
 
+<!-- ═══ Testimonials (匿名) ═══ -->
+<section class="section-testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>真實上線的成果</h2>
+      <p>3 個行業，3 套已上線系統，量化成果（客戶授權匿名分享）</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">派車排程從打電話逐一聯繫司機，變成系統自動排程 + LINE 推播。AI 月報每月自動產出，主管看評語就能掌握每位司機表現。</p>
+        <div class="testimonial-metrics">
+          <span class="testimonial-metric">排程 -83%</span>
+          <span class="testimonial-metric">月報 $0.005/人</span>
+          <span class="testimonial-metric">23 模組</span>
+        </div>
+        <div class="testimonial-author">某環保清運業客戶 · 12 台車隊</div>
+      </div>
+
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">報價到出貨從 2 小時壓縮到 5 分鐘。應收帳款 Cron 自動逾期提醒，催收工作量降七成。LINE 操作零訓練，員工馬上上手。</p>
+        <div class="testimonial-metrics">
+          <span class="testimonial-metric">出單 5 分鐘</span>
+          <span class="testimonial-metric">催收 -70%</span>
+          <span class="testimonial-metric">v2.16.3 上線中</span>
+        </div>
+        <div class="testimonial-author">某 B2B 貿易公司客戶 · 20+ 員工</div>
+      </div>
+
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">14 台 CNC 的狀態以前要走去看，現在儀錶板即時更新。13 階段製程管制卡 + LIFF 員工五大按鈕，現場操作完成度可追蹤。</p>
+        <div class="testimonial-metrics">
+          <span class="testimonial-metric">14 台即時看板</span>
+          <span class="testimonial-metric">13 階段製程</span>
+          <span class="testimonial-metric">LIFF 操作</span>
+        </div>
+        <div class="testimonial-author">某精密金屬加工廠 · 14 台 CNC</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══ Feature Bento ═══ -->
 <section class="section-features" id="features">
   <div class="container">
@@ -711,90 +757,103 @@
           <tr><td>上線時間</td><td>6 - 12 個月</td><td>2 - 4 個月</td><td class="col-fde">4 - 8 週</td></tr>
           <tr><td>法規合規</td><td>另購模組</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> EPA / 電子發票</td></tr>
           <tr><td>資料安全</td><td>依版本</td><td>基本備份</td><td class="col-fde"><span class="check">&#10003;</span> AES-256 加密 + 三層備援</td></tr>
-          <tr><td>月租管理費</td><td>年維護費<br><small style="opacity:.6">約授權金額 15-20%</small></td><td>年維護費<br><small style="opacity:.6">$3-8 萬/年</small></td><td class="col-fde">$10,000 - 30,000/月<br><small style="font-weight:400;opacity:.7">依 AI 功能收費差異</small></td></tr>
+          <tr><td>月租管理費</td><td>年維護費<br><small style="opacity:.6">約授權金額 15-20%</small></td><td>年維護費<br><small style="opacity:.6">$3-8 萬/年</small></td><td class="col-fde">代管 $10,000-30,000/月<br>BYOC $4,000-12,000/月<br><small style="font-weight:400;opacity:.7">兩種模式擇一</small></td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- Monthly fee breakdown -->
+    <!-- Monthly fee — Deployment Modes (代管 vs BYOC) -->
     <div class="monthly-fee-detail fade-up" style="margin-top:48px">
       <div style="text-align:center;margin-bottom:32px">
-        <h3 style="font-size:1.3rem;margin-bottom:8px">月租管理費 NT$10,000 - 30,000</h3>
-        <p style="color:var(--text-sec);font-size:.92rem">每月包含以下 8 項專業管理服務，依使用規模與功能範圍定價</p>
+        <h3 style="font-size:1.3rem;margin-bottom:8px">兩種部署模式，依資料主權需求選擇</h3>
+        <p style="color:var(--text-sec);font-size:.92rem">代管模式 潤樋全包 · BYOC 模式資料完全留在你的雲端帳號</p>
       </div>
-      <div class="fee-grid">
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-lavender)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5" width="20" height="20"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div>
-            <strong>軟體維護管理</strong>
-            <span>每月 1 次功能微調與需求討論、bug 即時修復、版本更新上線、效能優化</span>
-          </div>
+
+      <div class="deployment-modes">
+        <div class="mode-card mode-card--managed">
+          <span class="mode-badge">代管模式</span>
+          <h4>潤樋全包，省心無痛</h4>
+          <div class="mode-price">NT$10,000–30,000 <small>/月</small></div>
+          <p class="mode-pitch">主機帳單、24/7 監控、備份儲存、電子發票服務全部潤樋負責。你只需要登入用，其他都不用管。</p>
+          <p class="mode-fit">適合：無 IT 人員、想一站到位、不想處理雲端帳單</p>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-rose)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div>
-            <strong>資安管理</strong>
-            <span>AES-256 加密備份、JWT Token 管理、安全漏洞修補、密碼政策與權限稽核</span>
-          </div>
+        <div class="mode-card mode-card--byoc">
+          <span class="mode-badge">BYOC 模式</span>
+          <h4>資料留你家，潤樋只代維護</h4>
+          <div class="mode-price">NT$4,000–12,000 <small>/月（代管 40%）</small></div>
+          <p class="mode-pitch">系統部署到你自己的 Fly.io / Neon / LINE 帳號，備份推到你指定位置。潤樋無法直接存取你的 production 資料。</p>
+          <p class="mode-fit">適合：自有 IT、資料合規需求、想完全掌控雲端帳單與資料</p>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-mint)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div>
-            <strong>AI 升級管理</strong>
-            <span>AI 模型版本更新、新 AI 功能開發上線、OCR/語音辨識準確度調優、prompt 迭代</span>
-          </div>
+      </div>
+
+      <table class="mode-table">
+        <thead>
+          <tr>
+            <th>服務項目</th>
+            <th>代管</th>
+            <th>BYOC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>軟體維護（bug 修復、版本更新、微調）</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>資安修補（程式碼層）</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>AI 升級管理（模型 / prompt 迭代）</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>法規合規更新（EPA / 電子發票 / 稅法）</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>LINE 頻道協助</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>雲端主機帳單</td><td>潤樋承擔</td><td>客戶自付 Fly / Neon</td></tr>
+          <tr><td>自動備份儲存</td><td>潤樋 NAS</td><td>推送到客戶指定位置</td></tr>
+          <tr><td>24/7 監控 + 即時異常處理</td><td>潤樋全責</td><td>提供 dashboard，客戶自看</td></tr>
+          <tr><td>電子發票服務管理（號池 / Turnkey）</td><td>潤樋代理</td><td>僅程式碼，客戶自管</td></tr>
+          <tr><td>ERP 用量監控</td><td>潤樋即時</td><td>客戶自看報表</td></tr>
+          <tr><td>資料庫代管</td><td>潤樋管理 Neon</td><td>客戶自有 Neon 帳號</td></tr>
+          <tr><td>資安監控（24/7）</td><td>潤樋即時</td><td>客戶自看告警</td></tr>
+          <tr><td>備援代管</td><td>潤樋全責</td><td>客戶自備儲存</td></tr>
+          <tr><td>AI 用量監控</td><td>潤樋即時</td><td>客戶自看</td></tr>
+        </tbody>
+      </table>
+
+      <div class="mode-cta">
+        <a href="calculator.html">試算我的成本 &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Security & Privacy ═══ -->
+<section class="section-security" id="security">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2>資料安全與隱密保護</h2>
+      <p>你的資料是你的 — BYOC 模式天然保證、代管模式三層備援</p>
+    </div>
+    <div class="security-grid">
+      <div class="security-card fade-up">
+        <div class="security-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-blue)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div>
-            <strong>雲端主機代管</strong>
-            <span>Fly.io 主機費用全包、SSL 憑證自動更新、CDN 加速、流量自動擴展</span>
-          </div>
+        <h4>資料主權</h4>
+        <p>BYOC 模式：資料留在你的 Fly / Neon / LINE 帳號，潤樋無 production DB 存取權。代管模式：資料加密存放，稽核日誌可隨時調閱。</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-peach)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="1.5" width="20" height="20"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          </div>
-          <div>
-            <strong>自動備份與災難復原</strong>
-            <span>每日/每週/每月三層自動備份、異地 NAS 存放、每月還原測試驗證、30 天資料恢復</span>
-          </div>
+        <h4>加密與認證</h4>
+        <p>AES-256 備份加密、JWT 短效 Token（15 分鐘）、bcrypt 密碼雜湊、全站 HTTPS 強制加密、敏感欄位自動遮罩。</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-lemon)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="1.5" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <div>
-            <strong>系統監控與異常通報</strong>
-            <span>24/7 uptime 監控、服務異常即時 LINE/Email 通知、效能瓶頸分析與處理</span>
-          </div>
+        <h4>備份與災難復原</h4>
+        <p>每日 / 每週 / 每月三層自動備份、異地存放、每月強制還原測試、30 天資料可恢復點。代管走潤樋 NAS，BYOC 推到你指定位置。</p>
+      </div>
+      <div class="security-card fade-up">
+        <div class="security-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
         </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-lavender)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="1.5" width="20" height="20"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-          </div>
-          <div>
-            <strong>法規合規更新</strong>
-            <span>EPA 申報格式變更跟進、電子發票規格更新、稅法/勞基法異動即時調整系統</span>
-          </div>
-        </div>
-        <div class="fee-item">
-          <div class="fee-icon" style="background:var(--mac-mint)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" width="20" height="20"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <div>
-            <strong>LINE 頻道維護</strong>
-            <span>LINE Messaging API 版本升級、LIFF 頁面維護、推播額度監控與管理</span>
-          </div>
-        </div>
+        <h4>稽核與合規</h4>
+        <p>每筆操作記錄人員 / 時間 / 修改前後差異、多租戶資料隔離（不同公司資料絕不交叉）、EPA 申報與電子發票符合法規。</p>
       </div>
     </div>
   </div>
@@ -874,7 +933,7 @@
           費用怎麼算？
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">首次導入費用 NT$ 10-20 萬（依模組數量），之後月租 NT$ 1-3 萬（含雲端主機、備份、維護、更新、技術支援 8 項服務）。沒有隱藏費用，不用買伺服器。</div>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">首次導入費用 NT$ 10-20 萬（依模組數量）。月租分兩種：代管 NT$1-3 萬（潤樋全包）／BYOC NT$0.4-1.2 萬（資料留你帳號）。<a href="calculator.html" style="color:var(--cta);font-weight:600">用計算器試算 →</a></div>
       </details>
       <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
         <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
@@ -883,22 +942,82 @@
         </summary>
         <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">我們不是通用 ERP 改一改。每個行業的流程、欄位、報表都是從實際作業長出來的。導入費用約 1/5-1/10，上線時間約 1/3，而且 AI 功能（語音下單、圖面辨識、智慧報告）是內建的，不需要另外購買。</div>
       </details>
+
+      <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
+        <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          代管與 BYOC 有什麼差別？該選哪個？
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>代管模式</strong>：潤樋負責主機帳單、24/7 監控、備份儲存全包，你只要登入用。適合無 IT、想省心的公司。<br><strong>BYOC 模式</strong>（自帶雲端）：系統部署到你的 Fly.io / Neon 帳號，備份推到你指定位置，潤樋只代維護程式碼，價格為代管的 40%。適合自有 IT、有資料合規需求、想完全掌控雲端帳單。</div>
+      </details>
+
+      <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
+        <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          30 天試用怎麼啟動？要付訂金嗎？
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">先聊 30 分鐘確認你的流程適合，潤樋會在 1-2 週內建立試用環境（含基本主檔與範例資料）。試用期 30 天不收費、不收訂金。試用結束滿意再簽約進入正式建置。</div>
+      </details>
+
+      <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
+        <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          年繳有折扣嗎？
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">有。年繳享 5-10% 折扣（依方案規模），詳情可在簽約時討論。月繳隨時可取消，沒有長期綁約。</div>
+      </details>
+
+      <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
+        <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          AI 功能超額怎麼計費？
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">月租已包含預估使用量。超出按實際成本計費：語音下單 ~$0.005/次、OCR 名片/單據 ~$0.01/份、AI 月報 ~$0.005/司機/月。所有 AI 用量在後台都可即時查詢，沒有意外帳單。</div>
+      </details>
+
+      <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
+        <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          如果不續約，資料怎麼帶走？
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>BYOC 模式</strong>：資料本來就在你的 Neon / Fly 帳號，潤樋只是停止維護程式碼，你完全保有資料庫與系統。<br><strong>代管模式</strong>：合約終止前 30 天內，潤樋會匯出完整資料庫 dump（PostgreSQL 格式）+ 上傳文件 ZIP 給你，你可帶到任何相容環境繼續使用。不綁架資料是承諾。</div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
+<!-- ═══ CTA (Email + LINE) ═══ -->
 <section class="section-cta" id="contact">
   <div class="container">
-    <h2 class="fade-up">30 分鐘，先把問題弄清楚</h2>
-    <p class="fade-up">不用先決定要不要買系統<br>帶著你現在最頭痛的流程來，我們一起走一遍</p>
-    <div class="fade-up" style="margin:32px 0 16px">
-      <a href="mailto:runtong.tw@gmail.com" class="btn btn-white" style="font-size:1.1rem;padding:16px 40px;gap:10px">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        runtong.tw@gmail.com
-      </a>
+    <div class="cta-inner">
+
+      <div class="fade-up">
+        <h2 style="margin-bottom:12px">30 分鐘，先把問題弄清楚</h2>
+        <p style="margin-bottom:0">不用先決定要不要買系統，帶著你現在最頭痛的流程來，我們一起走一遍。</p>
+      </div>
+
+      <div class="cta-right fade-up">
+        <a href="mailto:runtong.tw@gmail.com" class="cta-option">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" style="flex-shrink:0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>Email 直接寄信</strong>
+            <span>runtong.tw@gmail.com</span>
+          </div>
+        </a>
+        <a href="#" class="cta-option cta-option--line" onclick="alert('LINE 官方帳號設定中，請先用 Email 聯絡');return false;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" style="flex-shrink:0"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <div>
+            <strong>LINE 官方帳號</strong>
+            <span>點擊直接開啟對話</span>
+          </div>
+        </a>
+        <p class="cta-hint-bottom">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          通常 24 小時內回覆 · 免費 30 分鐘流程診斷
+        </p>
+      </div>
+
     </div>
-    <p class="cta-hint fade-up">點擊上方按鈕直接寄信 — 通常 24 小時內回覆</p>
   </div>
 </section>
 
@@ -931,6 +1050,7 @@
           <a href="#pain">常見困境</a>
           <a href="#compare-ba">效益對比</a>
           <a href="#features">功能亮點</a>
+          <a href="#security">資料安全</a>
           <a href="#faq">常見問題</a>
           <a href="#about">關於我們</a>
         </nav>
@@ -942,6 +1062,7 @@
           <a href="cases/general-erp.html">貿易公司 ERP</a>
           <a href="cases/waste-management.html">環保清運 ERP</a>
           <a href="cases/precision-machining.html">精密加工 ERP</a>
+          <a href="calculator.html">成本計算器</a>
         </nav>
       </div>
 

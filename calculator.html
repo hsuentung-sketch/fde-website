@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP 成本計算器 — 潤樋科技</title>
+  <meta name="description" content="算一下換成潤樋 ERP 能省多少錢 — 代管 vs BYOC 兩種模式即時試算">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;900&subset=chinese-traditional&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .calc-page { padding: 60px 0 80px; background: var(--bg); }
+    .calc-header { text-align: center; margin-bottom: 40px; }
+    .calc-header h1 { font-size: 2rem; margin-bottom: 12px; }
+    .calc-header p { color: var(--text-sec); font-size: 1.05rem; }
+    .calc-back { display:inline-flex;align-items:center;gap:6px;color:var(--text-sec);font-size:.9rem;margin-bottom:24px;text-decoration:none; }
+    .calc-back:hover { color: var(--cta); }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .calc-form {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid var(--border);
+      align-self: start;
+    }
+    .calc-form h3 { font-size: 1.1rem; margin-bottom: 20px; }
+
+    .input-group { margin-bottom: 24px; }
+    .input-group label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 8px; }
+    .input-group .val { color: var(--cta); font-family: var(--font-num); font-weight: 800; }
+    .input-group input[type=range] { width: 100%; }
+
+    .radio-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .radio-group label {
+      flex: 1;
+      min-width: 80px;
+      padding: 8px 14px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      cursor: pointer;
+      font-size: .82rem;
+      font-weight: 600;
+      transition: all .15s;
+    }
+    .radio-group input { display: none; }
+    .radio-group input:checked + span { color: var(--cta); }
+    .radio-group label:has(input:checked) {
+      border-color: var(--cta);
+      background: var(--mac-lavender);
+      color: var(--cta);
+    }
+
+    .calc-results { display: flex; flex-direction: column; gap: 20px; }
+    .cost-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid var(--border);
+    }
+    .cost-card--rt { border-left: 5px solid var(--cta); }
+    .cost-card--generic { border-left: 5px solid #94a3b8; opacity: .92; }
+    .cost-card h3 { font-size: 1rem; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+    .cost-card .badge {
+      font-size: .7rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .cost-card--rt .badge { background: var(--mac-lavender); color: var(--cta); }
+    .cost-card--generic .badge { background: #f1f5f9; color: #64748b; }
+
+    .cost-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: .9rem;
+      color: var(--text-sec);
+      border-bottom: 1px dashed var(--border-light);
+    }
+    .cost-line:last-child { border-bottom: none; }
+    .cost-line.total {
+      border-top: 2px solid var(--border);
+      margin-top: 8px;
+      padding-top: 14px;
+      font-weight: 700;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .cost-line .num { font-family: var(--font-num); font-weight: 700; }
+
+    .savings-card {
+      background: linear-gradient(135deg, var(--mac-mint), var(--mac-lavender));
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+    }
+    .savings-card h3 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
+    .savings-amount {
+      font-family: var(--font-num);
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #047857;
+      line-height: 1;
+      margin: 8px 0;
+    }
+    .savings-percent { font-size: 1rem; color: #059669; font-weight: 700; }
+    .savings-note { font-size: .82rem; color: var(--text-sec); margin-top: 12px; }
+
+    .calc-disclaimer {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      background: var(--bg-lemon, #FEFCE8);
+      border: 1px solid #FDE047;
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: .82rem;
+      color: var(--text-sec);
+      line-height: 1.7;
+    }
+    .calc-disclaimer strong { color: var(--text); }
+
+    .calc-cta {
+      text-align: center;
+      margin: 40px auto 0;
+      max-width: 600px;
+    }
+    .calc-cta .btn {
+      font-size: 1.05rem;
+      padding: 14px 36px;
+    }
+
+    @media (max-width: 768px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .calc-header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header (簡化版) -->
+<header class="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg width="36" height="36" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <path d="M68 18 A38 38 0 0 1 97 72" stroke="#4F46E5" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <polygon points="100,75 88,68 94,80" fill="#4F46E5"/>
+        <path d="M90 80 A38 38 0 0 1 30 80" stroke="#818CF8" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <polygon points="27,78 32,90 22,85" fill="#818CF8"/>
+        <path d="M28 74 A38 38 0 0 1 62 18" stroke="#4F46E5" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <polygon points="65,15 58,8 56,22" fill="#4F46E5"/>
+        <circle cx="60" cy="52" r="18" fill="none" stroke="#C7D2FE" stroke-width="1.5"/>
+        <text x="60" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="#4F46E5">AI</text>
+      </svg>
+      潤樋科技
+    </a>
+    <nav class="nav">
+      <a href="index.html">回首頁</a>
+      <a href="index.html#contact" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem">與我聯絡</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="calc-page">
+  <div class="container">
+    <a href="index.html" class="calc-back">&larr; 回首頁</a>
+
+    <div class="calc-header">
+      <h1>ERP 成本計算器</h1>
+      <p>算一下換成潤樋能省多少錢 — 代管 vs BYOC 兩種模式即時試算</p>
+    </div>
+
+    <div class="calc-grid">
+
+      <!-- 左：輸入 -->
+      <div class="calc-form">
+        <h3>你的公司規模</h3>
+
+        <div class="input-group">
+          <label>員工數 — <span class="val" id="empVal">50</span> 人</label>
+          <input type="range" id="emp" min="20" max="500" step="10" value="50">
+        </div>
+
+        <div class="input-group">
+          <label>月訂單量 — <span class="val" id="ordVal">100</span> 張</label>
+          <input type="range" id="ord" min="10" max="1000" step="10" value="100">
+        </div>
+
+        <div class="input-group">
+          <label>部署模式</label>
+          <div class="radio-group">
+            <label><input type="radio" name="mode" value="managed" checked><span>代管</span></label>
+            <label><input type="radio" name="mode" value="byoc"><span>BYOC</span></label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>AI 功能使用量</label>
+          <div class="radio-group">
+            <label><input type="radio" name="ai" value="low" checked><span>低</span></label>
+            <label><input type="radio" name="ai" value="mid"><span>中</span></label>
+            <label><input type="radio" name="ai" value="high"><span>高</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：結果 -->
+      <div class="calc-results">
+
+        <div class="cost-card cost-card--rt">
+          <h3>
+            <span>潤樋科技 — <span id="modeLabel">代管模式</span></span>
+            <span class="badge" id="modeBadge">推薦</span>
+          </h3>
+          <div class="cost-line"><span>月租 × 12</span><span class="num" id="rtRent">NT$180K</span></div>
+          <div class="cost-line"><span>首次建置（一次性）</span><span class="num" id="rtSetup">NT$150K</span></div>
+          <div class="cost-line"><span>AI 用量（年）</span><span class="num" id="rtAi">NT$5K</span></div>
+          <div class="cost-line total"><span>第一年總成本</span><span class="num" id="rtTotal">NT$335K</span></div>
+          <div class="cost-line"><span style="color:var(--text-muted);font-size:.82rem">第二年起（無建置費）</span><span class="num" id="rtYear2" style="color:var(--text-muted);font-size:.85rem">NT$185K</span></div>
+        </div>
+
+        <div class="cost-card cost-card--generic">
+          <h3>
+            <span>通用 ERP（市場估算）</span>
+            <span class="badge">對照</span>
+          </h3>
+          <div class="cost-line"><span>授權 + 年維護費</span><span class="num" id="gnRent">NT$480K</span></div>
+          <div class="cost-line"><span>整合費（一次性）</span><span class="num" id="gnIntegration">NT$500K</span></div>
+          <div class="cost-line"><span>客製化模組</span><span class="num" id="gnModules">NT$200K</span></div>
+          <div class="cost-line total"><span>第一年總成本</span><span class="num" id="gnTotal">NT$1,180K</span></div>
+          <div class="cost-line"><span style="color:var(--text-muted);font-size:.82rem">第二年起</span><span class="num" id="gnYear2" style="color:var(--text-muted);font-size:.85rem">NT$480K</span></div>
+        </div>
+
+        <div class="savings-card">
+          <h3>第一年可省</h3>
+          <div class="savings-amount" id="savings">NT$845K</div>
+          <div class="savings-percent" id="savingsPct">節省 72%</div>
+          <p class="savings-note">相當於 <span id="staffEq">1-2</span> 位員工的年薪</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="calc-disclaimer">
+      <strong>計算說明：</strong>
+      代管月租依員工規模分檔（≤100 人 NT$15K，101-200 人 NT$20K，&gt;200 人 NT$30K）。BYOC = 代管 × 40%（雲端帳單由你直接支付給 Fly.io / Neon，未計入）。
+      AI 用量：低 NT$5K/年、中 NT$20K/年、高 NT$60K/年。
+      通用 ERP 數字為市場常見區間估算（年維護 NT$3-8 萬/月、整合 NT$50 萬、客製 NT$20 萬），實際依供應商與規模差異。
+      此試算僅供參考，正式報價以合約為準。
+    </div>
+
+    <div class="calc-cta">
+      <p style="margin-bottom:16px;color:var(--text-sec)">想知道你的實際成本？</p>
+      <a href="index.html#contact" class="btn btn-primary">預約 30 分鐘流程診斷</a>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>&copy; 2026 潤樋科技. All rights reserved.</span>
+      <span class="footer-tags">Taiwan &nbsp;·&nbsp; ERP &nbsp;·&nbsp; LINE Bot &nbsp;·&nbsp; AI 自動化</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => 'NT$' + Math.round(n / 1000).toLocaleString('en-US') + 'K';
+
+  function getMode() {
+    return document.querySelector('input[name="mode"]:checked').value;
+  }
+  function getAi() {
+    return document.querySelector('input[name="ai"]:checked').value;
+  }
+
+  function calc() {
+    const emp = parseInt($('emp').value);
+    const ord = parseInt($('ord').value);
+    const mode = getMode();
+    const ai = getAi();
+
+    $('empVal').textContent = emp;
+    $('ordVal').textContent = ord;
+
+    // 代管月租分檔
+    let managedMonthly = 15000;
+    if (emp > 100) managedMonthly = 20000;
+    if (emp > 200) managedMonthly = 30000;
+
+    // BYOC = 40%
+    const monthly = mode === 'byoc' ? Math.round(managedMonthly * 0.4) : managedMonthly;
+    const setup = mode === 'byoc' ? 100000 : 150000; // BYOC 略低，因主機設定由客戶端
+    const aiYearly = { low: 5000, mid: 20000, high: 60000 }[ai];
+
+    const rtRent = monthly * 12;
+    const rtTotal = rtRent + setup + aiYearly;
+    const rtYear2 = rtRent + aiYearly;
+
+    $('modeLabel').textContent = mode === 'byoc' ? 'BYOC 模式（資料留你帳號）' : '代管模式';
+    $('modeBadge').textContent = mode === 'byoc' ? '40% 價' : '推薦';
+    $('rtRent').textContent = fmt(rtRent);
+    $('rtSetup').textContent = fmt(setup);
+    $('rtAi').textContent = fmt(aiYearly);
+    $('rtTotal').textContent = fmt(rtTotal);
+    $('rtYear2').textContent = fmt(rtYear2);
+
+    // 通用 ERP 估算（隨員工規模略增）
+    const gnMonthly = emp > 200 ? 80000 : (emp > 100 ? 50000 : 40000);
+    const gnRent = gnMonthly * 12;
+    const gnIntegration = 500000;
+    const gnModules = 200000;
+    const gnTotal = gnRent + gnIntegration + gnModules;
+    const gnYear2 = gnRent;
+
+    $('gnRent').textContent = fmt(gnRent);
+    $('gnIntegration').textContent = fmt(gnIntegration);
+    $('gnModules').textContent = fmt(gnModules);
+    $('gnTotal').textContent = fmt(gnTotal);
+    $('gnYear2').textContent = fmt(gnYear2);
+
+    // 節省
+    const savings = gnTotal - rtTotal;
+    const savingsPct = Math.round((savings / gnTotal) * 100);
+    $('savings').textContent = fmt(savings);
+    $('savingsPct').textContent = '節省 ' + savingsPct + '%';
+    const staff = Math.round(savings / 720000);
+    $('staffEq').textContent = staff < 1 ? '小於 1' : staff;
+  }
+
+  // 綁定事件
+  $('emp').addEventListener('input', calc);
+  $('ord').addEventListener('input', calc);
+  document.querySelectorAll('input[name="mode"]').forEach(el => el.addEventListener('change', calc));
+  document.querySelectorAll('input[name="ai"]').forEach(el => el.addEventListener('change', calc));
+
+  calc();
+})();
+</script>
+
+</body>
+</html>
