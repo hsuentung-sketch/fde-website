@@ -254,7 +254,7 @@
 
     <div class="calc-disclaimer">
       <strong>計算說明：</strong>
-      代管月租依員工規模分檔（≤100 人 NT$15K，101-200 人 NT$20K，&gt;200 人 NT$30K）。BYOC = 代管 × 40%（雲端帳單由你直接支付給 Fly.io / Neon，未計入）。
+      代管月租依員工規模分檔（≤100 人 NT$15K，101-200 人 NT$20K，&gt;200 人 NT$20K）。BYOC = 代管 × 40%（虛擬主機 / 線上資料庫帳單由你直接支付，未計入；BYOC 不含電子發票服務）。
       AI 用量：低 NT$5K/年、中 NT$20K/年、高 NT$60K/年。
       通用 ERP 數字為市場常見區間估算（年維護 NT$3-8 萬/月、整合 NT$50 萬、客製 NT$20 萬），實際依供應商與規模差異。
       此試算僅供參考，正式報價以合約為準。
@@ -302,7 +302,7 @@
     // 代管月租分檔
     let managedMonthly = 15000;
     if (emp > 100) managedMonthly = 20000;
-    if (emp > 200) managedMonthly = 30000;
+    if (emp > 200) managedMonthly = 20000;
 
     // BYOC = 40%
     const monthly = mode === 'byoc' ? Math.round(managedMonthly * 0.4) : managedMonthly;

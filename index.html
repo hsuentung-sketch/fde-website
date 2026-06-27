@@ -748,7 +748,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>導入費用</td><td>$50 - 250 萬</td><td>$20 - 50 萬</td><td class="col-fde">首次建置 $10 - 20 萬<br><small style="font-weight:400;opacity:.7">依功能範圍差異</small></td></tr>
+          <tr><td>導入費用</td><td>$50 - 250 萬</td><td>$20 - 50 萬</td><td class="col-fde">首次建置 $10 - 20 萬<br><small style="font-weight:400;opacity:.7">依模組建置數量差異<br>設計專屬模組費用另計</small></td></tr>
           <tr><td>客製化程度</td><td>模組配置</td><td>套版微調</td><td class="col-fde">行業專屬程式碼</td></tr>
           <tr><td>操作介面</td><td>桌面軟體</td><td>網頁後台</td><td class="col-fde">LINE Bot + Web</td></tr>
           <tr><td>機台整合</td><td>需外掛 MES</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> 內建 FOCAS</td></tr>
@@ -757,7 +757,7 @@
           <tr><td>上線時間</td><td>6 - 12 個月</td><td>2 - 4 個月</td><td class="col-fde">4 - 8 週</td></tr>
           <tr><td>法規合規</td><td>另購模組</td><td><span class="cross">&#10005;</span> 無</td><td class="col-fde"><span class="check">&#10003;</span> EPA / 電子發票</td></tr>
           <tr><td>資料安全</td><td>依版本</td><td>基本備份</td><td class="col-fde"><span class="check">&#10003;</span> AES-256 加密 + 三層備援</td></tr>
-          <tr><td>月租管理費</td><td>年維護費<br><small style="opacity:.6">約授權金額 15-20%</small></td><td>年維護費<br><small style="opacity:.6">$3-8 萬/年</small></td><td class="col-fde">代管 $10,000-30,000/月<br>BYOC $4,000-12,000/月<br><small style="font-weight:400;opacity:.7">兩種模式擇一</small></td></tr>
+          <tr><td>月租管理費</td><td>年維護費<br><small style="opacity:.6">約授權金額 15-20%</small></td><td>年維護費<br><small style="opacity:.6">$3-8 萬/年</small></td><td class="col-fde">代管 $10,000-20,000/月<br>BYOC $4,000-12,000/月<br><small style="font-weight:400;opacity:.7">兩種模式擇一</small></td></tr>
         </tbody>
       </table>
     </div>
@@ -773,7 +773,7 @@
         <div class="mode-card mode-card--managed">
           <span class="mode-badge">代管模式</span>
           <h4>潤樋全包，省心無痛</h4>
-          <div class="mode-price">NT$10,000–30,000 <small>/月</small></div>
+          <div class="mode-price">NT$10,000–20,000 <small>/月</small></div>
           <p class="mode-pitch">主機帳單、24/7 監控、備份儲存、電子發票服務全部潤樋負責。你只需要登入用，其他都不用管。</p>
           <p class="mode-fit">適合：無 IT 人員、想一站到位、不想處理雲端帳單</p>
         </div>
@@ -781,7 +781,7 @@
           <span class="mode-badge">BYOC 模式</span>
           <h4>資料留你家，潤樋只代維護</h4>
           <div class="mode-price">NT$4,000–12,000 <small>/月（代管 40%）</small></div>
-          <p class="mode-pitch">系統部署到你自己的 Fly.io / Neon / LINE 帳號，備份推到你指定位置。潤樋無法直接存取你的 production 資料。</p>
+          <p class="mode-pitch">系統部署到你自己的虛擬主機 / 線上資料庫 / LINE 帳號，備份推到你指定位置。潤樋無法直接存取你的 production 資料。</p>
           <p class="mode-fit">適合：自有 IT、資料合規需求、想完全掌控雲端帳單與資料</p>
         </div>
       </div>
@@ -798,17 +798,18 @@
           <tr><td>軟體維護（bug 修復、版本更新、微調）</td><td>✓ 含</td><td>✓ 含</td></tr>
           <tr><td>資安修補（程式碼層）</td><td>✓ 含</td><td>✓ 含</td></tr>
           <tr><td>AI 升級管理（模型 / prompt 迭代）</td><td>✓ 含</td><td>✓ 含</td></tr>
-          <tr><td>法規合規更新（EPA / 電子發票 / 稅法）</td><td>✓ 含</td><td>✓ 含</td></tr>
+          <tr><td>法規合規更新（EPA / 稅法）</td><td>✓ 含</td><td>✓ 含</td></tr>
           <tr><td>LINE 頻道協助</td><td>✓ 含</td><td>✓ 含</td></tr>
-          <tr><td>雲端主機帳單</td><td>潤樋承擔</td><td>客戶自付 Fly / Neon</td></tr>
+          <tr><td>客戶端首次轉移（BYOC 部署）</td><td>—</td><td>免費；後續網路環境變更另計</td></tr>
+          <tr><td>雲端主機帳單</td><td>潤樋承擔</td><td>客戶自付虛擬主機 / 線上資料庫</td></tr>
           <tr><td>自動備份儲存</td><td>潤樋 NAS</td><td>推送到客戶指定位置</td></tr>
-          <tr><td>24/7 監控 + 即時異常處理</td><td>潤樋全責</td><td>提供 dashboard，客戶自看</td></tr>
-          <tr><td>電子發票服務管理（號池 / Turnkey）</td><td>潤樋代理</td><td>僅程式碼，客戶自管</td></tr>
+          <tr><td>24/7 監控 + 即時異常處理</td><td>潤樋全責</td><td>客戶自管</td></tr>
+          <tr><td>電子發票服務管理（號池 / Turnkey）</td><td>潤樋代理</td><td>不含（客戶自接電子發票服務商）</td></tr>
           <tr><td>ERP 用量監控</td><td>潤樋即時</td><td>客戶自看報表</td></tr>
-          <tr><td>資料庫代管</td><td>潤樋管理 Neon</td><td>客戶自有 Neon 帳號</td></tr>
-          <tr><td>資安監控（24/7）</td><td>潤樋即時</td><td>客戶自看告警</td></tr>
+          <tr><td>資料庫代管</td><td>潤樋管理線上資料庫</td><td>客戶自有資料庫帳號</td></tr>
+          <tr><td>資安監控（24/7）</td><td>潤樋即時</td><td>客戶自管</td></tr>
           <tr><td>備援代管</td><td>潤樋全責</td><td>客戶自備儲存</td></tr>
-          <tr><td>AI 用量監控</td><td>潤樋即時</td><td>客戶自看</td></tr>
+          <tr><td>AI 用量監控</td><td>潤樋即時</td><td>客戶自管</td></tr>
         </tbody>
       </table>
 
@@ -832,7 +833,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
         <h4>資料主權</h4>
-        <p>BYOC 模式：資料留在你的 Fly / Neon / LINE 帳號，潤樋無 production DB 存取權。代管模式：資料加密存放，稽核日誌可隨時調閱。</p>
+        <p>BYOC 模式：資料留在你的虛擬主機 / 線上資料庫 / LINE 帳號，潤樋無 production DB 存取權。代管模式：資料加密存放，稽核日誌可隨時調閱。</p>
       </div>
       <div class="security-card fade-up">
         <div class="security-icon">
@@ -933,7 +934,7 @@
           費用怎麼算？
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">首次導入費用 NT$ 10-20 萬（依模組數量）。月租分兩種：代管 NT$1-3 萬（潤樋全包）／BYOC NT$0.4-1.2 萬（資料留你帳號）。<a href="calculator.html" style="color:var(--cta);font-weight:600">用計算器試算 →</a></div>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">首次導入費用 NT$ 10-20 萬（依模組數量）。月租分兩種：代管 NT$1-2 萬（潤樋全包）／BYOC NT$0.4-1.2 萬（資料留你帳號）。<a href="calculator.html" style="color:var(--cta);font-weight:600">用計算器試算 →</a></div>
       </details>
       <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
         <summary style="padding:20px 24px;cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">
@@ -948,7 +949,7 @@
           代管與 BYOC 有什麼差別？該選哪個？
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>代管模式</strong>：潤樋負責主機帳單、24/7 監控、備份儲存全包，你只要登入用。適合無 IT、想省心的公司。<br><strong>BYOC 模式</strong>（自帶雲端）：系統部署到你的 Fly.io / Neon 帳號，備份推到你指定位置，潤樋只代維護程式碼，價格為代管的 40%。適合自有 IT、有資料合規需求、想完全掌控雲端帳單。</div>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>代管模式</strong>：潤樋負責主機帳單、24/7 監控、備份儲存全包，你只要登入用。適合無 IT、想省心的公司。<br><strong>BYOC 模式</strong>（自帶雲端）：系統部署到你的虛擬主機 / 線上資料庫帳號，備份推到你指定位置，潤樋只代維護程式碼，價格為代管的 40%。客戶端首次轉移免費；後續網路環境變更會加收費用。BYOC 模式不含電子發票服務（需自接電子發票服務商）。適合自有 IT、有資料合規需求、想完全掌控雲端帳單。</div>
       </details>
 
       <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
@@ -964,7 +965,7 @@
           年繳有折扣嗎？
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">有。年繳享 5-10% 折扣（依方案規模），詳情可在簽約時討論。月繳隨時可取消，沒有長期綁約。</div>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8">有。<strong>1 年繳享 10% 折扣，2 年繳享 15% 折扣</strong>。月繳隨時可取消，沒有長期綁約。</div>
       </details>
 
       <details class="faq-item fade-up" style="border:1px solid var(--border);border-radius:var(--radius-sm,8px);margin-bottom:12px;overflow:hidden">
@@ -980,7 +981,7 @@
           如果不續約，資料怎麼帶走？
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;transition:transform .2s"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>BYOC 模式</strong>：資料本來就在你的 Neon / Fly 帳號，潤樋只是停止維護程式碼，你完全保有資料庫與系統。<br><strong>代管模式</strong>：合約終止前 30 天內，潤樋會匯出完整資料庫 dump（PostgreSQL 格式）+ 上傳文件 ZIP 給你，你可帶到任何相容環境繼續使用。不綁架資料是承諾。</div>
+        <div style="padding:0 24px 20px;color:var(--text-muted);font-size:.9rem;line-height:1.8"><strong>BYOC 模式</strong>：資料本來就在你的虛擬主機 / 線上資料庫帳號，潤樋只是停止維護程式碼，你完全保有資料庫與系統。<br><strong>代管模式</strong>：合約終止前 30 天內，潤樋會匯出完整資料庫 dump（PostgreSQL 格式）+ 上傳文件 ZIP 給你，你可帶到任何相容環境繼續使用。不綁架資料是承諾。</div>
       </details>
     </div>
   </div>
