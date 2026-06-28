@@ -362,7 +362,7 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 
 .pain-grid-8 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--gap);
 }
 
@@ -1649,6 +1649,7 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   .feature-bento { grid-template-columns: repeat(2, 1fr); }
   .feature-card--wide { grid-column: span 1; }
   .ai-grid { grid-template-columns: repeat(2, 1fr); }
+  .pain-grid-8 { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
