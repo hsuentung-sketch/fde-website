@@ -2067,8 +2067,8 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   .pain-grid-8 { grid-template-columns: repeat(2, 1fr); }
 
   .ba-grid { grid-template-columns: 1fr; }
-  .ba-before { border-right: none; border-bottom: 3px solid var(--mac-rose); }
-  .ba-after  { border-left: none; border-top: 3px solid var(--mac-mint); }
+  .ba-before { border-right: none; border-bottom: 1px solid var(--steel-300); }
+  .ba-after  { border-left: none; border-top: 1px solid var(--steel-300); }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
 

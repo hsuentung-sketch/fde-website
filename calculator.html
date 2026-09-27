@@ -64,12 +64,12 @@
     .calc-results { display: flex; flex-direction: column; gap: 20px; }
     .cost-card {
       background: var(--surface);
-      border-radius: var(--radius);
+      border-radius: 0;
       padding: 28px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--steel-300);
     }
-    .cost-card--rt { border-top: 2px solid var(--cta); }
-    .cost-card--generic { border-top: 2px solid #94a3b8; opacity: .92; }
+    .cost-card--rt { border-color: var(--cta); }
+    .cost-card--generic { opacity: .85; }
     .cost-card h3 { font-size: 1rem; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
     .cost-card .badge {
       font-size: .7rem;
@@ -185,7 +185,7 @@
 
       <!-- 左：輸入 -->
       <div class="calc-form">
-        <h3>你的公司規模（顯示用）</h3>
+        <h2 style="font-size:1.15rem;margin-bottom:8px">你的公司規模（顯示用）</h2>
 
         <div class="input-group">
           <label>員工人數 — <span class="val" id="empVal">10 人以下</span></label>
@@ -204,7 +204,7 @@
         </div>
 
         <hr style="border:none;border-top:1px dashed var(--border);margin:24px 0">
-        <h3>影響費用的選項</h3>
+        <h2 style="font-size:1.15rem;margin-bottom:8px">影響費用的選項</h2>
 
         <div class="input-group">
           <label>模組規模（決定建置費）</label>
