@@ -1,69 +1,102 @@
 /* ══════════════════════════════════════════════════════════════
    潤樋科技 — FDE 自動化流程優化服務
-   Design System v2: Macaron Enterprise
-   Inspired by Linear / Stripe / Monday.com bento patterns
+   Design System v3: Industrial (2026-09-27)
+   Aesthetic: 車床外殼、機油、警戒帶、工程圖藍晒
+   Palette: 鐵灰 + 深墨藍 + 警戒黃 + 銹橙 + 紙灰白
    ══════════════════════════════════════════════════════════════ */
 
 /* ── Design Tokens ─────────────────────────────────────── */
 :root {
-  /* Macaron Palette (desaturated for enterprise) */
-  --mac-rose:      #FFD6D1;
-  --mac-mint:      #B8F0C8;
-  --mac-lavender:  #D8D9FF;
-  --mac-lemon:     #FFF3B8;
-  --mac-blue:      #C4DEFF;
-  --mac-peach:     #FFDCC8;
+  /* === Industrial Core Palette === */
+  --steel-900:      #1E2328;   /* 鐵灰深 — body text */
+  --steel-800:      #2C3238;   /* 鐵灰 — 標題 */
+  --steel-700:      #3F4750;   /* 鐵灰中 — 次文字 */
+  --steel-500:      #6B7280;   /* 鐵灰淺 — 三級文字 */
+  --steel-300:      #B8BEC7;   /* 分隔線 / disabled */
+  --steel-100:      #E5E7EB;   /* 淺分隔 */
 
-  /* Surface tints (very light, for section backgrounds) */
-  --bg-rose:     #FFF5F3;
-  --bg-mint:     #F0FFF4;
-  --bg-lavender: #F5F2FF;
-  --bg-lemon:    #FFFBEB;
-  --bg-blue:     #EFF6FF;
-  --bg-peach:    #FFF8F3;
+  --blueprint-900:  #0F2340;   /* 深墨藍 — hero 底 */
+  --blueprint-700:  #1E3A5F;   /* 中墨藍 */
+  --blueprint-500:  #385880;   /* 藍晒圖藍 */
+  --blueprint-100:  #DDE3EC;   /* 藍晒淺底 */
 
-  /* Core neutrals */
-  --bg:           #FAFAFA;
+  --warning-yellow:       #F5B301;   /* 警戒黃 — 主 CTA */
+  --warning-yellow-hover: #E5A600;
+  --warning-yellow-light: #FFF4C4;
+
+  --rust-orange:       #D95A2C;   /* 銹橙 — 次強調 */
+  --rust-orange-hover: #B94A24;
+  --rust-orange-light: #FBEBE0;
+
+  --paper-white:    #F4F1EC;   /* 紙灰白 — section 背景 */
+  --paper-mid:      #EAE5DA;   /* 深紙灰 */
+
+  --industrial-green:      #4A7856;   /* 機械綠 — success */
+  --industrial-green-light: #D9E5DA;
+
+  /* === Legacy 相容 mapping (原 macaron → 工業版) === */
+  --mac-rose:      #F5D5CE;   /* was #FFD6D1 淺粉 → 銹橙淺 */
+  --mac-mint:      #C4D6C0;   /* was #B8F0C8 淺綠 → 機械綠淺 */
+  --mac-lavender:  #D8D5D0;   /* was #D8D9FF 淺紫 → 灰米 */
+  --mac-lemon:     #FFE99C;   /* was #FFF3B8 淺黃 → 警戒黃淺 */
+  --mac-blue:      #CFD8E3;   /* was #C4DEFF 淺藍 → 藍晒淺 */
+  --mac-peach:     #E8D4C0;   /* was #FFDCC8 淺桃 → 陶土 */
+
+  --bg-rose:     #FBF2EF;
+  --bg-mint:     #EEF3EE;
+  --bg-lavender: #F2EEE8;
+  --bg-lemon:    #FFF8DC;
+  --bg-blue:     #EEF1F5;
+  --bg-peach:    #F5EBE0;
+
+  /* === Core neutrals (fix WCAG contrast) === */
+  --bg:           #FAF7F2;                 /* 紙質白背景 */
   --surface:      #FFFFFF;
-  --text:         #1E1E2E;
-  --text-sec:     #6B7280;
-  --text-muted:   #9CA3AF;
-  --border:       #E5E7EB;
-  --border-light: #F3F4F6;
+  --text:         var(--steel-900);        /* 15.2:1 on white */
+  --text-sec:     var(--steel-700);        /* 8.6:1 on white — was 4.7:1 */
+  --text-muted:   var(--steel-500);        /* 4.6:1 on white — was 2.5:1 */
+  --border:       var(--steel-300);
+  --border-light: var(--steel-100);
 
-  /* Dark mode surfaces */
-  --navy:      #1A1A2E;
-  --navy-mid:  #16213E;
-  --navy-deep: #0F0F1A;
+  /* === Dark surfaces === */
+  --navy:      var(--blueprint-900);
+  --navy-mid:  var(--blueprint-700);
+  --navy-deep: #08152B;
 
-  /* CTA (saturated indigo pops against all pastels) */
-  --cta:       #4F46E5;
-  --cta-hover: #4338CA;
-  --cta-light: #EEF2FF;
+  /* === CTA — 警戒黃 (取代原紫色 SaaS 公版) === */
+  --cta:        var(--warning-yellow);
+  --cta-hover:  var(--warning-yellow-hover);
+  --cta-light:  var(--warning-yellow-light);
+  --cta-glow:   rgba(30,35,40,.20);  /* 中性陰影，非彩色 glow */
 
-  /* === 製造業 accent（copper/琥珀金） === */
-  --accent-copper:        #B45309;
-  --accent-copper-light:  #FEF3C7;
-  --accent-copper-mid:    #D97706;
-  --cta-glow:  rgba(79,70,229,.25);
+  /* === 銹橙 accent (次強調) === */
+  --accent-copper:        var(--rust-orange);
+  --accent-copper-hover:  var(--rust-orange-hover);
+  --accent-copper-light:  var(--rust-orange-light);
+  --accent-copper-mid:    var(--rust-orange-hover);
 
-  /* Accent */
-  --green:  #10B981;
-  --amber:  #F59E0B;
-  --red:    #EF4444;
+  /* === 語意色 === */
+  --green:  var(--industrial-green);
+  --amber:  var(--warning-yellow);
+  --red:    var(--rust-orange);
 
-  /* Typography */
-  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  --font-num:  "Inter", var(--font-sans);
+  /* === Typography === */
+  --font-sans:    "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-display: "Space Grotesk", "Noto Sans TC", sans-serif;
+  --font-num:     "Space Grotesk", "IBM Plex Mono", monospace;
 
-  /* Spacing & Shape */
-  --radius:    16px;
-  --radius-sm: 10px;
-  --radius-xs: 6px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
-  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,.10);
-  --shadow-card: 0 2px 8px rgba(0,0,0,.04), 0 0 0 1px rgba(0,0,0,.03);
+  /* === Shape (小圓角，接近實線邊框) === */
+  --radius:    6px;                  /* was 16px */
+  --radius-sm: 4px;                  /* was 10px */
+  --radius-xs: 2px;                  /* was 6px */
+
+  /* === Shadow (中性色、有 offset + blur、無 halo) === */
+  --shadow-sm:   0 1px 2px rgba(30,35,40,.08);
+  --shadow-md:   0 4px 12px rgba(30,35,40,.10);
+  --shadow-lg:   0 8px 24px rgba(30,35,40,.12);
+  --shadow-card: 0 1px 3px rgba(30,35,40,.06), 0 0 0 1px rgba(184,190,199,.30);
+
+  /* === Layout === */
   --max-w:      1200px;
   --section-py: 96px;
   --gap:        24px;
@@ -87,8 +120,34 @@ body {
 }
 
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--cta); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--blueprint-700); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Browser surface — themed to industrial palette */
+::selection {
+  background: var(--warning-yellow);
+  color: var(--steel-900);
+}
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--paper-white); }
+::-webkit-scrollbar-thumb {
+  background: var(--steel-300);
+  border: 3px solid var(--paper-white);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--steel-500); }
+:focus-visible {
+  outline: 3px solid var(--warning-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+caret-color: var(--rust-orange);
+input, textarea { caret-color: var(--rust-orange); }
+
+/* Tabular numerals for numeric contexts */
+.num, [class*="metric"], td, th {
+  font-variant-numeric: tabular-nums;
+}
 
 .container {
   max-width: var(--max-w);
@@ -97,10 +156,21 @@ a:hover { text-decoration: underline; }
 }
 
 /* ── Typography ────────────────────────────────────────── */
-h1, h2, h3, h4 { font-weight: 800; line-height: 1.3; color: var(--text); }
-h1 { font-size: 3rem; letter-spacing: -.02em; }
-h2 { font-size: 2.2rem; letter-spacing: -.01em; }
-h3 { font-size: 1.4rem; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+  letter-spacing: -.02em;
+}
+h1 { font-size: 3rem; letter-spacing: -.03em; font-weight: 700; }
+h2 { font-size: 2.2rem; letter-spacing: -.025em; }
+h3 { font-size: 1.4rem; letter-spacing: -.015em; }
+h4 { font-size: 1rem; letter-spacing: -.01em; }
+
+/* 中文字元回歸 Noto Sans TC；英文/數字用 Space Grotesk */
+:lang(zh), :lang(zh-Hant) { font-family: var(--font-sans); }
+h1, h2, h3, h4 { font-family: var(--font-display), var(--font-sans); }
 h4 { font-size: 1.1rem; font-weight: 700; }
 
 .section-header {
