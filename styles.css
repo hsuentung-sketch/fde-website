@@ -323,7 +323,9 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 
 /* ── Hero ──────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1B2D4F 100%);
+  background:
+    linear-gradient(135deg, rgba(15,35,64,.94) 0%, rgba(15,35,64,.88) 45%, rgba(30,58,95,.85) 100%),
+    url('https://images.unsplash.com/photo-1565194481104-39d1ee1b8bcc?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
@@ -331,21 +333,22 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 .hero::before {
   content: '';
   position: absolute;
-  top: -40%;
-  right: -15%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(217,90,44,.15) 0%, transparent 70%);
+  inset: 0;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255,255,255,.03) 25%, rgba(255,255,255,.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.03) 75%, rgba(255,255,255,.03) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255,255,255,.03) 25%, rgba(255,255,255,.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.03) 75%, rgba(255,255,255,.03) 76%, transparent 77%, transparent);
+  background-size: 60px 60px;
   pointer-events: none;
+  opacity: .5;
 }
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(16,185,129,.1) 0%, transparent 70%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
 }
 
