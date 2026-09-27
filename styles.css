@@ -916,22 +916,29 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   color: var(--steel-900);
 }
 .feature-hero-main p {
-  font-size: 1.02rem;
+  font-size: .95rem;
   color: var(--text-sec);
   line-height: 1.75;
   max-width: 60ch;
+  margin-bottom: 12px;
+}
+.feature-hero-main .feature-hero-lead {
+  font-size: 1.05rem;
+  color: var(--steel-800);
+  font-weight: 500;
 }
 .feature-hero-aside {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-left: 36px;
+  padding-left: 40px;
   border-left: 1px solid var(--steel-300);
   justify-content: center;
 }
 .feature-hero-aside .stat {
   display: flex;
   flex-direction: column;
+  padding-left: 4px;
 }
 .feature-hero-aside .stat-num {
   font-family: var(--font-num);
