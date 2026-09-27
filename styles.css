@@ -33,7 +33,8 @@
   --paper-mid:      #EBEBE7;   /* 深冷灰 */
 
   --industrial-green:      #4A7856;   /* 機械綠 — success */
-  --industrial-green-light: #D9E5DA;
+  --industrial-green-light: #E3EBDF;
+  --industrial-green-dark:  #1E3924;   /* 深綠 for text on light bg (7:1) */
 
   /* === Legacy 相容 mapping (原 macaron → 工業版) === */
   --mac-rose:      #F5D5CE;   /* was #FFD6D1 淺粉 → 銹橙淺 */
@@ -191,6 +192,15 @@ h3.card-title {
 .module-card h3.card-title { font-size: .95rem; margin-bottom: 6px; }
 .ai-enhance-card h3.card-title { font-size: .92rem; margin-bottom: 4px; }
 .security-card h3.card-title { font-size: 1rem; margin-bottom: 8px; }
+.security-marker {
+  display: block;
+  font-family: var(--font-num);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--rust-orange);
+  letter-spacing: .1em;
+  margin-bottom: 10px;
+}
 .testimonial-card h3.card-title { font-size: 1rem; }
 .feature-card h3.card-title { margin-bottom: 8px; }
 .ai-card h3.card-title { color: #fff; margin-bottom: 6px; font-size: 1rem; }
@@ -1109,7 +1119,7 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 }
 .module-status--live {
   background: var(--industrial-green-light);
-  color: #2F5334;
+  color: var(--industrial-green-dark);
 }
 .module-status--wip {
   background: var(--warning-yellow-light);
@@ -1528,7 +1538,7 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   margin-bottom: 12px;
 }
 .mode-card--managed .mode-badge { background: var(--rust-orange-light); color: var(--rust-orange-hover); }
-.mode-card--byoc .mode-badge { background: var(--industrial-green-light); color: #2F5334; }
+.mode-card--byoc .mode-badge { background: var(--industrial-green-light); color: var(--industrial-green-dark); }
 .mode-card h4 { font-size: 1.15rem; margin-bottom: 8px; }
 .mode-card .mode-price {
   font-family: var(--font-num);
