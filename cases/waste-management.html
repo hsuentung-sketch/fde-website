@@ -63,13 +63,7 @@
     /* Module cards */
     .module-section { margin-bottom:56px; }
     .module-section > h2 { margin-bottom:24px; }
-    .module-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:16px; }
-    .module-card { padding:22px 18px;border-radius:var(--radius-sm);border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden; }
-    .module-card:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
-    .module-card .mc-icon { width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px; }
-    .module-card h4 { font-size:.92rem;margin-bottom:6px;color:var(--text); }
-    .module-card p { font-size:.8rem;color:var(--text-sec);line-height:1.5; }
-    .module-card .badge { position:absolute;top:10px;right:10px;font-size:.72rem;padding:3px 8px;font-weight:600; }
+    /* module-manifest CSS shared in styles.css */
 
     /* AI features built */
     .ai-built-section { margin-bottom:56px;padding:48px 0;background:var(--bg-lavender);border-radius:var(--radius);padding:40px; }
@@ -342,206 +336,189 @@
     <!-- ── Module Inventory ── -->
     <div class="module-section fade-up">
       <h2>23 功能模組總覽</h2>
-      <div class="module-grid">
+            <div class="module-manifest">
 
-        <!-- 1. Customer Master -->
-        <div class="module-card" style="background:var(--bg-mint);">
-          <div class="mc-icon" style="background:#D1FAE5;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="module-hero">
+          <div class="module-hero-header">
+            <span class="module-cat">基本主檔</span>
+            <span class="module-status module-status--live">Live</span>
           </div>
-          <h3 class="card-title">客戶主檔</h3>
+          <h3>客戶主檔</h3>
           <p>EPA 欄位、管制編號、廢棄物代碼表整合（環保署代碼對照）、清運合約 30 天到期提醒、統編 g0v 查詢</p>
-          <span class="badge badge-live">上線</span>
         </div>
 
-        <!-- 2. Supplier -->
-        <div class="module-card" style="background:var(--bg-blue);">
-          <div class="mc-icon" style="background:var(--mac-blue);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>處理廠 / 供應商</h3>
+              <p>EPA 許可證追蹤、到期自動停派、依廢棄物代碼計價</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">處理廠 / 供應商</h3>
-          <p>EPA 許可證追蹤、到期自動停派、依廢棄物代碼計價</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 3. Driver -->
-        <div class="module-card" style="background:var(--bg-lemon);">
-          <div class="mc-icon" style="background:var(--mac-lemon);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>司機管理</h3>
+              <p>多駕照管理、駕照 30 天到期提醒</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">司機管理</h3>
-          <p>多駕照管理、駕照 30 天到期提醒</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 4. Vehicle -->
-        <div class="module-card" style="background:var(--bg-peach);">
-          <div class="mc-icon" style="background:var(--mac-peach);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>車隊管理</h3>
+              <p>車輛主檔、里程追蹤、KPI 儀表板（維修費/油耗/輪胎成本 CSS 條狀圖）、車種篩選</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">車隊管理</h3>
-          <p>車輛主檔、里程追蹤、KPI 儀表板（維修費/油耗/輪胎成本 CSS 條狀圖）、車種篩選</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 5. Tire -->
-        <div class="module-card" style="background:var(--bg-rose);">
-          <div class="mc-icon" style="background:var(--mac-rose);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">庫存管理</div>
+            <div class="module-cell--body">
+              <h3>輪胎庫存</h3>
+              <p>寄庫管理、安裝/拆卸紀錄追蹤、前後輪位置追蹤、庫存即時查詢</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">輪胎庫存</h3>
-          <p>寄庫管理、安裝/拆卸紀錄追蹤、前後輪位置追蹤、庫存即時查詢</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 6. Product -->
-        <div class="module-card" style="background:var(--bg-lavender);">
-          <div class="mc-icon" style="background:var(--mac-lavender);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>產品分類</h3>
+              <p>階層式分類管理</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">產品分類</h3>
-          <p>階層式分類管理</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 7. Quotation -->
-        <div class="module-card" style="background:var(--bg-mint);">
-          <div class="mc-icon" style="background:#D1FAE5;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>報價管理</h3>
+              <p>3 模板：壓縮車/工業廢棄物/營建；壓縮車 3 計價：月包/按桶/按趟</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">報價管理</h3>
-          <p>3 模板：壓縮車/工業廢棄物/營建；壓縮車 3 計價：月包/按桶/按趟</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 8. Sales Order -->
-        <div class="module-card" style="background:var(--bg-blue);">
-          <div class="mc-icon" style="background:var(--mac-blue);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>銷貨管理</h3>
+              <p>報價自動轉單、派車整合、司機過磅回寫</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">銷貨管理</h3>
-          <p>報價自動轉單、派車整合、司機過磅回寫</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 9. Single Trip Dispatch -->
-        <div class="module-card" style="background:var(--bg-lemon);">
-          <div class="mc-icon" style="background:var(--mac-lemon);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">派車調度</div>
+            <div class="module-cell--body">
+              <h3>單趟派車</h3>
+              <p>5 階段生命週期、LINE 推播、LIFF 操作、GPS、車輛衝突偵測</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">單趟派車</h3>
-          <p>5 階段生命週期、LINE 推播、LIFF 操作、GPS、車輛衝突偵測</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 10. Compactor Route -->
-        <div class="module-card" style="background:var(--bg-peach);">
-          <div class="mc-icon" style="background:var(--mac-peach);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">派車調度</div>
+            <div class="module-cell--body">
+              <h3>壓縮車路線</h3>
+              <p>週模板 7 天、每日秤重/桶數、月結自動銷貨、3 項自動附加費</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">壓縮車路線</h3>
-          <p>週模板 7 天、每日秤重/桶數、月結自動銷貨、3 項自動附加費</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 11. Fuel Management -->
-        <div class="module-card" style="background:var(--bg-rose);">
-          <div class="mc-icon" style="background:var(--mac-rose);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><path d="M3 22V2h12l4 4v16H3z"/><path d="M14 2v6h5"/><path d="M8 13h8M8 17h5"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">車隊維護</div>
+            <div class="module-cell--body">
+              <h3>油料管理</h3>
+              <p>台糖/山隆/統一三大油商 Excel 自動偵測匯入、動態表頭比對、彙總列過濾、HTML table 解析、司機拍照、油耗 km/L 自動計算、SHA256 去重防重複</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">油料管理</h3>
-          <p>台糖/山隆/統一三大油商 Excel 自動偵測匯入、動態表頭比對、彙總列過濾、HTML table 解析、司機拍照、油耗 km/L 自動計算、SHA256 去重防重複</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 12. Maintenance -->
-        <div class="module-card" style="background:var(--bg-lavender);">
-          <div class="mc-icon" style="background:var(--mac-lavender);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">車隊維護</div>
+            <div class="module-cell--body">
+              <h3>維修保養</h3>
+              <p>完整生命週期、LIFF 報修、廠商主檔、工/料/稅明細、90 天成本摘要</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">維修保養</h3>
-          <p>完整生命週期、LIFF 報修、廠商主檔、工/料/稅明細、90 天成本摘要</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 13. Inventory -->
-        <div class="module-card" style="background:var(--bg-mint);">
-          <div class="mc-icon" style="background:#D1FAE5;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">庫存管理</div>
+            <div class="module-cell--body">
+              <h3>庫存管理</h3>
+              <p>PO 收貨自動入庫、逐品項開關</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">庫存管理</h3>
-          <p>PO 收貨自動入庫、逐品項開關</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 14. AR -->
-        <div class="module-card" style="background:var(--bg-blue);">
-          <div class="mc-icon" style="background:var(--mac-blue);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">財務會計</div>
+            <div class="module-cell--body">
+              <h3>應收帳款</h3>
+              <p>SO 自動建立 + 實重回寫、現金/月結 30/60/支票、1:1/1:N/N:1 沖帳、帳齡分析</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">應收帳款</h3>
-          <p>SO 自動建立 + 實重回寫、現金/月結 30/60/支票、1:1/1:N/N:1 沖帳、帳齡分析</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 15. AP -->
-        <div class="module-card" style="background:var(--bg-lemon);">
-          <div class="mc-icon" style="background:var(--mac-lemon);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">財務會計</div>
+            <div class="module-cell--body">
+              <h3>應付帳款</h3>
+              <p>4 來源自動產生：維修/輪胎/PO/處理廠（派車重量 x 費率）</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">應付帳款</h3>
-          <p>4 來源自動產生：維修/輪胎/PO/處理廠（派車重量 x 費率）</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 16. Payment -->
-        <div class="module-card" style="background:var(--bg-peach);">
-          <div class="mc-icon" style="background:var(--mac-peach);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">財務會計</div>
+            <div class="module-cell--body">
+              <h3>收付款管理</h3>
+              <p>現金/匯款/支票全生命週期、逾期提醒、月結對帳 PDF</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">收付款管理</h3>
-          <p>現金/匯款/支票全生命週期、逾期提醒、月結對帳 PDF</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 17. AI Monthly Report -->
-        <div class="module-card" style="background:var(--bg-lavender);">
-          <div class="mc-icon" style="background:var(--mac-lavender);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l7-7"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">AI 應用</div>
+            <div class="module-cell--body">
+              <h3>AI 司機月報</h3>
+              <p>油耗/效率/里程/維修/輪胎/異常，規則計分 A-D，Claude Haiku 中文評語</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">AI 司機月報</h3>
-          <p>油耗/效率/里程/維修/輪胎/異常，規則計分 A-D，Claude Haiku 中文評語</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 18. AI Fuel Analysis -->
-        <div class="module-card" style="background:var(--bg-rose);">
-          <div class="mc-icon" style="background:var(--mac-rose);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">AI 應用</div>
+            <div class="module-cell--body">
+              <h3>AI 油耗分析</h3>
+              <p>車隊油耗模式分析 + AI 中文評語</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">AI 油耗分析</h3>
-          <p>車隊油耗模式分析 + AI 中文評語</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 19. LINE / LIFF -->
-        <div class="module-card" style="background:var(--bg-mint);">
-          <div class="mc-icon" style="background:#D1FAE5;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">系統整合</div>
+            <div class="module-cell--body">
+              <h3>LINE / LIFF</h3>
+              <p>3 套 Rich Menu（司機/管理/客戶）自動切換、司機端：今日派車/歷史/油料/維修/月報/個人、管理端：名片 OCR 建客戶、客戶 LINE 綁定 QR</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">LINE / LIFF</h3>
-          <p>3 套 Rich Menu（司機/管理/客戶）自動切換、司機端：今日派車/歷史/油料/維修/月報/個人、管理端：名片 OCR 建客戶、客戶 LINE 綁定 QR</p>
-          <span class="badge badge-live">上線</span>
-        </div>
 
-        <!-- 20. System -->
-        <div class="module-card" style="background:var(--bg-blue);">
-          <div class="mc-icon" style="background:var(--mac-blue);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">系統管理</div>
+            <div class="module-cell--body">
+              <h3>系統管理</h3>
+              <p>4 角色權限、資料依指派可見、每日備份 30d/12w/24m、稽核日誌</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">系統管理</h3>
-          <p>4 角色權限、資料依指派可見、每日備份 30d/12w/24m、稽核日誌</p>
-          <span class="badge badge-live">上線</span>
+
         </div>
 
       </div>

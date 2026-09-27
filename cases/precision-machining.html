@@ -62,14 +62,7 @@
 
     /* ── Module Cards ── */
     .module-section { margin-bottom:56px; }
-    .module-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
-    .module-card { padding:24px;border-radius:var(--radius);border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden; }
-    .module-card:hover { transform:translateY(-3px);box-shadow:var(--shadow-md); }
-    .module-card .mc-icon { width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px; }
-    .module-card .mc-icon svg { width:22px;height:22px;stroke-width:1.8; }
-    .module-card h4 { font-size:.95rem;margin-bottom:6px; }
-    .module-card p { color:var(--text-sec);font-size:.83rem;line-height:1.6; }
-    .module-card .badge { position:absolute;top:12px;right:12px;font-size:.72rem;padding:3px 8px;font-weight:600; }
+    /* module-manifest CSS shared in styles.css */
 
     /* ── Machine Board Mockup ── */
     .board-mockup { background:var(--navy);border-radius:var(--radius);padding:24px;margin-bottom:56px;position:relative;overflow:hidden; }
@@ -589,186 +582,170 @@
         </span>
         系統功能模組
       </h2>
-      <div class="module-grid">
+      <div class="module-manifest">
 
-        <!-- Core: Process Tracking Card -->
-        <div class="module-card" style="background:var(--bg-blue);grid-column:span 2;">
-          <span class="badge badge-live" style="position:static;margin-bottom:10px;display:inline-block">核心模組</span>
-          <div class="mc-icon" style="background:var(--mac-blue)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <div class="module-hero">
+          <div class="module-hero-header">
+            <span class="module-cat">核心模組</span>
+            <span class="module-status module-status--live">Live</span>
           </div>
-          <h3 class="card-title">製程管制卡 Process Tracking Card</h3>
+          <h3>製程管制卡 Process Tracking Card</h3>
           <p>13 階段生命週期完整追蹤：備料到出貨。Excel-like 表格介面、階段歷史紀錄、與機台看板連動。每張卡對應一張客戶工單，串連圖面、機台、外包、出貨全流程。</p>
         </div>
 
-        <!-- Machine Board -->
-        <div class="module-card" style="background:var(--bg-mint)">
-          <div class="mc-icon" style="background:var(--mac-mint)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <div class="module-list">
+          <div class="module-row">
+            <div class="module-cell--cat">機台監控</div>
+            <div class="module-cell--body">
+              <h3>機台即時看板</h3>
+              <p>CSS Grid 看板，5 秒輪詢刷新，色碼狀態一眼掌握全場 14 台機台。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">機台即時看板</h3>
-          <p>麥當勞式 CSS Grid 看板，5 秒輪詢刷新，色碼狀態一眼掌握全場 14 台機台。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- FOCAS Integration -->
-        <div class="module-card" style="background:var(--bg-lemon)">
-          <div class="mc-icon" style="background:var(--mac-lemon)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">機台整合</div>
+            <div class="module-cell--body">
+              <h3>CNC FOCAS 整合</h3>
+              <p>FANUC FOCAS 協議直連控制器，Python 收集器（含 39 支 FANUC SDK DLL 完整工具鏈）5-10 秒推送。顯示模式、運轉狀態、當前程式、加工件數、警報，60 秒過時指示。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">CNC FOCAS 整合</h3>
-          <p>FANUC FOCAS 協議直連控制器，Python 收集器（含 39 支 FANUC SDK DLL 完整工具鏈）5-10 秒推送。顯示模式、運轉狀態、當前程式、加工件數、警報。60 秒過時指示。取代舊版 CNC_Viewer 孤島式監控，數據直接流入 ERP 訂單系統。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Machine Status -->
-        <div class="module-card" style="background:var(--bg-peach)">
-          <div class="mc-icon" style="background:var(--mac-peach)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">機台監控</div>
+            <div class="module-cell--body">
+              <h3>機台狀態機</h3>
+              <p>完整狀態機搭配管制卡連動：加工中連結卡片、待機推送至品檢。狀態變更間自動計算持續時間。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">機台狀態機</h3>
-          <p>完整狀態機搭配管制卡連動：加工中連結卡片、待機推送至品檢。狀態變更間自動計算持續時間。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Dispatch Board -->
-        <div class="module-card" style="background:var(--bg-lavender)">
-          <div class="mc-icon" style="background:var(--mac-lavender)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">派工排程</div>
+            <div class="module-cell--body">
+              <h3>派工看板</h3>
+              <p>拖放式介面：未派工 + 各機台泳道。衝突偵測、派工決策日誌（DispatchDecisionLog）含必填理由。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">派工看板</h3>
-          <p>拖放式介面：未派工 + 各機台泳道。衝突偵測、派工決策日誌 (DispatchDecisionLog) 含必填理由。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Schedule Timeline -->
-        <div class="module-card" style="background:var(--bg-blue)">
-          <div class="mc-icon" style="background:var(--mac-blue)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">派工排程</div>
+            <div class="module-cell--body">
+              <h3>排程時程表</h3>
+              <p>甘特圖式：Y 軸依類別分機台、X 軸可切 7/14/30 天、衝突標記、今日線。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">排程時程表</h3>
-          <p>甘特圖式：Y 軸依類別分機台、X 軸可切 7/14/30 天、衝突標記、今日線。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Drawing AI -->
-        <div class="module-card" style="background:var(--bg-rose)">
-          <div class="mc-icon" style="background:var(--mac-rose)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">AI 應用</div>
+            <div class="module-cell--body">
+              <h3>AI 圖面辨識</h3>
+              <p>上傳 PDF/JPG 工程圖面，GCV OCR + Claude Haiku 自動擷取 10 個標題欄位。逐欄信心分數，一鍵建立管制卡。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">AI 圖面辨識</h3>
-          <p>上傳 PDF/JPG 工程圖面，GCV OCR + Claude Haiku 自動擷取 10 個標題欄位。逐欄信心分數，一鍵建立管制卡。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Dashboard -->
-        <div class="module-card" style="background:var(--bg-mint)">
-          <div class="mc-icon" style="background:var(--mac-mint)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">儀表板</div>
+            <div class="module-cell--body">
+              <h3>即時儀表板</h3>
+              <p>三區 KPI：生產進度／逾期／未派工、銷售月報、交期風險 3 日預警。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">即時儀表板</h3>
-          <p>三區 KPI：生產進度/逾期/未派工、銷售月報、交期風險 3 日預警。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Customer Master -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-lemon)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>客戶主檔</h3>
+              <p>EPA 欄位、承辦人可見性、LINE 綁定。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">客戶主檔</h3>
-          <p>EPA 欄位、承辦人可見性、LINE 綁定。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Customer Part -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-peach)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>客戶料號</h3>
+              <p>ODM 追蹤：客戶料號、圖號、版次、材質、公差、表面處理、多版次圖面管理。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">客戶料號</h3>
-          <p>ODM 追蹤：客戶料號、圖號、版次、材質、公差、表面處理、多版次圖面管理。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Machine Master -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-blue)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>機台主檔</h3>
+              <p>6 分類（銑／車／磨／放電／線切割／其他）、6 種狀態、時薪費率、目前管制卡追蹤。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">機台主檔</h3>
-          <p>6 分類（銑/車/磨/放電/線切割/其他）、6 種狀態、時薪費率、目前管制卡追蹤。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Routing Template -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-lavender)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>工序模板</h3>
+              <p>製程步驟範本，用於預估加工時間與排程。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">工序模板</h3>
-          <p>製程步驟範本，用於預估加工時間與排程。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Shipment -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-mint)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>出貨管理</h3>
+              <p>DO-YYMMDD-NN 編號、部分出貨追蹤、多卡合併出貨、超交預防機制。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">出貨管理</h3>
-          <p>DO-YYMMDD-NN 編號、部分出貨追蹤、多卡合併出貨、超交預防機制。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Quotation -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-rose)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>報價管理</h3>
+              <p>金屬加工專用報價，含工時估算與材料成本。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">報價管理</h3>
-          <p>金屬加工專用報價，含工時估算與材料成本。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Sales Order -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-lemon)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>銷貨訂單</h3>
+              <p>客戶 PO 編號對應、圖面參照行號。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">銷貨訂單</h3>
-          <p>客戶 PO 編號對應、圖面參照行號。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Purchase Order -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-peach)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">交易單據</div>
+            <div class="module-cell--body">
+              <h3>採購單</h3>
+              <p>材料採購 + 外包加工，追蹤供應商交期。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">採購單</h3>
-          <p>材料採購 + 外包加工，追蹤供應商交期。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Supplier -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-blue)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>供應商管理</h3>
+              <p>含外包分類（如電鍍廠），追蹤外包工序。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">供應商管理</h3>
-          <p>含外包分類（如電鍍廠），追蹤外包工序。</p>
-          <span class="badge badge-live">已上線</span>
-        </div>
 
-        <!-- Dictionary -->
-        <div class="module-card">
-          <div class="mc-icon" style="background:var(--mac-lavender)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <div class="module-row">
+            <div class="module-cell--cat">基本主檔</div>
+            <div class="module-cell--body">
+              <h3>資料字典</h3>
+              <p>表面處理規格、管理者可擴充的選項清單。</p>
+            </div>
+            <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
           </div>
-          <h3 class="card-title">資料字典</h3>
-          <p>表面處理規格、管理者可擴充的選項清單。</p>
-          <span class="badge badge-live">已上線</span>
         </div>
 
       </div>

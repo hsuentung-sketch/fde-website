@@ -31,13 +31,7 @@
     .section-title { font-size:1.4rem;margin-bottom:24px;display:flex;align-items:center;gap:10px; }
     .section-title svg { flex-shrink:0; }
 
-    /* Module icon */
-    .module-icon {
-      width:40px;height:40px;border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      margin-bottom:12px;flex-shrink:0;
-    }
-    .module-icon svg { width:20px;height:20px;stroke-width:2; }
+    /* module-manifest CSS shared in styles.css */
 
     /* AI built feature cards */
     .ai-built-grid {
@@ -305,133 +299,137 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cta)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
       系統功能模組
     </h2>
-    <div class="module-grid fade-up">
-      <!-- 1 客戶主檔 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-rose)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mac-rose)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <div class="module-manifest">
+
+      <div class="module-hero">
+        <div class="module-hero-header">
+          <span class="module-cat">基本主檔</span>
+          <span class="module-status module-status--live">Live</span>
         </div>
-        <h3 class="card-title">客戶主檔</h3>
+        <h3>客戶主檔</h3>
         <p>名片 OCR 自動建立、聯絡人管理、交易歷史、信用額度追蹤</p>
-        <span class="badge badge-live">已上線</span>
       </div>
-      <!-- 2 供應商主檔 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-mint)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+
+      <div class="module-list">
+        <div class="module-row">
+          <div class="module-cell--cat">基本主檔</div>
+          <div class="module-cell--body">
+            <h3>供應商主檔</h3>
+            <p>銀行帳戶管理、文件上傳、聯絡窗口、付款條件設定</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">供應商主檔</h3>
-        <p>銀行帳戶管理、文件上傳、聯絡窗口、付款條件設定</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 3 產品主檔 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lemon)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">基本主檔</div>
+          <div class="module-cell--body">
+            <h3>產品主檔</h3>
+            <p>EK 產品規格、14 系列分類、售價/成本管理、圖片上傳</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">產品主檔</h3>
-        <p>EK 產品規格、14 系列分類、售價/成本管理、圖片上傳</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 4 銷售報價 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lavender)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">交易單據</div>
+          <div class="module-cell--body">
+            <h3>銷售報價</h3>
+            <p>LINE + LIFF + 後台三通道建立、一鍵轉銷貨、PDF 自動生成、LINE 取消/編輯</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">銷售報價</h3>
-        <p>LINE + LIFF + 後台三通道建立、一鍵轉銷貨、PDF 自動生成、LINE 取消/編輯</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 5 銷貨單 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-blue)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">交易單據</div>
+          <div class="module-cell--body">
+            <h3>銷貨單</h3>
+            <p>LINE 全流程操作、CJK PDF 生成、報價一鍵轉銷貨</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">銷貨單</h3>
-        <p>LINE 全流程操作、CJK PDF 生成、報價一鍵轉銷貨</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 6 銷售佣金 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-rose)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">業務績效</div>
+          <div class="module-cell--body">
+            <h3>銷售佣金</h3>
+            <p>毛利計算、員工稅率設定、角色可見性控制、即時成本快照</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">銷售佣金</h3>
-        <p>毛利計算、員工稅率設定、角色可見性控制、即時成本快照</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 7 進貨單 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-mint)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 3 20 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">交易單據</div>
+          <div class="module-cell--body">
+            <h3>進貨單</h3>
+            <p>LINE 對話流程建立、PDF 列印、自動產生應付帳款</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">進貨單</h3>
-        <p>LINE 對話流程建立、PDF 列印、自動產生應付帳款</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 8 應收帳款 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lemon)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">財務會計</div>
+          <div class="module-cell--body">
+            <h3>應收帳款</h3>
+            <p>銷貨自動產生、逾期 Cron 提醒、月結帳單批次 PDF ZIP</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">應收帳款</h3>
-        <p>銷貨自動產生、逾期 Cron 提醒、月結帳單批次 PDF ZIP</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 9 應付帳款 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lavender)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/><path d="M12 2L2 7l10 5 10-5L12 2z"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">財務會計</div>
+          <div class="module-cell--body">
+            <h3>應付帳款</h3>
+            <p>進貨自動產生、付款狀態追蹤、到期日管理</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">應付帳款</h3>
-        <p>進貨自動產生、付款狀態追蹤、到期日管理</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 10 電子發票 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-blue)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">財務會計</div>
+          <div class="module-cell--body">
+            <h3>電子發票</h3>
+            <p>B2B/B2C、Turnkey XML、號碼池管理、載具/捐贈、中文大寫金額</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">電子發票</h3>
-        <p>B2B/B2C、Turnkey XML、號碼池管理、載具/捐贈、中文大寫金額</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 11 會計科目 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-rose)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><path d="M4 7V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/><polyline points="14 2 14 8 20 8"/><line x1="2" y1="15" x2="12" y2="15"/><line x1="7" y1="12" x2="7" y2="18"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">財務會計</div>
+          <div class="module-cell--body">
+            <h3>會計科目 + 分錄</h3>
+            <p>科目表管理、傳票登錄、借貸平衡驗證</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">會計科目 + 分錄</h3>
-        <p>科目表管理、傳票登錄、借貸平衡驗證</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 12 庫存 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-mint)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">庫存管理</div>
+          <div class="module-cell--body">
+            <h3>庫存管理</h3>
+            <p>事件驅動：銷貨扣庫、進貨入庫、即時庫存查詢</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">庫存管理</h3>
-        <p>事件驅動：銷貨扣庫、進貨入庫、即時庫存查詢</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 13 拜訪紀錄 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lemon)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">客戶關係</div>
+          <div class="module-cell--body">
+            <h3>拜訪紀錄 / CRM</h3>
+            <p>客戶拜訪追蹤、下次行動日期、業務活動歷程</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">拜訪紀錄 / CRM</h3>
-        <p>客戶拜訪追蹤、下次行動日期、業務活動歷程</p>
-        <span class="badge badge-live">已上線</span>
-      </div>
-      <!-- 14 管理後台 -->
-      <div class="module-card">
-        <div class="module-icon" style="background:var(--bg-lavender)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+
+        <div class="module-row">
+          <div class="module-cell--cat">系統管理</div>
+          <div class="module-cell--body">
+            <h3>管理後台</h3>
+            <p>14 視圖、可直接建立報價/銷貨/進貨單、角色權限控制、儀表板總覽</p>
+          </div>
+          <div class="module-cell--stat"><span class="module-status module-status--live">Live</span></div>
         </div>
-        <h3 class="card-title">管理後台</h3>
-        <p>14 視圖、可直接建立報價/銷貨/進貨單、角色權限控制、儀表板總覽</p>
-        <span class="badge badge-live">已上線</span>
+
       </div>
+
     </div>
 
     <!-- ── Admin Tabs Mockup ──────────────────────── -->

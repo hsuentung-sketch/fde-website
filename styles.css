@@ -1018,6 +1018,116 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   line-height: 1.75;
 }
 
+/* ── Module Manifest (case-page industrial spec-sheet) ── */
+.module-manifest {
+  border: 1px solid var(--steel-300);
+  background: var(--surface);
+  margin-bottom: 48px;
+}
+.module-hero {
+  padding: 32px 36px;
+  background: var(--paper-white);
+  border-bottom: 1px solid var(--steel-300);
+}
+.module-hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.module-cat {
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust-orange);
+}
+.module-hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--steel-900);
+  letter-spacing: -.015em;
+}
+.module-hero p {
+  font-size: .96rem;
+  color: var(--text-sec);
+  line-height: 1.75;
+  max-width: 70ch;
+}
+.module-list { }
+.module-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 90px;
+  gap: 24px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--steel-300);
+  align-items: start;
+}
+.module-row:last-child {
+  border-bottom: none;
+}
+.module-row:nth-child(even) {
+  background: var(--paper-white);
+}
+.module-cell--cat {
+  font-family: var(--font-display);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--steel-500);
+  padding-top: 4px;
+}
+.module-cell--body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--steel-900);
+  letter-spacing: -.01em;
+}
+.module-cell--body p {
+  font-size: .87rem;
+  color: var(--text-sec);
+  line-height: 1.65;
+}
+.module-cell--stat {
+  text-align: right;
+  padding-top: 4px;
+}
+.module-status {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.module-status--live {
+  background: var(--industrial-green-light);
+  color: #2F5334;
+}
+.module-status--wip {
+  background: var(--warning-yellow-light);
+  color: #8B6300;
+}
+
+@media (max-width: 768px) {
+  .module-hero { padding: 24px; }
+  .module-hero h3 { font-size: 1.25rem; }
+  .module-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 18px 22px;
+  }
+  .module-cell--cat { padding-top: 0; }
+  .module-cell--stat { text-align: left; padding-top: 0; }
+}
+
 /* ── AI Section (industrial capabilities manifest) ─────── */
 .section-ai {
   padding: var(--section-py) 0;
