@@ -1018,61 +1018,101 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   line-height: 1.75;
 }
 
-/* ── AI Section ────────────────────────────────────────── */
+/* ── AI Section (industrial capabilities manifest) ─────── */
 .section-ai {
   padding: var(--section-py) 0;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  background: var(--blueprint-900);
   color: #fff;
 }
 .section-ai .section-header h2 { color: #fff; }
-.section-ai .section-header p  { color: #94a3b8; }
+.section-ai .section-header p  { color: var(--blueprint-100); }
 
-.ai-grid {
+.ai-roster {
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.ai-item {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap);
+  grid-template-columns: 200px 1fr 200px;
+  gap: 40px;
+  padding: 28px 8px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  align-items: start;
+  transition: background .25s;
+}
+.ai-item:hover {
+  background: rgba(255,255,255,.03);
 }
 
-.ai-card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: var(--radius);
-  padding: 28px 22px;
-  text-align: center;
-  transition: background .25s, transform .25s;
-}
-.ai-card:hover {
-  background: rgba(255,255,255,.1);
-  transform: translateY(-3px);
-}
-
-.ai-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 14px;
-  border-radius: 14px;
+.ai-status {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 4px;
 }
-.ai-icon svg { width: 28px; height: 28px; }
-
-.ai-icon--voice    { background: rgba(168,85,247,.2); }
-.ai-icon--ocr      { background: rgba(59,130,246,.2); }
-.ai-icon--report   { background: rgba(16,185,129,.2); }
-.ai-icon--dispatch { background: rgba(245,158,11,.2); }
-
-.ai-card h4 { color: #fff; margin-bottom: 6px; font-size: 1rem; }
-.ai-card p { color: #94a3b8; font-size: .82rem; line-height: 1.6; }
-.ai-cost {
-  display: inline-block;
-  margin-top: 10px;
+.ai-status .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.15);
+}
+.ai-item--live .status-dot {
+  background: #6EE7B7;
+  animation: ai-pulse 2s ease-in-out infinite;
+}
+.ai-item--wip .status-dot {
+  background: var(--warning-yellow);
+}
+@keyframes ai-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+.ai-status .status-label {
+  font-family: var(--font-display);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ai-item--live .status-label { color: #6EE7B7; }
+.ai-item--wip .status-label { color: var(--warning-yellow); }
+.ai-status .status-hint {
+  font-size: .8rem;
+  color: var(--blueprint-100);
   font-family: var(--font-num);
-  font-size: .72rem;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: rgba(16,185,129,.15);
-  color: #6EE7B7;
+}
+
+.ai-body h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  letter-spacing: -.015em;
+}
+.ai-body p {
+  color: var(--blueprint-100);
+  font-size: .95rem;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.ai-meta {
+  padding-top: 6px;
+  text-align: right;
+}
+.ai-meta .ai-tech {
+  display: inline-block;
+  font-family: var(--font-num);
+  font-size: .8rem;
+  color: var(--warning-yellow);
+  padding: 4px 10px;
+  border: 1px solid rgba(245,179,1,.3);
+  border-radius: 2px;
+  letter-spacing: -.005em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-item--live .status-dot { animation: none; }
 }
 
 /* ── Comparison Table ──────────────────────────────────── */
@@ -1840,7 +1880,8 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   .feature-hero { padding: 32px; }
   .feature-hero-main h3 { font-size: 1.7rem; }
   .feature-hero-aside .stat-num { font-size: 2.4rem; }
-  .ai-grid { grid-template-columns: repeat(2, 1fr); }
+  .ai-item { grid-template-columns: 160px 1fr 140px; gap: 24px; }
+  .ai-meta .ai-tech { font-size: .72rem; }
   .pain-grid-8 { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -1942,7 +1983,13 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
     gap: 12px;
   }
 
-  .ai-grid { grid-template-columns: 1fr; }
+  .ai-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 8px;
+  }
+  .ai-meta { text-align: left; }
+  .ai-body h3 { font-size: 1.15rem; }
 
   .compare-wrap { overflow-x: auto; }
   .compare-table { min-width: 0; }
