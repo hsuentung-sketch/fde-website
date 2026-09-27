@@ -69,7 +69,7 @@
     .module-card .mc-icon svg { width:22px;height:22px;stroke-width:1.8; }
     .module-card h4 { font-size:.95rem;margin-bottom:6px; }
     .module-card p { color:var(--text-sec);font-size:.83rem;line-height:1.6; }
-    .module-card .badge { position:absolute;top:14px;right:14px;font-size:.65rem;padding:2px 8px; }
+    .module-card .badge { position:absolute;top:12px;right:12px;font-size:.72rem;padding:3px 8px;font-weight:600; }
 
     /* ── Machine Board Mockup ── */
     .board-mockup { background:var(--navy);border-radius:var(--radius);padding:24px;margin-bottom:56px;position:relative;overflow:hidden; }
@@ -80,7 +80,7 @@
     .board-card:hover { transform:scale(1.04); }
     .board-card .bc-name { font-size:.72rem;color:#94a3b8;margin-bottom:8px; }
     .board-card .bc-type { font-size:.6rem;color:#64748b;margin-bottom:6px; }
-    .board-card .bc-status { font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block; }
+    .board-card .bc-status { font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block; }
     .bc-running { background:rgba(16,185,129,.2);color:#6EE7B7; }
     .bc-idle { background:rgba(148,163,184,.15);color:#94a3b8; }
     .bc-setup { background:rgba(250,204,21,.2);color:#FDE047; }
@@ -109,7 +109,7 @@
     .ai-card::before { content:'';position:absolute;top:0;left:0;right:0;height:3px; }
     .ai-card-blue::before { background:linear-gradient(90deg,var(--mac-blue),var(--mac-lavender)); }
     .ai-card-mint::before { background:linear-gradient(90deg,var(--mac-mint),var(--mac-blue)); }
-    .ai-card .ai-badge { font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:8px;display:inline-block;margin-bottom:12px; }
+    .ai-card .ai-badge { font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:8px;display:inline-block;margin-bottom:12px; }
     .ai-card h4 { font-size:1.05rem;margin-bottom:8px; }
     .ai-card p { color:var(--text-sec);font-size:.88rem;line-height:1.7; }
     .ai-detail-grid { display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px; }
@@ -142,7 +142,7 @@
     @keyframes pulse-progress { 0%,100%{opacity:1;}50%{opacity:.6;} }
     .progress-label { display:flex;justify-content:space-between;font-size:.78rem;color:var(--text-sec); }
     .progress-phases { display:grid;grid-template-columns:repeat(11,1fr);gap:6px;margin-top:16px; }
-    .phase-chip { text-align:center;padding:8px 4px;border-radius:var(--radius-xs);font-size:.68rem;font-weight:600; }
+    .phase-chip { text-align:center;padding:8px 4px;border-radius:var(--radius-xs);font-size:.75rem;font-weight:600; }
     .phase-done { background:#EEF2FF;color:var(--cta); }
     .phase-current { background:#FEF3C7;color:#92400e;border:1px solid #F59E0B; }
     .phase-todo { background:#F3F4F6;color:#9CA3AF; }
@@ -597,7 +597,7 @@
           <div class="mc-icon" style="background:var(--mac-blue)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <h4>製程管制卡 Process Tracking Card</h4>
+          <h3 class="card-title">製程管制卡 Process Tracking Card</h3>
           <p>13 階段生命週期完整追蹤：備料到出貨。Excel-like 表格介面、階段歷史紀錄、與機台看板連動。每張卡對應一張客戶工單，串連圖面、機台、外包、出貨全流程。</p>
         </div>
 
@@ -606,7 +606,7 @@
           <div class="mc-icon" style="background:var(--mac-mint)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <h4>機台即時看板</h4>
+          <h3 class="card-title">機台即時看板</h3>
           <p>麥當勞式 CSS Grid 看板，5 秒輪詢刷新，色碼狀態一眼掌握全場 14 台機台。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -616,7 +616,7 @@
           <div class="mc-icon" style="background:var(--mac-lemon)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <h4>CNC FOCAS 整合</h4>
+          <h3 class="card-title">CNC FOCAS 整合</h3>
           <p>FANUC FOCAS 協議直連控制器，Python 收集器（含 39 支 FANUC SDK DLL 完整工具鏈）5-10 秒推送。顯示模式、運轉狀態、當前程式、加工件數、警報。60 秒過時指示。取代舊版 CNC_Viewer 孤島式監控，數據直接流入 ERP 訂單系統。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -626,7 +626,7 @@
           <div class="mc-icon" style="background:var(--mac-peach)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h4>機台狀態機</h4>
+          <h3 class="card-title">機台狀態機</h3>
           <p>完整狀態機搭配管制卡連動：加工中連結卡片、待機推送至品檢。狀態變更間自動計算持續時間。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -636,7 +636,7 @@
           <div class="mc-icon" style="background:var(--mac-lavender)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
-          <h4>派工看板</h4>
+          <h3 class="card-title">派工看板</h3>
           <p>拖放式介面：未派工 + 各機台泳道。衝突偵測、派工決策日誌 (DispatchDecisionLog) 含必填理由。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -646,7 +646,7 @@
           <div class="mc-icon" style="background:var(--mac-blue)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
           </div>
-          <h4>排程時程表</h4>
+          <h3 class="card-title">排程時程表</h3>
           <p>甘特圖式：Y 軸依類別分機台、X 軸可切 7/14/30 天、衝突標記、今日線。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -656,7 +656,7 @@
           <div class="mc-icon" style="background:var(--mac-rose)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h4>AI 圖面辨識</h4>
+          <h3 class="card-title">AI 圖面辨識</h3>
           <p>上傳 PDF/JPG 工程圖面，GCV OCR + Claude Haiku 自動擷取 10 個標題欄位。逐欄信心分數，一鍵建立管制卡。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -666,7 +666,7 @@
           <div class="mc-icon" style="background:var(--mac-mint)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
           </div>
-          <h4>即時儀表板</h4>
+          <h3 class="card-title">即時儀表板</h3>
           <p>三區 KPI：生產進度/逾期/未派工、銷售月報、交期風險 3 日預警。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -676,7 +676,7 @@
           <div class="mc-icon" style="background:var(--mac-lemon)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h4>客戶主檔</h4>
+          <h3 class="card-title">客戶主檔</h3>
           <p>EPA 欄位、承辦人可見性、LINE 綁定。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -686,7 +686,7 @@
           <div class="mc-icon" style="background:var(--mac-peach)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           </div>
-          <h4>客戶料號</h4>
+          <h3 class="card-title">客戶料號</h3>
           <p>ODM 追蹤：客戶料號、圖號、版次、材質、公差、表面處理、多版次圖面管理。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -696,7 +696,7 @@
           <div class="mc-icon" style="background:var(--mac-blue)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4"/></svg>
           </div>
-          <h4>機台主檔</h4>
+          <h3 class="card-title">機台主檔</h3>
           <p>6 分類（銑/車/磨/放電/線切割/其他）、6 種狀態、時薪費率、目前管制卡追蹤。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -706,7 +706,7 @@
           <div class="mc-icon" style="background:var(--mac-lavender)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
           </div>
-          <h4>工序模板</h4>
+          <h3 class="card-title">工序模板</h3>
           <p>製程步驟範本，用於預估加工時間與排程。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -716,7 +716,7 @@
           <div class="mc-icon" style="background:var(--mac-mint)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
-          <h4>出貨管理</h4>
+          <h3 class="card-title">出貨管理</h3>
           <p>DO-YYMMDD-NN 編號、部分出貨追蹤、多卡合併出貨、超交預防機制。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -726,7 +726,7 @@
           <div class="mc-icon" style="background:var(--mac-rose)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h4>報價管理</h4>
+          <h3 class="card-title">報價管理</h3>
           <p>金屬加工專用報價，含工時估算與材料成本。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -736,7 +736,7 @@
           <div class="mc-icon" style="background:var(--mac-lemon)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#D97706"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
           </div>
-          <h4>銷貨訂單</h4>
+          <h3 class="card-title">銷貨訂單</h3>
           <p>客戶 PO 編號對應、圖面參照行號。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -746,7 +746,7 @@
           <div class="mc-icon" style="background:var(--mac-peach)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           </div>
-          <h4>採購單</h4>
+          <h3 class="card-title">採購單</h3>
           <p>材料採購 + 外包加工，追蹤供應商交期。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -756,7 +756,7 @@
           <div class="mc-icon" style="background:var(--mac-blue)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h4>供應商管理</h4>
+          <h3 class="card-title">供應商管理</h3>
           <p>含外包分類（如電鍍廠），追蹤外包工序。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -766,7 +766,7 @@
           <div class="mc-icon" style="background:var(--mac-lavender)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
-          <h4>資料字典</h4>
+          <h3 class="card-title">資料字典</h3>
           <p>表面處理規格、管理者可擴充的選項清單。</p>
           <span class="badge badge-live">已上線</span>
         </div>
@@ -812,7 +812,7 @@
         <!-- Drawing AI -->
         <div class="ai-card ai-card-blue" style="background:var(--bg-blue)">
           <span class="ai-badge" style="background:rgba(79,70,229,.1);color:var(--cta)">GCV + Claude Haiku</span>
-          <h4>工程圖面標題欄自動辨識</h4>
+          <h3 class="card-title">工程圖面標題欄自動辨識</h3>
           <p>完整的圖面生命週期管理：上傳時建立 DrawingIngestJob（owner 指定制），人工確認後觸發 AI 抽取 10 個結構化欄位（品名、料號、材質、版次、公差等）。每個欄位獨立信心分數 (0-1)，低於 0.5 紅色標記提醒審查。Orchestration 層與 AI 抽取層分離，未來可換 model 不改業務流。</p>
           <div class="ai-flow">
             <span class="ai-flow-step">上傳圖面</span>
@@ -841,7 +841,7 @@
         <!-- Auto-Dispatch -->
         <div class="ai-card ai-card-mint" style="background:var(--bg-mint)">
           <span class="ai-badge" style="background:rgba(16,185,129,.1);color:#059669">3-Phase Engine</span>
-          <h4>AI 派工推薦引擎</h4>
+          <h3 class="card-title">AI 派工推薦引擎</h3>
           <p>三階段決策：(1) 硬約束過濾機台類別與能力、(2) 軟評分加權 (3) Claude LLM 審查 Top 5 並產出自然語言理由。</p>
           <div style="margin-top:16px">
             <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -881,35 +881,35 @@
           <div class="ai-enhance-icon" style="background:var(--mac-rose)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#DC2626"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <h4>AI 品質預測</h4>
+          <h3 class="card-title">AI 品質預測</h3>
           <p>根據機台狀況、材質、操作員、加工時段，預測不良品機率，在加工前預警。</p>
         </div>
         <div class="ai-enhance-card">
           <div class="ai-enhance-icon" style="background:var(--mac-mint)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#059669"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h4>AI 刀具壽命預測</h4>
+          <h3 class="card-title">AI 刀具壽命預測</h3>
           <p>追蹤 FOCAS 刀具磨耗數據，預測最佳更換時機，避免刀具斷裂造成廢品。</p>
         </div>
         <div class="ai-enhance-card">
           <div class="ai-enhance-icon" style="background:var(--mac-lavender)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <h4>AI 交期預估</h4>
+          <h3 class="card-title">AI 交期預估</h3>
           <p>綜合目前排隊量、機台稼動率、歷史加工時間，自動估算可承諾交期。</p>
         </div>
         <div class="ai-enhance-card">
           <div class="ai-enhance-icon" style="background:var(--mac-blue)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1e40af"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
-          <h4>AI 自動排程優化</h4>
+          <h3 class="card-title">AI 自動排程優化</h3>
           <p>最佳化機台排程，最小化換模時間，最大化產出量，自動考慮機台能力與訂單優先序。</p>
         </div>
         <div class="ai-enhance-card">
           <div class="ai-enhance-icon" style="background:var(--mac-peach)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C2410C"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <h4>AI 圖面相似度搜尋</h4>
+          <h3 class="card-title">AI 圖面相似度搜尋</h3>
           <p>上傳新圖面，自動比對歷史相似零件，快速參考過往報價與工序模板。</p>
         </div>
       </div>
@@ -998,17 +998,17 @@
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128274;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">AES-256 加密備份</h4>
+          <h4 style="font-size:.95rem;margin-bottom:6px">AES-256 加密備份</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">每日 / 每週 / 每月三層保留策略，自動推送至異地 NAS</p>
         </div>
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128273;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">JWT 短效 Token</h4>
+          <h4 style="font-size:.95rem;margin-bottom:6px">JWT 短效 Token</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">15 分鐘過期 + 30 天 Refresh Token，密碼 bcrypt 雜湊儲存</p>
         </div>
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128209;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">完整稽核日誌</h4>
+          <h4 style="font-size:.95rem;margin-bottom:6px">完整稽核日誌</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">每筆操作記錄人員、時間、修改前後差異，全站 HTTPS 強制加密</p>
         </div>
       </div>

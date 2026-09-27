@@ -24,9 +24,10 @@
   --warning-yellow-hover: #E5A600;
   --warning-yellow-light: #FFF4C4;
 
-  --rust-orange:       #D95A2C;   /* 銹橙 — 次強調 */
-  --rust-orange-hover: #B94A24;
+  --rust-orange:       #B84620;   /* 銹橙深 — CTA 主色 (4.7:1 白字通過 WCAG AA) */
+  --rust-orange-hover: #963719;   /* 更深 hover */
   --rust-orange-light: #FBEBE0;
+  --rust-orange-vivid: #D95A2C;   /* 保留原色供裝飾/圖標細節用 */
 
   --paper-white:    #F5F5F3;   /* 冷灰白 — section 背景（避免 cream/beige） */
   --paper-mid:      #EBEBE7;   /* 深冷灰 */
@@ -176,6 +177,23 @@ h4 { font-size: 1rem; letter-spacing: -.01em; }
 /* 中文字元回歸 Noto Sans TC；英文/數字用 Space Grotesk */
 :lang(zh), :lang(zh-Hant) { font-family: var(--font-sans); }
 h1, h2, h3, h4 { font-family: var(--font-display), var(--font-sans); }
+
+/* Card / list-item title — semantically h3, sized like old h4 to preserve layout */
+h3.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.mode-card h3.card-title { font-size: 1.15rem; }
+.pain-card h3.card-title { font-size: .95rem; line-height: 1.4; margin-bottom: 8px; }
+.module-card h3.card-title { font-size: .95rem; margin-bottom: 6px; }
+.ai-enhance-card h3.card-title { font-size: .92rem; margin-bottom: 4px; }
+.security-card h3.card-title { font-size: 1rem; margin-bottom: 8px; }
+.testimonial-card h3.card-title { font-size: 1rem; }
+.feature-card h3.card-title { margin-bottom: 8px; }
+.ai-card h3.card-title { color: #fff; margin-bottom: 6px; font-size: 1rem; }
 h4 { font-size: 1.1rem; font-weight: 700; }
 
 .section-header {
@@ -998,9 +1016,11 @@ h4 { font-size: 1.1rem; font-weight: 700; }
   font-weight: 600;
 }
 .compare-table tr:last-child td { border-bottom: none; }
-.compare-table tr:hover td { background: #FAFAFA; }
+.compare-table tr:hover td { background: var(--paper-white); }
+.compare-table tr:hover td.col-fde { background: var(--rust-orange-light); }
+.compare-table tr:hover th.col-fde { background: var(--cta); }
 
-.col-fde { background: var(--bg-lavender) !important; color: var(--cta); font-weight: 700; }
+.col-fde { background: var(--rust-orange-light) !important; color: var(--rust-orange-hover); font-weight: 700; }
 th.col-fde { background: var(--cta) !important; color: #fff; }
 
 .check { color: var(--green); }
@@ -1140,12 +1160,7 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   justify-content: center;
   box-shadow: var(--shadow-lg);
 }
-.cta-hint { color: rgba(255,255,255,.6); font-size: .88rem; margin-bottom: 24px; }
-.cta-contact a {
-  color: rgba(255,255,255,.8);
-  font-size: .9rem;
-}
-.cta-contact a:hover { color: #fff; }
+.cta-hint { color: rgba(255,255,255,.72); font-size: .88rem; margin-bottom: 24px; }
 
 /* ── Footer ────────────────────────────────────────────── */
 .footer {
@@ -1269,8 +1284,8 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   border-radius: 4px;
   margin-bottom: 12px;
 }
-.mode-card--managed .mode-badge { background: var(--mac-lavender); color: var(--cta); }
-.mode-card--byoc .mode-badge { background: var(--mac-mint); color: #047857; }
+.mode-card--managed .mode-badge { background: var(--rust-orange-light); color: var(--rust-orange-hover); }
+.mode-card--byoc .mode-badge { background: var(--industrial-green-light); color: #2F5334; }
 .mode-card h4 { font-size: 1.15rem; margin-bottom: 8px; }
 .mode-card .mode-price {
   font-family: var(--font-num);
