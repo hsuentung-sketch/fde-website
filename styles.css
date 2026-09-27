@@ -63,13 +63,18 @@
   --navy-mid:  var(--blueprint-700);
   --navy-deep: #08152B;
 
-  /* === CTA — 警戒黃 (取代原紫色 SaaS 公版) === */
-  --cta:        var(--warning-yellow);
-  --cta-hover:  var(--warning-yellow-hover);
-  --cta-light:  var(--warning-yellow-light);
+  /* === CTA — 銹橙 (取代原紫色 SaaS 公版) === */
+  --cta:        var(--rust-orange);
+  --cta-hover:  var(--rust-orange-hover);
+  --cta-light:  var(--rust-orange-light);
   --cta-glow:   rgba(30,35,40,.20);  /* 中性陰影，非彩色 glow */
 
-  /* === 銹橙 accent (次強調) === */
+  /* === 警戒黃 accent (次強調 - 警示/highlight) === */
+  --accent-yellow:        var(--warning-yellow);
+  --accent-yellow-hover:  var(--warning-yellow-hover);
+  --accent-yellow-light:  var(--warning-yellow-light);
+
+  /* === 銅色 legacy alias (仍指向銹橙) === */
   --accent-copper:        var(--rust-orange);
   --accent-copper-hover:  var(--rust-orange-hover);
   --accent-copper-light:  var(--rust-orange-light);
@@ -125,8 +130,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Browser surface — themed to industrial palette */
 ::selection {
-  background: var(--warning-yellow);
-  color: var(--steel-900);
+  background: var(--rust-orange);
+  color: #FFFFFF;
 }
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--paper-white); }
@@ -137,7 +142,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--steel-500); }
 :focus-visible {
-  outline: 3px solid var(--warning-yellow);
+  outline: 3px solid var(--rust-orange);
   outline-offset: 2px;
   border-radius: 2px;
 }
