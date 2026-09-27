@@ -101,7 +101,7 @@
     .dn-dispatched { background:rgba(251,191,36,.2);border:1px solid #FBBF24;color:#FDE68A; }
     .dn-arrived { background:rgba(52,211,153,.2);border:1px solid #34D399;color:#6EE7B7; }
     .dn-completed { background:rgba(16,185,129,.2);border:1px solid #10B981;color:#A7F3D0; }
-    .dn-returned { background:rgba(139,92,246,.2);border:1px solid #8B5CF6;color:#C4B5FD; }
+    .dn-returned { background:rgba(139,92,246,.2);border:1px solid #385880;color:#C4B5FD; }
     .dispatch-arrow { color:rgba(255,255,255,.4);font-size:.8rem; }
     .dispatch-labels { display:flex;gap:16px;flex-wrap:wrap;margin-top:16px; }
     .dispatch-label { font-size:.72rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px; }
@@ -133,14 +133,14 @@
   <div class="header-inner">
     <a href="../index.html" class="logo" style="text-decoration:none">
       <svg width="36" height="36" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-        <path d="M68 18 A38 38 0 0 1 97 72" stroke="#4F46E5" stroke-width="7" fill="none" stroke-linecap="round"/>
-        <polygon points="100,75 88,68 94,80" fill="#4F46E5"/>
+        <path d="M68 18 A38 38 0 0 1 97 72" stroke="#B84620" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <polygon points="100,75 88,68 94,80" fill="#B84620"/>
         <path d="M90 80 A38 38 0 0 1 30 80" stroke="#818CF8" stroke-width="7" fill="none" stroke-linecap="round"/>
         <polygon points="27,78 32,90 22,85" fill="#818CF8"/>
-        <path d="M28 74 A38 38 0 0 1 62 18" stroke="#4F46E5" stroke-width="7" fill="none" stroke-linecap="round"/>
-        <polygon points="65,15 58,8 56,22" fill="#4F46E5"/>
+        <path d="M28 74 A38 38 0 0 1 62 18" stroke="#B84620" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <polygon points="65,15 58,8 56,22" fill="#B84620"/>
         <circle cx="60" cy="52" r="18" fill="none" stroke="#C7D2FE" stroke-width="1.5"/>
-        <text x="60" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="#4F46E5">AI</text>
+        <text x="60" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="18" fill="#B84620">AI</text>
       </svg>
       潤樋科技
     </a>
@@ -545,7 +545,7 @@
         <div class="dispatch-label"><span style="background:#60A5FA"></span>LINE 推播通知司機</div>
         <div class="dispatch-label"><span style="background:#FBBF24"></span>LIFF 操作回報</div>
         <div class="dispatch-label"><span style="background:#34D399"></span>GPS 定位紀錄</div>
-        <div class="dispatch-label"><span style="background:#8B5CF6"></span>過磅資料自動回寫</div>
+        <div class="dispatch-label"><span style="background:#385880"></span>過磅資料自動回寫</div>
       </div>
     </div>
 
@@ -686,17 +686,17 @@
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128274;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">AES-256 加密備份</h3>
+          <h3 style="font-size:.95rem;margin-bottom:6px">AES-256 加密備份</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">每日 / 每週 / 每月三層保留策略，自動推送至異地 NAS</p>
         </div>
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128273;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">JWT 短效 Token</h3>
+          <h3 style="font-size:.95rem;margin-bottom:6px">JWT 短效 Token</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">15 分鐘過期 + 30 天 Refresh Token，密碼 bcrypt 雜湊儲存</p>
         </div>
         <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);text-align:center">
           <div style="font-size:1.8rem;margin-bottom:8px">&#128209;</div>
-          <h4 style="font-size:.95rem;margin-bottom:6px">完整稽核日誌</h3>
+          <h3 style="font-size:.95rem;margin-bottom:6px">完整稽核日誌</h3>
           <p style="font-size:.82rem;color:var(--text-sec);line-height:1.5">每筆操作記錄人員、時間、修改前後差異，全站 HTTPS 強制加密</p>
         </div>
       </div>

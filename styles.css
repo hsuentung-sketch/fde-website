@@ -1526,8 +1526,8 @@ th.col-fde { background: var(--cta) !important; color: #fff; }
   box-shadow: var(--shadow-md);
   border-color: var(--steel-700);
 }
-.mode-card--managed { border-top: 3px solid var(--cta); }
-.mode-card--byoc { border-top: 3px solid var(--industrial-green); }
+.mode-card--managed { border-color: var(--cta); }
+.mode-card--byoc { border-color: var(--industrial-green); }
 .mode-badge {
   display: inline-block;
   font-size: .72rem;
